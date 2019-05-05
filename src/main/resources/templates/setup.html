@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Setup files</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/header.css}"/>
+    <link rel="stylesheet" th:href="@{/css/basic.css}" href="../static/css/basic.css"/>
+    <link rel="stylesheet" th:href="@{/css/buttons.css}" href="../static/css/buttons.css"/>
+    <link rel="stylesheet" th:href="@{/css/program.css}" href="../static/css/program.css"/>
+    <link rel="stylesheet" th:href="@{/css/footer.css}" href="../static/css/footer.css"/>
+    <link rel="stylesheet" th:href="@{/css/ml3.css}" href="../static/css/ml3.css"/>
+    <link rel="stylesheet" th:href="@{/css/flow.css}" href="../static/css/flow.css"/>
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon-16x16.png}"
+          href="../static/images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans|Gloria+Hallelujah"
+          rel="stylesheet">
+    <script th:src="@{/js/animation_program.js}" type="text/javascript"></script>
+
+</head>
+<body class="bg-color custom-font">
+<div class="header">
+    <div th:replace="fragments/header :: header"></div>
+    <div class="content">
+        <h3 class="centered-title ml3">SETUP FILES</h3>
+        <h4 class="centered-title">Here you can find the necessary files that you may need while undergoing a mentoring
+            program.</h4>
+        <br>
+        <br>
+        <div class="bg-content-v button-text-center">
+            <a href="/mentoring-portal/files/mentoringProgram.pdf"
+               class="badge badge-pill badge-info bold-font letter-margin" download="full-program">&nbsp&nbsp&nbsp
+                Get full program &nbsp&nbsp&nbsp</a>&nbsp&nbsp&nbsp
+            <a href="/mentoring-portal/files/EnvironmentSetup.pdf" class="badge badge-pill badge-info bold-font letter-margin"
+               download="env-setup">&nbsp&nbsp&nbsp Get env setup &nbsp&nbsp&nbsp</a>&nbsp&nbsp&nbsp
+            <a href="/mentoring-portal/files/ConnectedTV1.xml"
+               class="badge badge-pill badge-info bold-font letter-margin" download="code-formatter">&nbsp&nbsp&nbsp
+                Get code formatter &nbsp&nbsp&nbsp</a>
+        </div>
+        <br>
+        <div class="button-text-center">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div th:replace="fragments/footer-absolute :: footer"></div>
+</div>
+</body>
+</html>

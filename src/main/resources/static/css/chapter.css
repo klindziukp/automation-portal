@@ -1,0 +1,85 @@
+.tab-content-block {
+	position: relative;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+ul.list-bullet {
+	list-style-type: circle;
+}
+
+.nav-link {
+	color: #2197ba;
+	background-color: rgb(0, 0, 0, 0);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	color: #fff;
+	background-color: #2197ba;
+}
+
+.nav-bullet {
+	color: #39C;
+}
+
+ul.ipro_menu li.active-parent ul.sub-menu li a {
+	color: #000;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.left {
+	width: 25%;
+}
+
+.right {
+	width: 75%;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.btn-dark {
+	width: 110px;
+	margin-bottom: 0.85em;
+	margin-left: 0.85em;
+}
+
+#nav-buttons {
+	padding-top: 3em;
+}
+
+.content {
+	min-height: 100vh;
+	padding-top: 1.3em;
+}
+
+a:hover {
+	color: black;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0em;
+	margin-left: 0.4em;
+}
+
+.centered-title {
+	text-align: center;
+	position: relative;
+	top: 30px;
+	margin-bottom: 0px;
+}
+
+.subTitle {
+	font-size: 1em;
+	color: grey;
+	margin-top: 0.7em;
+}

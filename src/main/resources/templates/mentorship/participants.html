@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Mentoring program</title>
+	<link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon-16x16.png}"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans|Gloria+Hallelujah"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+	<link rel="stylesheet" th:href="@{/css/header.css}"/>
+	<link rel="stylesheet" th:href="@{/css/basic.css}"/>
+	<link rel="stylesheet" th:href="@{/css/buttons.css}"/>
+	<link rel="stylesheet" th:href="@{/css/mentorship.css}"/>
+	<link rel="stylesheet" th:href="@{/css/ml3.css}"/>
+</head>
+<body class="bg-color custom-font">
+	<div class="header">
+		<div th:replace="fragments/header :: header"></div>
+	</div>
+	<div class="bg-content">
+		<h4 class="centered-title ml3">PROGRAM MEMBERS</h4>
+		<div class="content">
+			<div class="row">
+				<div th:replace="fragments/mentorshipMenu :: mentorshipMenu"></div>
+				<div class="column right">
+					<form class="form-inline" action="#" th:action="@{/participants}" th:object="${newParticipant}" method="post">
+						<div class="form-inline" >
+							<label for="memberName">Name:</label>
+							<input th:field="*{name}" type="text" class="form-control" id="memberName" placeholder="Full name" required="required">
+						</div>
+						<div class="form-inline">
+							<label for="role">Role:</label>
+							<select th:field="*{role}" class="form-control" id="role">
+								<th:block th:each="userRole : ${userRoles}">
+									<option th:value="${userRole}" th:text="${userRole}"></option>
+								</th:block>
+							</select>
+						</div>
+						<div class="form-inline">
+							<label for="position">Position:</label>
+							<select th:field="*{position}" class="form-control" id="position">
+								<th:block th:each="userPosition : ${userPositions}">
+									<option th:value="${userPosition}" th:text="${userPosition}"></option>
+								</th:block>
+							</select>
+						</div>
+						<button type="submit" class="btn button-primary">Add</button>
+					</form>
+					<div th:text="${message != null} ? ${message} : ''" th:classappend=
+							"${message != null} and ${#strings.contains(message, 'Error') ? 'error-message' : ''}" class="message">...</div>
+					<table id="membersTable" class="table table-hover">
+						<thead>
+						<tr>
+							<th scope="col">Full name</th>
+							<th scope="col">Role</th>
+							<th scope="col">Position</th>
+							<th scope="col"># of mentorships</th>
+						</tr>
+						</thead>
+						<tbody>
+						<th:block th:each="participant : ${participants}">
+							<tr class="clickable-row" th:userUrl ="@{/participants/} +  ${participant.name}" th:onClick="javascript:location.href=this.getAttribute('userUrl');">
+								<th scope="row" th:text="${participant.name}">...</th>
+								<td th:text="${participant.role}">...</td>
+								<td th:text="${participant.position}">...</td>
+								<td th:text="${#lists.size(participant.mentees)}">...</td>
+							</tr>
+						</th:block>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

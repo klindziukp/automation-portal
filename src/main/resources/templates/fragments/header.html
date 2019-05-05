@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/header.css}"/>
+	<link rel="stylesheet" th:href="@{/css/basic.css}"/>
+	<link
+	href="https://fonts.googleapis.com/css?family=Encode+Sans|Gloria+Hallelujah"
+		rel="stylesheet">
+</head>
+<body class="custom-font" th:fragment="header">
+	<nav class="navbar navbar-expand-lg navbar-sea-wave bg-sea-wave">
+		<div class="navbar-brand">TEST AUTOMATION PORTAL</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+					<div class="dropdown dropdown-front">
+						<a class="btn-link dropdown-toggle" role="button" type="button-link" id="automation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Automation
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-background" role="menu" aria-labelledby="automation">
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/setup}">Unit </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/setup}">Api </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/setup}">Web</a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/setup}">Mobile</a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/setup}">ConnectedTV</a></li>
+						</ul>
+
+					</div>
+				<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/program}">Continuous Integration</a>
+				</li>
+								<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/program}">Tools</a>
+				</li>
+				<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/program}">Code Review</a>
+				</li>
+				<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/setup}">Testing Theory</a>
+				</li>
+				<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/vocabulary}">Vocabulary</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>

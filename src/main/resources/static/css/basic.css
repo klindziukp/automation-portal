@@ -1,0 +1,102 @@
+.background-image {
+	background-image: url(../images/mountains.jpg);
+	background-position: center top;
+	background-size: 100% auto;
+}
+
+.custom-font {
+	/* font-family: 'Gloria Hallelujah', cursive; */
+	font-family: 'Encode Sans', sans-serif;
+}
+
+.bg-color {
+	background-color: #f9f9f9;
+}
+
+.bg-content {
+	display: block;
+	background-color: #ffffff;
+	position: relative;
+	left: 5%;
+	width: 90%;
+	top: 20px;
+	padding-bottom: 30px;
+	top: 20px;
+}
+
+.bg-content-v {
+	display: block;
+	position: relative;
+	left: 5%;
+	width: 90%;
+	top: 20px;
+	padding-bottom: 30px;
+	top: 20px;
+}
+
+.centered-content {
+	position: relative;
+	width: 50%;
+	margin: auto;
+	top: 30px;
+	margin-bottom: 25px;
+	line-height: 1.6;
+}
+
+.centered {
+	text-align: center;
+}
+
+.centered-title {
+	text-align: center;
+	position: relative;
+	top: 30px;
+	margin-bottom: 25px;
+}
+
+.content {
+	position: relative;
+	left: 5%;
+	width: 90%;
+	top: 30px;
+}
+
+.footer-default {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: rgba(255, 255, 255, .9);
+}
+
+.footer-blue-absolute {
+	bottom: 0;
+	width: 100%;
+	color: #2197ba;
+	position: absolute;
+}
+
+.footer-blue-relative {
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    color: #2197ba;
+}
+
+.centered-regular-font {
+	font-weight: 400;
+	text-align: center;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.font-voc {
+  font-size: 0.85em;
+}
+
+.bold-font {
+  font-size: 1.1em;
+}
+
+

@@ -1,0 +1,27 @@
+.card {
+	margin-bottom: 1.5em;
+}
+
+.card-img {
+	display: block;
+	margin: auto;
+	width: 150px;
+	padding-top: 0.6em;
+	padding-bottom: 0.05em;
+}
+
+.card-body {
+	padding: 0.65rem;
+}
+
+.button-primary {
+	margin-left: 5%;
+}
+
+.border-thick {
+	border-width: 0.16em;
+}
+
+.text-block {
+	min-height: 3.1em;
+}

@@ -1,0 +1,71 @@
+.navbar-link {
+	color: rgba(255, 255, 255, .9);
+	display: block;
+	padding-right: .7rem;
+	padding-left: .6rem;
+}
+
+.navbar-link-dropdown {
+	color: rgba(255, 255, 255, .9);
+	display: block;
+	padding-right: .7rem;
+	padding-left: .6rem;
+}
+
+.dropdown-front {
+    color: rgba(255, 255, 255, .9);
+    padding-right: .7rem;
+    padding-left: .6rem;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.dropdown-background {
+    background-color: #2197ba;
+}
+
+.navbar-link:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.navbar-brand {
+	color: rgba(255, 255, 255, .9);
+	float: left;
+	height: 50px;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.navbar-brand:hover {
+	color: #ffffff;
+}
+
+.bg-sea-wave {
+	background-color: #2197ba !important
+}
+
+a.bg-sea-wave:focus, a.bg-sea-wave:hover, button.bg-sea-wave:focus,
+	button.bg-sea-wave:hover {
+	background-color: #ffffff !important
+}
+
+.navbar-nav>li>a:hover {
+	background-color: rgba(255, 255, 255, .0);
+}
+
+.navbar-collapse {
+	padding-left: 0px;
+}
+
+.navbar {
+	padding: .2rem 1rem;
+	border-radius: 4px;
+}
+
+.logout-icon {
+	margin-left: 0.6rem;
+}
