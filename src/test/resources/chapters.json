@@ -1,0 +1,1675 @@
+[
+  {
+    "_id": {
+      "$oid": "5b577c3f37e10c3174a46711"
+    },
+    "key": "webDriver",
+    "name": "Selenium WebDriver",
+    "description": "Using Selenium WebDriver in MQE frameworks.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is Selenium WebDriver?"
+      },
+      {
+        "text": "What are the different types of locators?"
+      },
+      {
+        "text": "Compare Xpath vs CSS?"
+      },
+      {
+        "text": "Сomplex user gestures emulation. Actions class."
+      },
+      {
+        "text": "How to execute JavaScript with Selenium?"
+      },
+      {
+        "text": "Types of Wait in WebDriver. Difference between Implicit and Explicit Wait?"
+      },
+      {
+        "text": "What is Fluent Wait? Fluent Wait configuration."
+      },
+      {
+        "text": "What is Page Object pattern?"
+      },
+      {
+        "text": "What is Page Component Object pattern?"
+      },
+      {
+        "text": "Page Objects: Composition vs Inheritance? When to use?"
+      },
+      {
+        "text": "Selenium DesiredCapabilities?"
+      },
+      {
+        "text": "Browser commands, Browser Navigation commands."
+      },
+      {
+        "text": "Selenium Grid. How to start hub, nodes?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "How does Selenium WebDriver works?"
+      },
+      {
+        "text": "What is Page Factory? FindBy(s) annotation."
+      },
+      {
+        "text": "What is Headless mode?"
+      },
+      {
+        "text": "What is Fluent style page object?"
+      },
+      {
+        "text": "What is ThreadLocal? What is InheritedThreadlocal?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Basic understanding how Selenium WebDriver works."
+      },
+      {
+        "text": "Knowledge how to start drivers for different browsers."
+      },
+      {
+        "text": "Knowledge of WebDriver interface API."
+      },
+      {
+        "text": "Knowledge of Page Object, Page Component Object patterns."
+      },
+      {
+        "text": "Understanding of using Page Object Composition and Inheritance."
+      },
+      {
+        "text": "Knowledge of Implicit and Explicit waits, Fluent waits."
+      },
+      {
+        "text": "Understanding how to run tests in parallel."
+      },
+      {
+        "text": "Understanding of ThreadLocal and when it can be used."
+      },
+      {
+        "text": "Knowledge of Actions, JavaScriptExecutor classes."
+      },
+      {
+        "text": "Understanding what is Selenium Grid, how to start and configure hub, nodes."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Implement test suite with 2 test scripts for checking login/logout process to Mail.",
+        "subItems": [
+          {
+            "text": "at least 3 checks should be done for each test"
+          },
+          {
+            "text": "use Fluent Wait for page loading, elements waiting"
+          },
+          {
+            "text": "use Page Object, Page Compontents Object patterns"
+          },
+          {
+            "text": "use Action for at least one user actions"
+          },
+          {
+            "text": "use javascript (e.g. for clicking on any button)"
+          },
+          {
+            "text": "use Hard and Soft asserts"
+          },
+          {
+            "text": "use logging for each step (log4j)"
+          },
+          {
+            "text": "use PageFactory and FindBy annotation"
+          },
+          {
+            "text": "run all tests in one thread for one browser"
+          }
+        ]
+      },
+      {
+        "text": "Add support for multithread execution. Run your tests in parallel."
+      },
+      {
+        "text": "Add DriverFactory to support both Firefox, Chrome. Run each test for both browsers (Factory, DataProvider)."
+      },
+      {
+        "text": "(Additional) Add getting run environment info (browser) from configuration/property file."
+      },
+      {
+        "text": "(Additional) Move driver start and termination to TestListener."
+      },
+      {
+        "text": "(Additional) Implement next test scenario with all requirements from task 1.",
+        "subItems": [
+          {
+            "text": "login to the Mail box"
+          },
+          {
+            "text": "verify that login is successful"
+          },
+          {
+            "text": "verify page layout header, footer"
+          },
+          {
+            "text": "create a new mail (fill in the fields: address, subject, body)"
+          },
+          {
+            "text": "save the mail as a draft"
+          },
+          {
+            "text": "verify that the mail is present in the ‘Drafts’ folder"
+          },
+          {
+            "text": "verify the draft content (address, subject and body)"
+          },
+          {
+            "text": "send the mail"
+          },
+          {
+            "text": "verify that the mail disappeared from the ‘Drafts’ folder"
+          },
+          {
+            "text": "verify that the mail is in the ‘Sent’ folder"
+          },
+          {
+            "text": "log off"
+          },
+          {
+            "text": "verify that user is not logged in"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "text": "https://www.seleniumhq.org/docs/03_webdriver.jsp"
+      },
+      {
+        "text": "http://www.assertselenium.com/automation-design-practices/page-object-pattern/"
+      },
+      {
+        "text": "https://xpinjection.com/articles/waits-and-timeouts-in-webdriver/"
+      },
+      {
+        "text": "https://www.testingexcellence.com/webdriver-explicit-implicit-fluent-wait/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/selenium-fluentwait/"
+      },
+      {
+        "text": "https://habr.com/post/325478/"
+      },
+      {
+        "text": "https://en.wikipedia.org/wiki/Composition_over_inheritance"
+      },
+      {
+        "text": "https://dzone.com/articles/composition-vs-inheritance"
+      },
+      {
+        "text": "https://www.guru99.com/keyboard-mouse-events-files-webdriver.html"
+      },
+      {
+        "text": "https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html"
+      },
+      {
+        "text": "http://tutorials.jenkov.com/java-concurrency/threadlocal.html"
+      },
+      {
+        "text": "http://www.testautomationguru.com/selenium-webdriver-design-patterns-in-test-automation-factory-pattern/"
+      },
+      {
+        "text": "http://www.testautomationguru.com/selenium-webdriver-how-to-design-page-objects-in-fluent-style/"
+      },
+      {
+        "text": "https://martinfowler.com/bliki/FluentInterface.html"
+      },
+      {
+        "text": "https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b577caf37e10c31b6bdd57c"
+    },
+    "key": "proxy",
+    "name": "Proxy",
+    "description": "Using proxy in TAF. Charles Proxy.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is a Proxy server and how does it work?"
+      },
+      {
+        "text": "What is HTTP Protocol?"
+      },
+      {
+        "text": "HTTP Request methods, Status codes, Request and Response message format?"
+      },
+      {
+        "text": "HTTP vs HTTPS? What is SSL and what are SSL certificates?"
+      },
+      {
+        "text": "What is Charles Proxy?"
+      },
+      {
+        "text": "Proxy Tool: Rewrite, No Caching, Map Remote."
+      },
+      {
+        "text": "Proxy configuration: External Proxies."
+      },
+      {
+        "text": "What is HAR file?"
+      },
+      {
+        "text": "What is BrowserMob Proxy?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is Proxy Server and how does it work."
+      },
+      {
+        "text": "Knowledge of HTTP/HTTPS protocol."
+      },
+      {
+        "text": "Knowledge what is Browser Mob Proxy."
+      },
+      {
+        "text": "Knowledge of Charles Proxy."
+      },
+      {
+        "text": "Understanding what is HAR file."
+      },
+      {
+        "text": "Understanding how to add Rewrite rule."
+      },
+      {
+        "text": "Ability to set up sniffing traffic HTTP/HTTPS traffic on mobile device."
+      },
+      {
+        "text": "Understanding how to configure external proxy."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Start BrowserMob Proxy server for Firefox WebDriver."
+      },
+      {
+        "text": "Open any url and collect session data to HAR file."
+      },
+      {
+        "text": "Add response body rewrite."
+      },
+      {
+        "text": "Add getRequests(String urlPattern) method that will return list of HarRequests by some pattern from Har object."
+      },
+      {
+        "text": "Configure mobile device to use Charles as a proxy. Setup HTTP/HTTPS traffic sniffing (use Charles SSL Certificate for HTTPS). Install certificate for Android, iOS 9, 10+ devices."
+      },
+      {
+        "text": "Add rewrite rule to Charles: add new header to all requests from device."
+      },
+      {
+        "text": "Configure External Proxy in Charles."
+      }
+    ],
+    "links": [
+      {
+        "text": "https://en.wikipedia.org/wiki/Proxy_server"
+      },
+      {
+        "text": "https://lifehacker.ru/proksi-servery/"
+      },
+      {
+        "text": "https://github.com/lightbody/browsermob-proxy"
+      },
+      {
+        "text": "http://internetka.in.ua/browsermobproxy-selenium-perfomance/"
+      },
+      {
+        "text": "https://www.swtestacademy.com/webdriver-browsermob-proxy/"
+      },
+      {
+        "text": "http://www.testingdiaries.com/browsermob-proxy-with-selenium/"
+      },
+      {
+        "text": "https://www.charlesproxy.com/"
+      },
+      {
+        "text": "https://www.facebot.org/charles-basics/"
+      },
+      {
+        "text": "https://habr.com/company/redmadrobot/blog/269109/"
+      },
+      {
+        "text": "https://inviqa.com/blog/manipulating-http-charles-proxy"
+      },
+      {
+        "text": "https://www.quora.com/What-is-a-proxy-server-and-how-does-it-work"
+      },
+      {
+        "text": "https://www.quora.com/What-is-SSL-and-what-are-SSL-certificates"
+      },
+      {
+        "text": "http://www.seleniumeasy.com/selenium-tutorials/browsermob-proxy-selenium-example"
+      },
+      {
+        "text": "https://www.charlesproxy.com/documentation/tools/"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b577d1137e10c31faee9caa"
+    },
+    "key": "appium",
+    "name": "Appium",
+    "description": "Mobile automation. Appium.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "Application types? What’s the difference (Native apps, Web apps, Hybrid apps)?"
+      },
+      {
+        "text": "What is Appium? How Appium works?"
+      },
+      {
+        "text": "Appium concepts, design, architecture? Appium advantages?"
+      },
+      {
+        "text": "Starting Appium Server from Command Line. Server flags."
+      },
+      {
+        "text": "Appium Desired Capabilities."
+      },
+      {
+        "text": "Finding elements for iOS and Android (Appium Inspector, UIAutomatorViewer, Appium-iOS-Inspector)."
+      },
+      {
+        "text": "Appium locator strategies."
+      },
+      {
+        "text": "Locator strategies for iOS 9.3(and below) and iOS 10+ (iOS UiAutomation, iOS Predicate String)."
+      },
+      {
+        "text": "Mobile actions: Gestures, mobile specific actions (reset, launch, notifications, lock, etc)."
+      },
+      {
+        "text": "What is Appium Java Client?"
+      },
+      {
+        "text": "What is xCode?"
+      },
+      {
+        "text": "Prerequisites for iOS Automation (xCode, xCode developer tools, device/simulator, WebDriver agent, dev profile)?"
+      },
+      {
+        "text": "What is WebDriver Agent and dev profile?"
+      },
+      {
+        "text": "Prerequisites for Android Automation (Android SDK, device/simulator)?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is Appium and how does it work?"
+      },
+      {
+        "text": "Knowledge how to start Appium server and basic CLI options."
+      },
+      {
+        "text": "Knowledge of basic Appium Desired Capabilities."
+      },
+      {
+        "text": "Understanding hot to find elements for iOS, Android apps."
+      },
+      {
+        "text": "Knowledge of Appium locator strategies and difference for iOS 9.3 (and below) and for iOS10+."
+      },
+      {
+        "text": "Knowledge of basic mobile actions."
+      },
+      {
+        "text": "Understanding what is Appium Java Client."
+      },
+      {
+        "text": "Knowledge of prerequisites for iOS, Android Automation with Appium"
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Set up environment for Android automation."
+      },
+      {
+        "text": "Execute an existing test for any Android App in repository (see https://github.com/appium/sample-code/tree/master/samplecode/examples/java/junit) and run it for real android device."
+      },
+      {
+        "text": "Create simple test for Android App."
+      },
+      {
+        "text": "Set up environment for iOS automation. Ask your mentor to provide info where you can find xCode and xCode developer tools."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://appium.io/"
+      },
+      {
+        "text": "https://habr.com/post/331224/"
+      },
+      {
+        "text": "http://toolsqa.com/mobile-automation/appium/appium-tutorial/"
+      },
+      {
+        "text": "https://www.swtestacademy.com/appium-tutorial/"
+      },
+      {
+        "text": "http://www.automationtestinghub.com/uiautomatorviewer-inspect-elements/"
+      },
+      {
+        "text": "https://seleniumbycharan.wordpress.com/2016/08/07/finding-elements-using-locators-in-appium/"
+      },
+      {
+        "text": "http://appium.io/docs/en/writing-running-appium/finding-elements/"
+      },
+      {
+        "text": "https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Appium+for+Mobile+Native+Application+Testing"
+      },
+      {
+        "text": "https://saucelabs.com/blog/advanced-locator-strategies"
+      },
+      {
+        "text": "https://saucelabs.com/resources/webinars/using-selenium-to-test-mobile-meet-appium"
+      },
+      {
+        "text": "https://www.dev2qa.com/appium-introduction-concepts-design-architecture/"
+      },
+      {
+        "text": "http://appium.io/docs/en/writing-running-appium/finding-elements/"
+      },
+      {
+        "text": "http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b577d6b37e10c322dc6cbc9"
+    },
+    "key": "ci",
+    "name": "Continuous Integration",
+    "description": "Automated testing in Continuous Integration.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is Continuous Integration(CI) and Continuous Deployment (CD)? Benefits of CI/CD."
+      },
+      {
+        "text": "What is Jenkins? Automated testing with Jenkins."
+      },
+      {
+        "text": "Jenkins plugins: Git plugin, Mailer plugin, Copy Artifact plugin."
+      },
+      {
+        "text": "What is Continuous delivery pipeline? What is Jenkins pipeline?"
+      },
+      {
+        "text": "How to schedule jobs in Jenkins? "
+      },
+      {
+        "text": "What are the ways in which build can be scheduled (build triggers)? (After other projects are build/ build periodically(cron)/ poll SCM/on-demand (manually))."
+      },
+      {
+        "text": "How to create a job in Jenkins?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Popular CI Tools?"
+      },
+      {
+        "text": "HTML Publisher plugin, AnsiColor plugin."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is CI/CD and it’s benefits."
+      },
+      {
+        "text": "Understanding what is Jenkins."
+      },
+      {
+        "text": "Understanding how to set up Jenkins job."
+      },
+      {
+        "text": "Knowledge different build triggers and how to set them."
+      },
+      {
+        "text": "Ability to set up email notifications for test results."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Install Jenkins on local machine."
+      },
+      {
+        "text": "Change Jenkins default port to 8888."
+      },
+      {
+        "text": "Create a job and configure to run tests from ‘WebDriver’ module. Use “test” goal for maven."
+      },
+      {
+        "text": "Configure different build triggers (vcs commit, 16-00 every day)."
+      },
+      {
+        "text": "Configure email notification about finished job."
+      }
+    ],
+    "links": [
+      {
+        "text": "https://en.wikipedia.org/wiki/Continuous_integration"
+      },
+      {
+        "text": "https://jenkins.io/doc/"
+      },
+      {
+        "text": "https://www.thoughtworks.com/continuous-integration"
+      },
+      {
+        "text": "https://martinfowler.com/articles/continuousIntegration.html"
+      },
+      {
+        "text": "http://www.vogella.com/tutorials/Jenkins/article.html"
+      },
+      {
+        "text": "http://www.cronmaker.com/"
+      },
+      {
+        "text": "https://www.360logica.com/blog/email-notification-in-jenkins/"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/jenkins/jenkins_notification.htm"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/jenkins/jenkins_overview.htm"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b577deb37e10c3272e271f1"
+    },
+    "key": "testingTheory",
+    "name": "Testing Theory",
+    "description": "Testing Theory",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "Automated testing benefits? Disadvantages of automated testing?"
+      },
+      {
+        "text": "How to decide what to automate and what not to automate?"
+      },
+      {
+        "text": "What is Test Case? How to write test cases?"
+      },
+      {
+        "text": "What is Test Script?"
+      },
+      {
+        "text": "Levels of testing?"
+      },
+      {
+        "text": "Types of testing?"
+      },
+      {
+        "text": "Testing techniques?"
+      },
+      {
+        "text": "What is Test Pyramid?"
+      },
+      {
+        "text": "What is Smoke Testing?"
+      },
+      {
+        "text": "What is Regression Testing?"
+      },
+      {
+        "text": "What is Performance Testing?"
+      },
+      {
+        "text": "What is Functional Testing?"
+      },
+      {
+        "text": "Test Automation Approaches?"
+      },
+      {
+        "text": "What is Keyword-Driven TA approach?"
+      },
+      {
+        "text": "What is Data-Driven TA approach?"
+      },
+      {
+        "text": "What is Behavior-Driven Testing?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "What is ROI?"
+      },
+      {
+        "text": "How to calculate ROI?"
+      },
+      {
+        "text": "What is Test Plan?"
+      },
+      {
+        "text": "What is Test Strategy?"
+      },
+      {
+        "text": "Testing Pyramid vs Ice-Cream Cones."
+      },
+      {
+        "text": "How to estimate test case? Estimation techniques."
+      },
+      {
+        "text": "Software development methodologies. Agile methodology."
+      },
+      {
+        "text": "Scrum vs KANBAN."
+      },
+      {
+        "text": "What is code review? Code review best practices."
+      },
+      {
+        "text": "Metrics: how to assess automated testing effectiveness?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding pros and cons of Automated testing and what (not) to automate."
+      },
+      {
+        "text": "Understanding how to write good test case."
+      },
+      {
+        "text": "Knowledge what is  test pyramid, levels of testing, types of testing, basic testing techniques."
+      },
+      {
+        "text": "Understanding Smoke and Regression testing and difference between them."
+      },
+      {
+        "text": "Understanding what is Functional, Performance testing."
+      },
+      {
+        "text": "Understanding of Test Automation Approaches."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create test cases for implemented scenarios in Modules ‘Framework’"
+      },
+      {
+        "text": "Create negative test cases for implemented scenarios in Modules ‘Framework’"
+      },
+      {
+        "text": "(Advanced) Create test plan"
+      },
+      {
+        "text": "(Advanced) Calculate ROI"
+      }
+    ],
+    "links": [
+      {
+        "text": "http://protesting.ru/"
+      },
+      {
+        "text": "http://alexeybulat.blogspot.com/2008/01/rup-project-process.html"
+      },
+      {
+        "text": "https://svyatoslav.biz/software_testing_book/"
+      },
+      {
+        "text": "http://www4.ncsu.edu/~tjmenzie/cs510/pdf/SWEBOKv3.pdf"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b577e6837e10c32b95a950e"
+    },
+    "key": "designPatterns",
+    "name": "Design Patterns",
+    "description": "Architecture principles and Design Patterns in TAF.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is SOLID principles?"
+      },
+      {
+        "text": "What is Single Responsibility principle?"
+      },
+      {
+        "text": "What is Open/Closed principle?"
+      },
+      {
+        "text": "What is Liskov Substitution principle?"
+      },
+      {
+        "text": "What is Interface segregation principle?"
+      },
+      {
+        "text": "What is Dependency inversion principle?"
+      },
+      {
+        "text": "What is Design pattern? Categories of Design patterns?"
+      },
+      {
+        "text": "What is Singleton design pattern? Double-cheched locking Singleton."
+      },
+      {
+        "text": "What is Abstract Factory Pattern?"
+      },
+      {
+        "text": "What is Factory Method Pattern? Static Factory Method."
+      },
+      {
+        "text": "What is Strategy Pattern?"
+      },
+      {
+        "text": "What is Decorator Pattern?"
+      },
+      {
+        "text": "What is Builder Pattern?"
+      },
+      {
+        "text": "What is Anti-Pattern?"
+      },
+      {
+        "text": "What is Refactoring?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding of SOLID principles."
+      },
+      {
+        "text": "Understanding of what is Design pattern."
+      },
+      {
+        "text": "Understanding of Singleton design pattern, double-checked locking Singleton."
+      },
+      {
+        "text": "Understanding of Abstract Factory, Factory method design pattern. Understanding difference between them."
+      },
+      {
+        "text": "Understanding of Strategy design pattern."
+      },
+      {
+        "text": "Understanding of Decorator design pattern."
+      },
+      {
+        "text": "Understanding of Builder Pattern."
+      },
+      {
+        "text": "Understanding what is Refactoring."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Implement following design patterns in your solution from ‘WebDriver’ module",
+        "subItems": [
+          {
+            "text": "double-checked-locking Singleton"
+          },
+          {
+            "text": "Abstract Factory/Factory method"
+          },
+          {
+            "text": "Builder"
+          },
+          {
+            "text": "Strategy"
+          }
+        ]
+      },
+      {
+        "text": "Revise your code to match SOLID principles. Fix list provide to mentor"
+      },
+      {
+        "text": "Implement any extra pattern or any other pattern except of the list above"
+      }
+    ],
+    "links": [
+      {
+        "text": "https://stackify.com/solid-design-principles/"
+      },
+      {
+        "text": "https://dzone.com/articles/the-solid-principles-in-real-life"
+      },
+      {
+        "text": "https://sourcemaking.com/design_patterns"
+      },
+      {
+        "text": "http://www.baeldung.com/java-singleton-double-checked-locking"
+      },
+      {
+        "text": "https://www.martinfowler.com/ieeeSoftware/patterns.pdf"
+      },
+      {
+        "text": "https://www.martinfowler.com/articles/writingPatterns.html"
+      },
+      {
+        "text": "https://refactoring.guru/ru/design-patterns/strategy"
+      },
+      {
+        "text": "https://habr.com/post/210288/"
+      },
+      {
+        "text": "https://www.oodesign.com/"
+      },
+      {
+        "text": "http://www.tutorialspoint.com/design_pattern/index.htm"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b58be9937e10c41dbd8387d"
+    },
+    "key": "framework",
+    "name": "Framework",
+    "description": "MQE Core Server, MQE Core Java, MQE Test Automation Framework basics. ",
+    "valuableInto": "NOTE: if you see (KT first) to some question - ask your mentor to make Knowledge Transfer (KT) first to make a short intro to assist you in self-learning the issue",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is Client-Server architecture? What is Servlet?"
+      },
+      {
+        "text": "What is Allure framework?"
+      },
+      {
+        "text": "What is marshalling/unmarshalling?"
+      },
+      {
+        "text": "What is Apache Commons library?"
+      },
+      {
+        "text": "Where are stored MQE frameworks? (KT first)"
+      },
+      {
+        "text": "How do mqe-core-server, mqe-core-java, TAF work together? (KT first)"
+      },
+      {
+        "text": "Framework layers: (KT first)",
+        "subItems": [
+          {
+            "text": "Configuration, tests run, data providers"
+          },
+          {
+            "text": "DSL: Services, Business Objects"
+          },
+          {
+            "text": "Page objects and tests, test data"
+          },
+          {
+            "text": "Reporting, Logging"
+          },
+          {
+            "text": "Utilities"
+          }
+        ]
+      },
+      {
+        "text": "What is ...Interact? …Interact class methods and where to find methods implementation. (KT first)"
+      },
+      {
+        "text": "Driver start: CapabilityFactory class and driver configuration. (KT first)"
+      },
+      {
+        "text": "Common framework utils, purpose and implementation: TestRun, Config, TestIDs, AppLib? (KT first)"
+      },
+      {
+        "text": "Proxy in framework: ProxyManager, Proxy(Log)Utils? (KT first)"
+      },
+      {
+        "text": "Where are locators for elements stored? Locator.class implementation. (KT first)"
+      },
+      {
+        "text": "Configuration parameters in TestNGSuiteConfig.xml. How to use from java code?"
+      },
+      {
+        "text": "Reporting: Allure framework. How is allure configured?  (KT first)"
+      },
+      {
+        "text": "Reporting: test annotations. What information can be found about a test in Allure report? (KT first)"
+      },
+      {
+        "text": "Reporting: what information is attached to tests (passed vs failed) in Allure report? (KT first)"
+      },
+      {
+        "text": "How is implemented rerun of failed tests? How are these tests showed in Allure report? (KT first)"
+      },
+      {
+        "text": "How to run test on Jenkins? How to configure Jenkins build? Where is Allure report link located in Jenkins build?  (KT first)"
+      },
+      {
+        "text": "How to run tests locally? Running tests via TestNG, Maven."
+      },
+      {
+        "text": "Which libraries are used in the framework for marshalling?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "What is stacktrace and how to use it?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Knowledge where are TAF, Core Server, Core located."
+      },
+      {
+        "text": "Understanding what is Core Server, Core and how TAF works with them."
+      },
+      {
+        "text": "Knowledge of release process for Core Server, Core and how to report a bug."
+      },
+      {
+        "text": "Understanding framework structure and common classes, used in all MQE frameworks."
+      },
+      {
+        "text": "Understanding what is Allure framework and how to use Allure report."
+      },
+      {
+        "text": "Understanding how is rerun implemented."
+      },
+      {
+        "text": "Understanding what is (un)marshalling and how is it used in framework."
+      },
+      {
+        "text": "Knowledge how to run tests locally and be ready to start implementing/updating/fixing tests."
+      },
+      {
+        "text": "Understanding what is MQE Lab and how to run tests in Lab."
+      },
+      {
+        "text": "Knowledge how to configure, run Jenkins job and analyze job results."
+      },
+      {
+        "text": "Knowledge who is Brandon Clark?"
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Start any test locally. Ask your mentor to assist with configuration for local run and chose test together."
+      },
+      {
+        "text": "Run this test with configured sniffing traffic to Charles. Use external proxy."
+      },
+      {
+        "text": "Run the same test in MQE Lab (on Jenkins). Analyze generated report."
+      },
+      {
+        "text": "Analyze report for failed test. Where to find stacktrace/screenshot/logs/app page source?"
+      },
+      {
+        "text": "Implement new test. Please ask your mentor to provide a scenario."
+      }
+    ],
+    "knowledgeTransfer": [
+      {
+        "text": "Where is the framework located. Link to the repo, credentials if needed."
+      },
+      {
+        "text": "What is Client-Server architecture? What is Servlet?"
+      },
+      {
+        "text": "What is Core Server (mqe-core-server)? What is Core (mqe-core-java)? How does TAF work with them?"
+      },
+      {
+        "text": "Release process of mqe-test-core, mqe-core-server. How are bugs reported?"
+      },
+      {
+        "text": "Framework layers:",
+        "subItems": [
+          {
+            "text": "Configuration, tests run, data providers"
+          },
+          {
+            "text": "DSL: Services, Business Objects"
+          },
+          {
+            "text": "Page objects and tests, test data"
+          },
+          {
+            "text": "Reporting, Logging"
+          },
+          {
+            "text": "Utilities"
+          }
+        ]
+      },
+      {
+        "text": "Short intro into common classes that are used in all MQE frameworks: CapabilityFactory,  listeners, proxy utils, AppLib, Config, TestIDs, TestRun, BaseTest."
+      },
+      {
+        "text": "Short intro into Locator class and locator jsons."
+      },
+      {
+        "text": "Intro to ...Interact classes. List of available Interacts (WebInteract, MobileInteract and etc.). Show where to find method implementation in mqe-core-server. Web(Mobile)Interact implementation features and waiters."
+      },
+      {
+        "text": "Where are located: driver start, configuration, termination. CapabilityFactory class intro."
+      },
+      {
+        "text": "Into into Allure configurations and how to use Allure report."
+      },
+      {
+        "text": "Rerunning failed tests, integration with Allure report."
+      },
+      {
+        "text": "Using marshalling/unmarshalling (xml, JSON) in the framework. Which libraries are used?"
+      },
+      {
+        "text": "What is reflection and how is it used in the framework?"
+      },
+      {
+        "text": "How is Apache Commons library used in the framework?"
+      },
+      {
+        "text": "What is MQE Lab? How to run tests in Lab?"
+      },
+      {
+        "text": "Link to Jenkins job. How to configure, run tests? How to find and analyze results."
+      },
+      {
+        "text": "Who is Brandon Clark?"
+      },
+      {
+        "text": "Provide a short simple scenario for implementation as a part of introduction to framework."
+      }
+    ],
+    "links": [
+      {
+        "text": "https://www.tutorialspoint.com/servlets/index.htm"
+      },
+      {
+        "text": "https://en.wikipedia.org/wiki/Decorator_pattern"
+      },
+      {
+        "text": "https://dzone.com/articles/introduction-to-jaxb-20"
+      },
+      {
+        "text": "https://www.swtestacademy.com/allure-testng/"
+      },
+      {
+        "text": "http://allure.qatools.ru/"
+      },
+      {
+        "text": "http://www.baeldung.com/jackson-object-mapper-tutorial"
+      },
+      {
+        "text": "http://tutorials.jenkov.com/java-json/jackson-objectmapper.html"
+      },
+      {
+        "text": "http://www.baeldung.com/jackson"
+      },
+      {
+        "text": "https://habr.com/company/naumen/blog/228279/"
+      },
+      {
+        "text": "https://dzone.com/articles/parsing-xml-using-dom-sax-and"
+      },
+      {
+        "text": "http://tutorials.jenkov.com/java-reflection/index.html"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b5afbe54ab79a662df0846b"
+    },
+    "key": "git",
+    "name": "Git",
+    "description": "Version Control System: Git.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is Version control?"
+      },
+      {
+        "text": "Benefits of version control system?"
+      },
+      {
+        "text": "Types of VCS?"
+      },
+      {
+        "text": "What is Git? Why is git popular?"
+      },
+      {
+        "text": "How to set up a repository?"
+      },
+      {
+        "text": "Git configuration – user name, user email?"
+      },
+      {
+        "text": "How to configure access to Git repo via SSH?"
+      },
+      {
+        "text": "Possible file states? Working directory/Staging area(Index)/Repository."
+      },
+      {
+        "text": "How to save changes?"
+      },
+      {
+        "text": "What is .gitignore file?"
+      },
+      {
+        "text": "Sync with remote repository (git pull, git fetch)."
+      },
+      {
+        "text": "Using branches."
+      },
+      {
+        "text": "What is Pull Request(PR)? Making a PR."
+      },
+      {
+        "text": "How to merge changes (git merge)?"
+      },
+      {
+        "text": "What is merge conflict? How to resolve merge it?"
+      },
+      {
+        "text": "Undoing changes in working directory, staging area."
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Git vs Svn?"
+      },
+      {
+        "text": "Popular git hosting systems(sites)? Github, bitbucket."
+      },
+      {
+        "text": "How to stash/unstash changes (git stash)?"
+      },
+      {
+        "text": "git pull vs git fetch."
+      },
+      {
+        "text": "Undoing changes (part 2): local commit, remote commit."
+      },
+      {
+        "text": "git cherry-pick "
+      },
+      {
+        "text": "Types of git reset?"
+      },
+      {
+        "text": "How to abort merge?"
+      },
+      {
+        "text": "Git rebase. Merge vs rebase."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Identify yourself ( set user name, user email via git config)"
+      },
+      {
+        "text": "Don’t forget to pull before push (will save you from unnecessary merges and your changes should be tested  with latest changes, that were made by teammates)"
+      },
+      {
+        "text": "Use command line to understand how git works"
+      },
+      {
+        "text": "Don’t commit temporary and system files (tests output, logs, target folder with binaries, IDE and system files like .idea, .DS_Store and others)"
+      },
+      {
+        "text": "Use branches and understand benefits of branching"
+      },
+      {
+        "text": "Decrease development overheads (short commits, often merging)"
+      },
+      {
+        "text": "Learn code review best practices"
+      },
+      {
+        "text": "Don’t use –f parameter for git push if you don’t understand what it is"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is Git and it’s benefits"
+      },
+      {
+        "text": "Understanding of Git workflow"
+      },
+      {
+        "text": "Understanding of changes states and workflow (Working directory/Staging area(Index)/Repository)"
+      },
+      {
+        "text": "Ability to work with Git via command line"
+      },
+      {
+        "text": "Ability to set up, clone a repo"
+      },
+      {
+        "text": "Ability to pull changes from remote repository"
+      },
+      {
+        "text": "Understanding and using .gitignore file"
+      },
+      {
+        "text": "Understanding and using branches"
+      },
+      {
+        "text": "Ability to create Pull Requests, merge branches, resolve conflicts"
+      },
+      {
+        "text": "Ability to undo local changes"
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create public repo on Github (create a new repo on the command line according with steps described on Github - repo with README.md file in ‘master’ branch)."
+      },
+      {
+        "text": "Configure your repo: set user name and user email."
+      },
+      {
+        "text": "Create branches with branch name ‘develop’, ‘test’ and push it to the remote repo."
+      },
+      {
+        "text": "Delete branch ‘test’ from local and remote repo."
+      },
+      {
+        "text": "Create .gitignore file in ‘master’ branch, add ignoring any folder, commit to local repo."
+      },
+      {
+        "text": "Create .gitignore file in ‘develop’ branch, add ignoring any file, commit to local repo."
+      },
+      {
+        "text": "Merge ‘develop’ branch to ‘master’ branch. Resolve conflict. Push to remote repo."
+      },
+      {
+        "text": "Delete .gitignore file from master branch. Don’t commit. Undo deleting."
+      },
+      {
+        "text": "Delete .gitignore file from master branch. Commit changes to local repo. Undo local commit."
+      },
+      {
+        "text": "Remove your local repo and clone it from Github."
+      },
+      {
+        "text": "Undo latest commit from local master branch, remove changes from working directory, update README.md file, push to remote master branch. Conflict should appear. Read git instructions (should present in terminal). What is –f parameter? Pull remote master branch to your local and push updated README.md file to remote repo again. No issues should appear."
+      }
+    ],
+    "links": [
+      {
+        "text": "https://www.atlassian.com/git/tutorials"
+      },
+      {
+        "text": "https://ru.wikipedia.org/wiki/Git"
+      },
+      {
+        "text": "https://git-scm.com/"
+      },
+      {
+        "text": "https://git-scm.com/book/en/v2"
+      },
+      {
+        "text": "https://git-scm.com/book/ru/v2"
+      },
+      {
+        "text": "https://tproger.ru/translations/most-common-git-screwupsquestions-and-solutions/"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b5afc194ab79a6664204048"
+    },
+    "key": "maven",
+    "name": "Maven",
+    "description": "What is Maven and how does it work? Maven in MQE Frameworks.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is Maven?"
+      },
+      {
+        "text": "How Maven works? Maven pros?"
+      },
+      {
+        "text": "Maven build lifecycles.  Default, clean, site lifecycle."
+      },
+      {
+        "text": "Default lifecycle phases sequence."
+      },
+      {
+        "text": "What is Maven dependency?"
+      },
+      {
+        "text": "What is Maven POM file? What information does POM contain?"
+      },
+      {
+        "text": "What is Maven Repository? Types of repositories?"
+      },
+      {
+        "text": "Maven Settings (settings.xml)."
+      },
+      {
+        "text": "How to manage Nexus Repository credentials via Maven Settings?"
+      },
+      {
+        "text": "What is Maven Plugin?"
+      },
+      {
+        "text": "What is purpose of compiler, surefire, checkstyle plugins?"
+      },
+      {
+        "text": "Surefire plugin configuration: how to run single test/group of tests?"
+      },
+      {
+        "text": "What id the default location for your local repository?"
+      },
+      {
+        "text": "What Is dependency exclusion? How to exclude dependency?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "What is Super POM and Effective POM?"
+      },
+      {
+        "text": "What does command make: mvn install? Mvn clean install?"
+      },
+      {
+        "text": "What is the difference between mvn deploy and mvn install?"
+      },
+      {
+        "text": "What is the sequence in which Maven searches for dependency libraries?"
+      },
+      {
+        "text": "What is SNAPSHOT in Maven? What is difference between Snapshot and Version?"
+      },
+      {
+        "text": "How do you reference a property defined in your pom.xml file?"
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is Maven and how it works."
+      },
+      {
+        "text": "Knowledge what are dependencies and dependency hierarchy."
+      },
+      {
+        "text": "Knowledge of 3 types of repositories (local, central, remote)."
+      },
+      {
+        "text": "Understanding how to configure access to remote repository (settings.xml)."
+      },
+      {
+        "text": "Understanding Maven lifecycle (what happens on each phase)."
+      },
+      {
+        "text": "Knowledge basic Maven plugins and it’s purpose (compiler/surefire/checkstyle plugins)."
+      },
+      {
+        "text": "Understanding what is local repository and how find it."
+      },
+      {
+        "text": "Knowledge how to exclude dependency."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a Maven project."
+      },
+      {
+        "text": "Add dependencies to POM file: TestNG, Selenium, Log4j. Use command line to load dependencies from Central Repository. Check if dependency is loaded to .m2 folder."
+      },
+      {
+        "text": "Create 2 simple tests."
+      },
+      {
+        "text": "Set target compile version."
+      },
+      {
+        "text": "Run single test with Maven Surefire plugin."
+      },
+      {
+        "text": "Run group of tests with Maven Surefire plugin."
+      },
+      {
+        "text": "Find list of TestNG dependencies (you can use Maven Central Repository or Dependency Hierarchy/Tree in your IDE)."
+      },
+      {
+        "text": "Exclude jcommander from TestNG dependency (\u003cexclusions\u003e tag). Check that  jcommander should present in Dependency Hierarchy any more."
+      },
+      {
+        "text": "Install JAR of your Maven project to your local repo. Check that dependency with your artifactId and groupId appeared in your local repository."
+      }
+    ],
+    "links": [
+      {
+        "text": "https://maven.apache.org/"
+      },
+      {
+        "text": "http://tutorials.jenkov.com/maven/maven-tutorial.html"
+      },
+      {
+        "text": "http://tutorials.jenkov.com/maven/maven-tutorial.html"
+      },
+      {
+        "text": "https://ru.wikipedia.org/wiki/Apache_Maven"
+      },
+      {
+        "text": "https://habr.com/post/77382/"
+      },
+      {
+        "text": "http://www.apache-maven.ru/"
+      },
+      {
+        "text": "https://www.jetbrains.com/help/idea/maven.html"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  },
+  {
+    "_id": {
+      "$oid": "5b5afc464ab79a668351d83b"
+    },
+    "key": "testng",
+    "name": "TestNG",
+    "description": "Using TestNG in MQE Frameworks.",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.epam.mentoringportal.model.Chapter"
+  }
+]
