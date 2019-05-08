@@ -1,4 +1,12 @@
 language: java
+
+sudo: required
+
+before_install:
+  - chmod +x gradlew
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t token
 notifications:
   email:
     - pavel_klindziuk@epam.com
