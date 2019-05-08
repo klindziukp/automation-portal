@@ -1,0 +1,4 @@
+language: java
+notifications:
+  email:
+    - pavel_klindziuk@epam.com
