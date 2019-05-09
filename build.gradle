@@ -5,6 +5,8 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'jacoco'
 
 group = 'com.dandelion'
 version = '0.0.3'
@@ -12,6 +14,27 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
+	jcenter()
+}
+
+task codeCoverageReport(type: JacocoReport) {
+	executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+	subprojects.each {
+		sourceSets it.sourceSets.main
+	}
+
+	reports {
+		xml.enabled true
+		xml.destination "${buildDir}/reports/jacoco/report.xml"
+		html.enabled false
+		csv.enabled false
+	}
+}
+
+codeCoverageReport.dependsOn {
+	subprojects*.test
 }
 
 dependencies {
