@@ -12,3 +12,4 @@ after_success:
 notifications:
   email:
     - pavel_klindziuk@epam.com
+    - alena_liamtsava@epam.com
