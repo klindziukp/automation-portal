@@ -1,13 +1,25 @@
+env:
+  global:
+    - CODECOV_TOKEN=:15648159-3a07-4733-a3ef-72374f94791d
+
 language: java
+
+jdk:
+  - oraclejdk8
+
+services:
+  - mongodb
 
 before_install:
   - chmod +x gradlew
 
 script:
   - ./gradlew clean build -i --continue
+  - ./gradlew check
+  - ./gradlew codeCoverageReport
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t token
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:

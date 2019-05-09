@@ -47,19 +47,21 @@ public class EmbeddedMongoService implements EmbeddedService {
     }
 
     public void dropCollection() {
-        try {
-            MongoClient mongoClient = new MongoClient(getNet().getServerAddress().getHostName(), getNet().getPort());
+            MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
             mongoClient.getDatabase(TestPropertyStorage.DATABASE_NAME).drop();
-        } catch (IOException ioEx) {
-            throw new RuntimeException(ioEx);
-        }
-
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
-        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION)
-                .net(getNet()).db(TestPropertyStorage.DATABASE_NAME).collection(this.collectionName).upsert(true)
-                .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
+        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
+                .version(Version.Main.PRODUCTION)
+                .net(getNet())
+                .db(TestPropertyStorage.DATABASE_NAME)
+                .collection(this.collectionName)
+                .upsert(true)
+                .dropCollection(false)
+                .jsonArray(true)
+                .importFile(jsonFile)
+                .build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);
     }
