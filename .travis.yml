@@ -1,9 +1,14 @@
 env:
   global:
     - CODECOV_TOKEN=:15648159-3a07-4733-a3ef-72374f94791d
+
 language: java
+
 jdk:
   - oraclejdk8
+
+services:
+  - mongodb
 
 before_install:
   - chmod +x gradlew

@@ -45,7 +45,6 @@ test {
 jacoco {
 	toolVersion = "0.8.3"
 	reportsDir = file("$buildDir/reports/jacoco")
-
 }
 
 task codeCoverageReport(type: JacocoReport) {
