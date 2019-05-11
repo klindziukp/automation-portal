@@ -1,4 +1,4 @@
-package com.dandelion.automationportal.support;
+package com.dandelion.automationportal.support.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

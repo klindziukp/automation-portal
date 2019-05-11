@@ -18,6 +18,14 @@
     padding-left: .6rem;
 }
 
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.navbar-nav li:hover .dropdown-menu {
+        display: block;
+    }
+
 .dropdown-toggle::after {
     display:none;
 }

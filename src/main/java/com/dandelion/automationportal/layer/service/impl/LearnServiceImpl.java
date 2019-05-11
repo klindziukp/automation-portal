@@ -7,7 +7,7 @@ import com.dandelion.automationportal.layer.repository.mongo.QuestionsMongoRepos
 import com.dandelion.automationportal.layer.service.LearnService;
 import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
-import com.dandelion.automationportal.support.StringUtil;
+import com.dandelion.automationportal.support.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
