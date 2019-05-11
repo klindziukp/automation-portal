@@ -14,7 +14,7 @@ import java.util.Objects;
 @Service
 public class ProgramServiceImpl implements ProgramService {
 
-    private static final String DEFAULT_PROGRAM_NAME = "All";
+    private static final String DEFAULT_PROGRAM_NAME = "Automation";
 
     private ChaptersRepository chaptersRepository;
     private ProgramRepository programRepository;

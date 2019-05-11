@@ -15,7 +15,6 @@ public class Chapter {
 
 	@Id
 	private String id;
-	@Indexed(unique = true)
 	private String key;
 	private String name;
 	private String description;
