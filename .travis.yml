@@ -1,6 +1,6 @@
 env:
   global:
-    - CODECOV_TOKEN=:15648159-3a07-4733-a3ef-72374f94791d
+    - CODECOV_TOKEN=15648159-3a07-4733-a3ef-72374f94791d
 
 language: java
 
@@ -17,7 +17,7 @@ script:
 - ./gradlew build -i --continue
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t 15648159-3a07-4733-a3ef-72374f94791d
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
