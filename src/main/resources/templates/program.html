@@ -23,7 +23,7 @@
 		<div th:replace="fragments/header :: header"></div>
 	</div>
 	<div class="bg-content">
-		<h4 class="centered-title ml3">AUTOMATION TOPICS</h4>
+		<h4 class="centered-title ml3">TEST AUTOMATION</h4>
 		<div class="content">
 
 			<div class="row justify-content-center">
@@ -37,7 +37,7 @@
 							</div>
 							<div class="card-body">
 								<p th:text="${chapter.description}"
-									class="card-text text-block">Some default description.</p>
+									class="card-text text-block bold-font">Some default description.</p>
 								<div class="card-buttons ">
 									<a th:href="@{/chapter/} + ${chapter.key}" href="#" class="btn button-primary">Materials</a>
 									<a th:href="@{/self-check/} + ${chapter.key}" href="#" class="btn button-primary">Self check</a>
