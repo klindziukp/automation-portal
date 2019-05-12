@@ -50,7 +50,6 @@ class ProgramServiceTest extends BaseServiceTest {
 
         WHEN();
         List<Program> actualPrograms = programService.findAllPrograms();
-        System.out.println(actualPrograms);
 
         THEN();
         assertThat(expectedPrograms).usingElementComparatorIgnoringFields("id").isEqualTo(actualPrograms);
