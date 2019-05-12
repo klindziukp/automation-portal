@@ -1,6 +1,6 @@
 env:
   global:
-    - CODECOV_TOKEN=:15648159-3a07-4733-a3ef-72374f94791d
+    - CODECOV_TOKEN=15648159-3a07-4733-a3ef-72374f94791d
 
 language: java
 
@@ -14,9 +14,7 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew clean build -i --continue
-  - ./gradlew check
-  - ./gradlew codeCoverageReport
+- ./gradlew build -i --continue
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
