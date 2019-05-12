@@ -1,1 +1,1 @@
-[{"_id":{"$oid":"5b5de1ae2b7455bb82c5d3ad"},"name":"Newcomers Full","sequence":["git","maven","testng","webDriver","proxy","appium","framework","ci","testingTheory","designPatterns"]}]
+[{"_id":{"$oid":"5b5de1ae2b7455bb82c5d3ad"},"name":"Automation","sequence":["unit","api","web","mobile","connected"]}]

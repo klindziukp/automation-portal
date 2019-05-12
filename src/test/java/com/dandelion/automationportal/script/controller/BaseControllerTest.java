@@ -1,19 +1,11 @@
-package com.dandelion.automationportal.script.repository;
+package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ExtendWith(SpringExtension.class)
-@DataMongoTest
-@ActiveProfiles("test")
-public class BaseMongoRepositoryTest {
-
+public class BaseControllerTest {
     private static EmbeddedService embeddedService;
 
     static void initEmbeddedService(String jsonCollectionName){
@@ -21,12 +13,12 @@ public class BaseMongoRepositoryTest {
     }
 
     @BeforeEach
-   protected void setUp() {
+    protected void setUp() {
         embeddedService.fillCollection();
     }
 
     @AfterEach
-   protected void tearDown() {
+    protected void tearDown() {
         embeddedService.dropCollection();
     }
 }
