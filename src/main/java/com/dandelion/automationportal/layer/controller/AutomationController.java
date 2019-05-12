@@ -2,7 +2,7 @@ package com.dandelion.automationportal.layer.controller;
 
 import com.dandelion.automationportal.layer.service.ProgramService;
 import com.dandelion.automationportal.model.Program;
-import com.dandelion.automationportal.support.Automation;
+import com.dandelion.automationportal.support.AutomationType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +20,7 @@ public class AutomationController {
     }
 
     @RequestMapping("/automation")
-    public ModelAndView program() {
+    public ModelAndView automation() {
         ModelAndView modelAndView = new ModelAndView();
         Program program = programService.getDefaultProgram();
         modelAndView.addObject("program", program);
@@ -31,7 +31,7 @@ public class AutomationController {
     @RequestMapping("/automation/{automationKey}")
     public ModelAndView automation(@PathVariable("automationKey") String automationKey) {
         ModelAndView modelAndView = new ModelAndView();
-        String programName = Automation.getAutomationNameByKey(automationKey);
+        String programName = AutomationType.getAutomationNameByKey(automationKey);
         Program program = programService.findProgramByName(programName);
         modelAndView.addObject("program", program);
         modelAndView.addObject("pageName", programName);
