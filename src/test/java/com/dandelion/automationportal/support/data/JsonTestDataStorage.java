@@ -6,7 +6,7 @@ import com.dandelion.automationportal.model.Mentorship;
 import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
 import com.dandelion.automationportal.model.user.User;
-import com.dandelion.automationportal.support.JsonUtil;
+import com.dandelion.automationportal.support.util.JsonUtil;
 
 import java.io.File;
 import java.util.List;

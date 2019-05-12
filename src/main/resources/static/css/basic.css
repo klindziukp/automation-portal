@@ -82,6 +82,11 @@
     color: #2197ba;
 }
 
+.footer-text-padding {
+padding-top: 2.5rem!important;
+    padding-bottom: 2.5rem!important;
+}
+
 .centered-regular-font {
 	font-weight: 400;
 	text-align: center;

@@ -1,4 +1,4 @@
-package com.dandelion.automationportal.support;
+package com.dandelion.automationportal.support.util;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -18,6 +18,14 @@
     padding-left: .6rem;
 }
 
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.navbar-nav li:hover .dropdown-menu {
+        display: block;
+}
+
 .dropdown-toggle::after {
     display:none;
 }
@@ -64,8 +72,4 @@ a.bg-sea-wave:focus, a.bg-sea-wave:hover, button.bg-sea-wave:focus,
 .navbar {
 	padding: .2rem 1rem;
 	border-radius: 4px;
-}
-
-.logout-icon {
-	margin-left: 0.6rem;
 }
