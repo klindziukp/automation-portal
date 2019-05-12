@@ -18,7 +18,7 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(value = AutomationController.class, secure = false)
 @AutoConfigureDataMongo
-@ActiveProfiles("test")
+@ActiveProfiles("testcontroller")
 @ComponentScan("com.dandelion.automationportal")
 public class AutomationControllerTest extends BaseControllerTest {
 
