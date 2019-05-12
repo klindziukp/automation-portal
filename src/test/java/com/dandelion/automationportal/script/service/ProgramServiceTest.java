@@ -14,6 +14,7 @@ import static com.dandelion.automationportal.support.Step.GIVEN;
 import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
+
 @ComponentScan("com.dandelion.automationportal")
 class ProgramServiceTest extends BaseServiceTest {
 
