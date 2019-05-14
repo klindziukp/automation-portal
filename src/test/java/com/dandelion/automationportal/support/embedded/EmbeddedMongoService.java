@@ -34,43 +34,36 @@ public class EmbeddedMongoService implements EmbeddedService {
     }
 
     public void fillCollection() {
+        MongodExecutable mongoExecutable = null;
         try {
-            MongodExecutable mongoExecutable = getMongoExecutable();
+            mongoExecutable = getMongoExecutable();
             String jsonFilePath = new File(JsonTestDataStorage.JSON_FOLDER_PATH + jsonName).getAbsolutePath();
             MongoImportExecutable mongoImportExecutable = mongoImportExecutable(jsonFilePath);
             MongoImportProcess mongoImportProcess = mongoImportExecutable.start();
             mongoImportProcess.stop();
             mongoExecutable.stop();
         } catch (IOException ioEx) {
-            throw new RuntimeException(ioEx);
+            if (mongoExecutable != null) {
+                mongoExecutable.stop();
+            }
         }
     }
 
     public void dropCollection() {
-            MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
-            mongoClient.getDatabase(TestPropertyStorage.DATABASE_NAME).drop();
+        MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
+        mongoClient.getDatabase(TestPropertyStorage.DATABASE_NAME).drop();
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
-        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
-                .version(Version.Main.PRODUCTION)
-                .net(getNet())
-                .db(TestPropertyStorage.DATABASE_NAME)
-                .collection(this.collectionName)
-                .upsert(true)
-                .dropCollection(false)
-                .jsonArray(true)
-                .importFile(jsonFile)
-                .build();
+        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION).net(
+                getNet()).db(TestPropertyStorage.DATABASE_NAME).collection(this.collectionName).upsert(true)
+                .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);
     }
 
     private MongodExecutable getMongoExecutable() throws IOException {
-        IMongodConfig mongodConfig = new MongodConfigBuilder()
-                .version(Version.Main.PRODUCTION)
-                .net(getNet())
-                .build();
+        IMongodConfig mongodConfig = new MongodConfigBuilder().version(Version.Main.PRODUCTION).net(getNet()).build();
         IRuntimeConfig runtimeConfig = new RuntimeConfigBuilder().defaults(Command.MongoD).build();
         return MongodStarter.getInstance(runtimeConfig).prepare(mongodConfig);
     }

@@ -10,10 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
-@AutoConfigureDataMongo
-@ActiveProfiles("test")
+
 public class BaseControllerTest {
     private static EmbeddedService embeddedService;
 
