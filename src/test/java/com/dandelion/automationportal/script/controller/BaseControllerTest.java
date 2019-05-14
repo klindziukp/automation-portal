@@ -12,10 +12,12 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest
 @ActiveProfiles("test")
+@SpringBootTest
+
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class BaseControllerTest {
+
     private static EmbeddedService embeddedService;
 
     static void initEmbeddedService(String jsonCollectionName){
