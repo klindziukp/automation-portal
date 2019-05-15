@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.support.embedded;
 
-import com.dandelion.automationportal.script.service.TestEntity;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.mongodb.MongoClient;
 import de.flapdoodle.embed.mongo.Command;

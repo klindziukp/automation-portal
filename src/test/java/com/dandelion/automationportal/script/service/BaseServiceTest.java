@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.script.service;
 
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.TestPropertyService;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
@@ -19,8 +20,7 @@ public class BaseServiceTest {
 
     static void initEmbeddedService(String jsonCollectionName) {
         TestPropertyService testPropertyService = new TestPropertyService("application-test");
-        TestEntity testEntity = new TestEntity(testPropertyService.getDatabasePort(),
-                testPropertyService.getDatabaseName());
+        TestEntity testEntity = new TestEntity(testPropertyService);
         embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
     }
 

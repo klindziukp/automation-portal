@@ -32,7 +32,6 @@ public class ProgramServiceImpl implements ProgramService {
 
     @Override
     public Program findProgramByName(String programName) {
-        System.out.println(programRepository.findAll());
         Program program = Objects.requireNonNull(programRepository.findByName(programName));
         program.setChapters(chaptersRepository.findAll());
         return program;
