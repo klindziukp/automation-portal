@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.support.embedded;
 
-import com.dandelion.automationportal.support.TestPropertyStorage;
+import com.dandelion.automationportal.script.service.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.mongodb.MongoClient;
 import de.flapdoodle.embed.mongo.Command;
@@ -27,10 +27,12 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     private String collectionName;
     private String jsonName;
+    private TestEntity testEntity;
 
-    public EmbeddedMongoService(String jsonCollectionName) {
+    public EmbeddedMongoService(String jsonCollectionName, TestEntity testEntity) {
         this.collectionName = jsonCollectionName;
         this.jsonName = jsonCollectionName + ".json";
+        this.testEntity = testEntity;
     }
 
     public void fillCollection() {
@@ -51,12 +53,12 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     public void dropCollection() {
         MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
-        mongoClient.getDatabase(TestPropertyStorage.DATABASE_NAME).drop();
+        mongoClient.getDatabase(testEntity.getGetDataBaseName()).drop();
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
         IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION).net(
-                getNet()).db(TestPropertyStorage.DATABASE_NAME).collection(this.collectionName).upsert(true)
+                getNet()).db(testEntity.getGetDataBaseName()).collection(this.collectionName).upsert(true)
                 .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);
@@ -70,7 +72,7 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     private Net getNet() {
         try {
-            return new Net(TestPropertyStorage.DATABASE_CONNECTION_PORT, Network.localhostIsIPv6());
+            return new Net(testEntity.getDataBasePort(), Network.localhostIsIPv6());
         } catch (UnknownHostException uhEx) {
             uhEx.printStackTrace();
             throw new RuntimeException(uhEx);

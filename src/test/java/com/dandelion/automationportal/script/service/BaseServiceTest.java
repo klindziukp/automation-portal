@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.script.service;
 
+import com.dandelion.automationportal.support.TestPropertyService;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;
@@ -11,14 +12,17 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@DataMongoTest
+@SpringBootTest
 @ActiveProfiles("test")
 public class BaseServiceTest {
 
     private static EmbeddedService embeddedService;
 
-    static void initEmbeddedService(String jsonCollectionName){
-        embeddedService = new EmbeddedMongoService(jsonCollectionName);
+    static void initEmbeddedService(String jsonCollectionName) {
+        TestPropertyService testPropertyService = new TestPropertyService("application-test");
+        TestEntity testEntity = new TestEntity(testPropertyService.getDatabasePort(),
+                testPropertyService.getDatabaseName());
+        embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
     }
 
     @BeforeEach

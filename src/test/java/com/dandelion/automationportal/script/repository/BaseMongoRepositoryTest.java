@@ -1,5 +1,7 @@
 package com.dandelion.automationportal.script.repository;
 
+import com.dandelion.automationportal.script.service.TestEntity;
+import com.dandelion.automationportal.support.TestPropertyService;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;
@@ -16,17 +18,20 @@ public class BaseMongoRepositoryTest {
 
     private static EmbeddedService embeddedService;
 
-    static void initEmbeddedService(String jsonCollectionName){
-        embeddedService = new EmbeddedMongoService(jsonCollectionName);
+    static void initEmbeddedService(String jsonCollectionName) {
+        TestPropertyService testPropertyService = new TestPropertyService("application-test");
+        TestEntity testEntity = new TestEntity(testPropertyService.getDatabasePort(),
+                testPropertyService.getDatabaseName());
+        embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
     }
 
     @BeforeEach
-   protected void setUp() {
+    protected void setUp() {
         embeddedService.fillCollection();
     }
 
     @AfterEach
-   protected void tearDown() {
+    protected void tearDown() {
         embeddedService.dropCollection();
     }
 }
