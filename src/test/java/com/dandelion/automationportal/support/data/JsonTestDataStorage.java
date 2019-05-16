@@ -2,7 +2,6 @@ package com.dandelion.automationportal.support.data;
 
 import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.HowToCategory;
-import com.dandelion.automationportal.model.Mentorship;
 import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
 import com.dandelion.automationportal.model.VocabularyItem;
@@ -30,10 +29,6 @@ public final class JsonTestDataStorage {
 
 	public static List<User> getUsers() {
 		return getListOfItems("users.json", User.class);
-	}
-
-	public static List<Mentorship> getMentorships() {
-		return getListOfItems("mentorships.json", Mentorship.class);
 	}
 
 	public static List<Program> getPrograms() {

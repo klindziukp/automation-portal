@@ -45,6 +45,8 @@ test {
 }
 
 jacocoTestReport {
+    violationRules { rule { excludes = ['com.dandelion.automationportal.model.*', 'com.dandelion.automationportal.support.*'] } }
+    
     reports {
         xml.enabled true
         html.enabled true
