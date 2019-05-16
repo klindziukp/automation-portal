@@ -23,24 +23,20 @@ public final class JsonTestDataStorage {
 		return getListOfItems("chapters.json", Chapter.class);
 	}
 
-	public static List<HowToCategory> getHowToCategories() {
-		return getListOfItems("howTo.json", HowToCategory.class);
+	public static List<Program> getPrograms() {
+		return getListOfItems("program.json", Program.class);
+	}
+
+	public static List<SelfCheckQuestion> getSelfCheckQuestions() {
+		return getListOfItems("questions.json", SelfCheckQuestion.class);
 	}
 
 	public static List<User> getUsers() {
 		return getListOfItems("users.json", User.class);
 	}
 
-	public static List<Program> getPrograms() {
-		return getListOfItems("program.json", Program.class);
-	}
-
 	public static List<VocabularyItem> getVocabularyItems() {
 		return getListOfItems("vocabulary.json", VocabularyItem.class);
-	}
-
-	public static List<SelfCheckQuestion> getSelfCheckQuestions() {
-		return getListOfItems("questions.json", SelfCheckQuestion.class);
 	}
 
 	private static <T> List<T> getListOfItems(String jsonCollectionName, Class<T> classOfT) {
