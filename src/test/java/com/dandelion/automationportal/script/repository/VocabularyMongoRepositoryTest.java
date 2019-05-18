@@ -2,6 +2,7 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.VocabularyMongoRepository;
 import com.dandelion.automationportal.model.VocabularyItem;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
@@ -21,25 +22,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 class VocabularyMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private VocabularyMongoRepository vocabularyMongoRepository;
+    private TestEntity testEntity;
 
     @Autowired
-    public VocabularyMongoRepositoryTest(VocabularyMongoRepository vocabularyMongoRepository) {
+    public VocabularyMongoRepositoryTest(VocabularyMongoRepository vocabularyMongoRepository, TestEntity testEntity) {
         this.vocabularyMongoRepository = vocabularyMongoRepository;
+        this.testEntity = testEntity;
     }
 
     @BeforeAll
-    static void initEmbeddedService(){
-        initEmbeddedService("vocabulary");
+    void initEmbeddedService() {
+        initEmbeddedService("vocabulary", testEntity);
     }
 
     @Test()
     void findSortedVocabularyItemsTest() {
 
         GIVEN();
-        List<VocabularyItem> expected = JsonTestDataStorage.getVocabularyItems()
-                .stream()
-                .sorted(Comparator.naturalOrder())
-                .collect(Collectors.toList());
+        List<VocabularyItem> expected = JsonTestDataStorage.getVocabularyItems().stream().sorted(
+                Comparator.naturalOrder()).collect(Collectors.toList());
 
         WHEN();
         List<VocabularyItem> actual = vocabularyMongoRepository.findAllByOrderByKeyAsc();

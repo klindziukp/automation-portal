@@ -2,6 +2,7 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.ProgramMongoRepository;
 import com.dandelion.automationportal.model.Program;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
@@ -18,15 +19,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ProgramMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private ProgramMongoRepository programMongoRepository;
+    private TestEntity testEntity;
 
     @Autowired
-    public ProgramMongoRepositoryTest(ProgramMongoRepository programMongoRepository) {
+    public ProgramMongoRepositoryTest(ProgramMongoRepository programMongoRepository, TestEntity testEntity) {
         this.programMongoRepository = programMongoRepository;
+        this.testEntity = testEntity;
     }
 
     @BeforeAll
-    static void initEmbeddedService(){
-        initEmbeddedService("program");
+    void initEmbeddedService() {
+        initEmbeddedService("program", testEntity);
     }
 
     @Test()

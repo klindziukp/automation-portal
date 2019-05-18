@@ -2,6 +2,7 @@ package com.dandelion.automationportal.script.service;
 
 import com.dandelion.automationportal.layer.service.VocabularyService;
 import com.dandelion.automationportal.model.VocabularyItem;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,15 +20,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class VocabularyServiceTest extends BaseServiceTest {
 
     private VocabularyService vocabularyService;
+    private TestEntity testEntity;
 
     @Autowired
-    public VocabularyServiceTest(VocabularyService vocabularyService) {
-        this.vocabularyService = vocabularyService;
+    public VocabularyServiceTest(VocabularyService vocabularyService, TestEntity testEntity) {
+           this.vocabularyService = vocabularyService;
+           this.testEntity = testEntity;
     }
 
     @BeforeAll
-    static void initEmbeddedService() {
-        initEmbeddedService("vocabulary");
+    void initEmbeddedService() {
+        initEmbeddedService(testEntity, "vocabulary");
     }
 
     @Test()

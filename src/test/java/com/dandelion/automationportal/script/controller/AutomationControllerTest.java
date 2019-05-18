@@ -1,6 +1,7 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.AutomationController;
+import com.dandelion.automationportal.support.TestEntity;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,15 +14,17 @@ import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 public class AutomationControllerTest extends BaseControllerTest {
 
     private AutomationController automationController;
+    private TestEntity testEntity;
 
     @Autowired
-    public AutomationControllerTest(AutomationController automationController) {
+    public AutomationControllerTest(AutomationController automationController, TestEntity testEntity) {
         this.automationController = automationController;
+        this.testEntity = testEntity;
     }
 
     @BeforeAll
-    static void initEmbeddedService() {
-        initEmbeddedService("program");
+    void initEmbeddedService() {
+        initEmbeddedService(testEntity, "program");
     }
 
     @Test()

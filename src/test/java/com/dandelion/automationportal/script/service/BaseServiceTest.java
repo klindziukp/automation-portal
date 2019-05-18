@@ -6,33 +6,37 @@ import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @DataMongoTest
 @ActiveProfiles("test")
 @ComponentScan("com.dandelion.automationportal")
+@TestPropertySource("classpath:application-test.properties")
+@TestInstance(Lifecycle.PER_CLASS)
 public class BaseServiceTest {
 
     private static EmbeddedService embeddedService;
 
-    static void initEmbeddedService(String jsonCollectionName) {
-        TestPropertyService testPropertyService = new TestPropertyService("application-test");
-        TestEntity testEntity = new TestEntity(testPropertyService);
+    static void initEmbeddedService(TestEntity testEntity, String jsonCollectionName) {
         embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
     }
 
     @BeforeEach
-   protected void setUp() {
+    protected void setUp() {
         embeddedService.fillCollection();
     }
 
     @AfterEach
-   protected void tearDown() {
+    protected void tearDown() {
         embeddedService.dropCollection();
     }
 }
