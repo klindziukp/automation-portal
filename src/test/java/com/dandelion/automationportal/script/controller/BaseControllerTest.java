@@ -38,8 +38,8 @@ public class BaseControllerTest {
 
     @BeforeEach
     protected void setUp() {
-        setBaseUriAndPort();
         embeddedService.fillCollection();
+        setBaseUriAndPort();
     }
 
     @AfterEach

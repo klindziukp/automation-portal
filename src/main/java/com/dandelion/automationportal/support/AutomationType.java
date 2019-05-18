@@ -25,7 +25,8 @@ public enum AutomationType {
               .filter(automationType -> automationType.key.equals(key))
               .map(automationType -> automationType.name)
               .findAny()
-              .orElseThrow(() ->new RuntimeException(String.format("Unable to get automation with key : '%s'", key)));
+              .orElseThrow(
+                      () -> new RuntimeException(String.format("Unable to get automation with key : '%s'", key)));
 
     }
 

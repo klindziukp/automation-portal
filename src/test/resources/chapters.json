@@ -505,7 +505,7 @@
   ],
   "_class": "com.dandelion.mentoringportal.model.Chapter"
 },
-  {
+{
     "_id": {
       "$oid": "5b577d6b37e10c322dc6cbc9"
     },
@@ -2560,7 +2560,7 @@
   ],
   "_class": "com.dandelion.automationportal.model.Chapter"
 },
-  {
+{
     "_id": {
       "$oid": "5cd6c31118c03e0eaa224498"
     },
@@ -3627,5 +3627,1607 @@
     }
   ],
   "_class": "com.dandelion.automationportal.model.Chapter"
-}
+},
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-general",
+    "name": "Api testing general info",
+    "parent": "api",
+    "description": "Api testing general info",
+    "generalInfo": "Api testing general info",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-web-services",
+    "name": "Web services info",
+    "parent": "api",
+    "description": "Web services info",
+    "generalInfo": "Web services info",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-graphql",
+    "name": "Api graph ql",
+    "parent": "api",
+    "description": "Web services info",
+    "generalInfo": "Web services info",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-contract",
+    "name": "Api Contract testing",
+    "parent": "api",
+    "description": "Api Contract testing",
+    "generalInfo": "Api Contract testing",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-microservices",
+    "name": "Api Microservices testing",
+    "parent": "api",
+    "description": "Api Microservices testing",
+    "generalInfo": "Api Contract testing",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "api-http",
+    "name": "HTTP protocol",
+    "parent": "api",
+    "description": "HTTP protocol",
+    "generalInfo": "HTTP protocol",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "web-general",
+    "name": "Web testing general information",
+    "parent": "web",
+    "description": "Web testing general information",
+    "generalInfo": "Web testing general information",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "mobile-general",
+    "name": "Mobile testing general information",
+    "parent": "mobile",
+    "description": "Mobile testing general information",
+    "generalInfo": "Mobile testing general information",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  },
+{
+    "_id": {
+      "$oid": "5cd6ea2718c03e0eaa22449d"
+    },
+    "key": "connected-general",
+    "name": "Connected Tv testing general information",
+    "parent": "connected",
+    "description": "Connected Tv testing general information",
+    "generalInfo": "Connected Tv testing general information",
+    "approxTimeHours": 1,
+    "questions": [
+      {
+        "text": "What is TestNG? How does it works."
+      },
+      {
+        "text": "What is testing.xml file used for?"
+      },
+      {
+        "text": "What are the annotations available in TestNG?"
+      },
+      {
+        "text": "What is the difference between Hard and Soft Assertions?"
+      },
+      {
+        "text": "How to parameterize test?"
+      },
+      {
+        "text": "What is DataProvider?"
+      },
+      {
+        "text": "What is TestNG Factory? What is the difference from DataProvider?"
+      },
+      {
+        "text": "What are TestNG Listeners and how can you use them (ISuiteListener, ITestListener, IMethodInterceptor)?"
+      },
+      {
+        "text": "How does IAnnorationTransformer listener can be used?"
+      },
+      {
+        "text": "How to rerun failed test (IRetryAnalyzer)?"
+      },
+      {
+        "text": "What is Dependent Test? When tests dependency can be used?"
+      },
+      {
+        "text": "How to configure dependent test on other method/test group?"
+      },
+      {
+        "text": "What is test priority? How to set up test priority?"
+      },
+      {
+        "text": "How to run tests in parallel?"
+      },
+      {
+        "text": "How to disable a test?"
+      },
+      {
+        "text": "How to skip a test?"
+      },
+      {
+        "text": "How to run tests programmatically?"
+      }
+    ],
+    "selfStudyQuestions": [
+      {
+        "text": "Testng vs Junit 5."
+      }
+    ],
+    "acceptanceCriteria": [
+      {
+        "text": "Understanding what is TestNG."
+      },
+      {
+        "text": "Knowledge of TestNG annotations."
+      },
+      {
+        "text": "Ability to configure test groups, tests dependency."
+      },
+      {
+        "text": "Understanding of difference between Soft and Hard Asserts."
+      },
+      {
+        "text": "Understanding of Factory and DataProvider, difference between them."
+      },
+      {
+        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
+      },
+      {
+        "text": "Knowledge how to run tests in parallel."
+      },
+      {
+        "text": "Knowledge how to run TestNG programmatically."
+      },
+      {
+        "text": "Knowledge what is IRetryAnalyzer."
+      }
+    ],
+    "tasks": [
+      {
+        "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
+      },
+      {
+        "text": "Create a new test class with test method. Integrate TestNG Factory to this test."
+      },
+      {
+        "text": "Create a new test with 2 independent test methods, then add the same group to both tests. Run both tests by group."
+      },
+      {
+        "text": "Create a new test with parameters from testng.xml file."
+      },
+      {
+        "text": "Add listeners: TestListener, SuiteListener and AnnotationTransformer (use separate class for each listener)."
+      },
+      {
+        "text": "Add logging that suite started (SuiteListener). Use Log4j for logging."
+      },
+      {
+        "text": "Add logging that test started and finished in format: class name + test name + “started/finished”. Class and test names should be dynamic, don’t hardcode (TestListener)."
+      },
+      {
+        "text": "Add logging list of annotations used for test method (AnnotationTransformer)."
+      },
+      {
+        "text": "Create your custom annotation, mark any 2 tests with this annotation."
+      },
+      {
+        "text": "Disable tests that are marked with your custom annotation (TestAnnotationTransformer)."
+      },
+      {
+        "text": "At the suite finish add logging duration in milliseconds for each test method."
+      }
+    ],
+    "links": [
+      {
+        "text": "http://testng.org/doc/documentation-main.html"
+      },
+      {
+        "text": "https://www.tutorialspoint.com/testng/index.htm"
+      },
+      {
+        "text": "https://www.guru99.com/all-about-testng-and-selenium.html"
+      },
+      {
+        "text": "https://www.guru99.com/listeners-selenium-webdriver.html"
+      },
+      {
+        "text": "https://www.infoq.com/news/2006/10/annotation-transformers"
+      },
+      {
+        "text": "http://toolsqa.com/selenium-webdriver/testng-listeners/"
+      },
+      {
+        "text": "http://artkoshelev.github.io/posts/running-parallel-tests-in-surefire"
+      },
+      {
+        "text": "http://rationalcoding.blogspot.com/2014/04/testng-annotation-transformers.html"
+      },
+      {
+        "text": "http://gururajhm.blogspot.com/p/12-example-of-iannotationtransformer.html"
+      },
+      {
+        "text": "http://www.tothenew.com/blog/soft-assertions-in-selenium-using-testng/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/testng-asserts/"
+      },
+      {
+        "text": "https://www.softwaretestingmaterial.com/soft-assert/"
+      },
+      {
+        "text": "https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/asserts/SoftAssert.java"
+      },
+      {
+        "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
+      }
+    ],
+    "_class": "com.dandelion.automationportal.model.Chapter"
+  }
 ]

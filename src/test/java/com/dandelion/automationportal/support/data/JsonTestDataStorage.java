@@ -9,6 +9,7 @@ import com.dandelion.automationportal.support.util.JsonUtil;
 
 import java.io.File;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class JsonTestDataStorage {
 
@@ -20,6 +21,13 @@ public final class JsonTestDataStorage {
 
 	public static List<Chapter> getChapters() {
 		return getListOfItems("chapters.json", Chapter.class);
+	}
+
+	public static List<String> getChapterKeys() {
+		return getListOfItems("chapters.json", Chapter.class)
+				.stream()
+				.map(Chapter::getKey).collect(
+				Collectors.toList());
 	}
 
 	public static List<Program> getPrograms() {
