@@ -1,7 +1,6 @@
 package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.support.TestEntity;
-import com.dandelion.automationportal.support.TestPropertyService;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;

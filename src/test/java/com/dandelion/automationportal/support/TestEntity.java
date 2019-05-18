@@ -2,7 +2,6 @@ package com.dandelion.automationportal.support;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 @Configuration
 public class TestEntity {
@@ -14,15 +13,13 @@ public class TestEntity {
     private String getDataBaseName;
 
     public TestEntity() {
-//        this.dataBasePort = testPropertyService.getDatabasePort();
-//        this.getDataBaseName = testPropertyService.getDatabaseName();
     }
 
     public int getDataBasePort() {
         return dataBasePort;
     }
 
-    public String getGetDataBaseName() {
+    public String getDataBaseName() {
         return getDataBaseName;
     }
 }
