@@ -27,9 +27,16 @@ public class LearnControllerTest extends BaseControllerTest {
 
     @ParameterizedTest
     @MethodSource("com.dandelion.automationportal.support.data.JsonTestDataStorage#getChapterKeys")
-    public void learnControllersTest(String automationKey) {
+    public void learnControllerChapterTest(String automationKey) {
             String path = "/chapter/" + automationKey;
             verifyLearnController(path);
+    }
+
+    @ParameterizedTest
+    @MethodSource("com.dandelion.automationportal.support.data.JsonTestDataStorage#getChapterKeys")
+    public void learnControllerSelfCheckTest(String automationKey) {
+        String path = "/self-check/" + automationKey;
+        verifyLearnController(path);
     }
 
     private void verifyLearnController(String path) {
