@@ -19,10 +19,6 @@ public final class JsonTestDataStorage {
 	private JsonTestDataStorage() {
 	}
 
-	public static List<Chapter> getChapters() {
-		return getListOfItems("chapters.json", Chapter.class);
-	}
-
 	public static List<String> getChapterKeys() {
 		return getListOfItems("chapters.json", Chapter.class)
 				.stream()
@@ -30,12 +26,18 @@ public final class JsonTestDataStorage {
 				Collectors.toList());
 	}
 
+	public static List<Chapter> getChapters() {
+		return getListOfItems("chapters.json", Chapter.class);
+	}
+
 	public static List<Program> getPrograms() {
 		return getListOfItems("program.json", Program.class);
 	}
 
-	public static List<SelfCheckQuestion> getSelfCheckQuestions() {
-		return getListOfItems("questions.json", SelfCheckQuestion.class);
+	public static List<SelfCheckQuestion> getSelfCheckQuestions(String chapterKey) {
+		return getListOfItems("questions.json", SelfCheckQuestion.class).stream()
+				.filter(selfCheckQuestion -> selfCheckQuestion.getChapterKey().equals(chapterKey))
+				.collect(Collectors.toList());
 	}
 
 	public static List<User> getUsers() {

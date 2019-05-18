@@ -2,6 +2,7 @@ package com.dandelion.automationportal.script.service;
 
 import com.dandelion.automationportal.layer.service.LearnService;
 import com.dandelion.automationportal.model.Chapter;
+import com.dandelion.automationportal.model.SelfCheckQuestion;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -55,5 +56,19 @@ class LearnServiceTest extends BaseServiceTest {
 
         THEN();
         assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test()
+    void getSelfCheckQuestionsTest() {
+
+        GIVEN();
+        Chapter chapter = JsonTestDataStorage.getChapters().get(0);
+        List<SelfCheckQuestion> expected = JsonTestDataStorage.getSelfCheckQuestions(chapter.getKey());
+
+        WHEN();
+        List<SelfCheckQuestion> actual = learnService.findAllByChapterKey(chapter.getKey());
+
+        THEN();
+        assertThat(expected).usingElementComparatorIgnoringFields("id").isEqualTo(actual);
     }
 }

@@ -5,9 +5,6 @@ import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
 import com.dandelion.automationportal.model.VocabularyItem;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public final class TestDataStorage {
 
     private static final String TEST_CHAPTER_KEY = "testChapterKey";
@@ -22,11 +19,6 @@ public final class TestDataStorage {
         Chapter testChapter = new Chapter();
         testChapter.setKey(TEST_CHAPTER_KEY);
         return testChapter;
-    }
-
-    public static List<SelfCheckQuestion> getSelfCheckQuestions(String chapterKey) {
-        return JsonTestDataStorage.getSelfCheckQuestions().stream().filter(
-                selfCheckQuestion -> selfCheckQuestion.getChapterKey().equals(chapterKey)).collect(Collectors.toList());
     }
 
     public static SelfCheckQuestion getTestSelfCheckQuestion() {
