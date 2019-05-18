@@ -15,12 +15,16 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("testcontroller")
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@TestPropertySource("classpath:application-testcontroller.properties")
+@ContextConfiguration(classes = TestEntity.class)
 @TestInstance(Lifecycle.PER_CLASS)
 public class BaseControllerTest {
 
