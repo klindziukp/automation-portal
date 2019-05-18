@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.support.embedded;
 
-import com.dandelion.automationportal.support.TestPropertyStorage;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.mongodb.MongoClient;
 import de.flapdoodle.embed.mongo.Command;
@@ -27,57 +27,52 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     private String collectionName;
     private String jsonName;
+    private TestEntity testEntity;
 
-    public EmbeddedMongoService(String jsonCollectionName) {
+    public EmbeddedMongoService(String jsonCollectionName, TestEntity testEntity) {
         this.collectionName = jsonCollectionName;
         this.jsonName = jsonCollectionName + ".json";
+        this.testEntity = testEntity;
     }
 
     public void fillCollection() {
+        MongodExecutable mongoExecutable = null;
         try {
-            MongodExecutable mongoExecutable = getMongoExecutable();
+            mongoExecutable = getMongoExecutable();
             String jsonFilePath = new File(JsonTestDataStorage.JSON_FOLDER_PATH + jsonName).getAbsolutePath();
             MongoImportExecutable mongoImportExecutable = mongoImportExecutable(jsonFilePath);
             MongoImportProcess mongoImportProcess = mongoImportExecutable.start();
             mongoImportProcess.stop();
             mongoExecutable.stop();
         } catch (IOException ioEx) {
-            throw new RuntimeException(ioEx);
+            if (mongoExecutable != null) {
+                mongoExecutable.stop();
+            }
         }
     }
 
     public void dropCollection() {
-            MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
-            mongoClient.getDatabase(TestPropertyStorage.DATABASE_NAME).drop();
+        MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
+        mongoClient.getDatabase(testEntity.getGetDataBaseName()).drop();
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
-        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
-                .version(Version.Main.PRODUCTION)
-                .net(getNet())
-                .db(TestPropertyStorage.DATABASE_NAME)
-                .collection(this.collectionName)
-                .upsert(true)
-                .dropCollection(false)
-                .jsonArray(true)
-                .importFile(jsonFile)
-                .build();
+        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION).net(
+                getNet()).db(testEntity.getGetDataBaseName()).collection(this.collectionName).upsert(true)
+                .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);
     }
 
     private MongodExecutable getMongoExecutable() throws IOException {
-        IMongodConfig mongodConfig = new MongodConfigBuilder()
-                .version(Version.Main.PRODUCTION)
-                .net(getNet())
-                .build();
+        IMongodConfig mongodConfig = new MongodConfigBuilder().version(Version.Main.PRODUCTION).net(getNet()).build();
         IRuntimeConfig runtimeConfig = new RuntimeConfigBuilder().defaults(Command.MongoD).build();
         return MongodStarter.getInstance(runtimeConfig).prepare(mongodConfig);
     }
 
     private Net getNet() {
         try {
-            return new Net(TestPropertyStorage.DATABASE_CONNECTION_PORT, Network.localhostIsIPv6());
+            return new Net(testEntity.getDataBasePort(), Network.localhostIsIPv6());
         } catch (UnknownHostException uhEx) {
             uhEx.printStackTrace();
             throw new RuntimeException(uhEx);

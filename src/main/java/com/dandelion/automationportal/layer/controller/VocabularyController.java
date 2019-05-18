@@ -24,7 +24,7 @@ public class VocabularyController {
         ModelAndView modelAndView = new ModelAndView();
         List<VocabularyItem> vocabularyList = vocabularyService.getAllItemsOrderByKeyAsc();
         modelAndView.addObject("vocabularyList", vocabularyList);
-        modelAndView.setViewName("vocabulary");
+        modelAndView.setViewName("vocabulary-list");
         return modelAndView;
     }
 }

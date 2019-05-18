@@ -9,11 +9,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document(collection = "vocabulary")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class VocabularyItem {
+public class VocabularyItem implements Comparable<VocabularyItem> {
 
     @Id
     private String id;
     @Indexed(unique = true)
     private String key;
     private String value;
+
+    @Override
+    public int compareTo(VocabularyItem vocabularyItem) {
+        return this.key.compareTo(vocabularyItem.getKey());
+    }
 }

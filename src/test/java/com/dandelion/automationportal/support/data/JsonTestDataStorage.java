@@ -2,9 +2,9 @@ package com.dandelion.automationportal.support.data;
 
 import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.HowToCategory;
-import com.dandelion.automationportal.model.Mentorship;
 import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
+import com.dandelion.automationportal.model.VocabularyItem;
 import com.dandelion.automationportal.model.user.User;
 import com.dandelion.automationportal.support.util.JsonUtil;
 
@@ -23,24 +23,20 @@ public final class JsonTestDataStorage {
 		return getListOfItems("chapters.json", Chapter.class);
 	}
 
-	public static List<HowToCategory> getHowToCategories() {
-		return getListOfItems("howTo.json", HowToCategory.class);
-	}
-
-	public static List<User> getUsers() {
-		return getListOfItems("users.json", User.class);
-	}
-
-	public static List<Mentorship> getMentorships() {
-		return getListOfItems("mentorships.json", Mentorship.class);
-	}
-
 	public static List<Program> getPrograms() {
 		return getListOfItems("program.json", Program.class);
 	}
 
 	public static List<SelfCheckQuestion> getSelfCheckQuestions() {
 		return getListOfItems("questions.json", SelfCheckQuestion.class);
+	}
+
+	public static List<User> getUsers() {
+		return getListOfItems("users.json", User.class);
+	}
+
+	public static List<VocabularyItem> getVocabularyItems() {
+		return getListOfItems("vocabulary.json", VocabularyItem.class);
 	}
 
 	private static <T> List<T> getListOfItems(String jsonCollectionName, Class<T> classOfT) {
