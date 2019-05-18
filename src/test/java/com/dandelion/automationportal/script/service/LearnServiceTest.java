@@ -1,9 +1,7 @@
 package com.dandelion.automationportal.script.service;
 
 import com.dandelion.automationportal.layer.service.LearnService;
-import com.dandelion.automationportal.layer.service.ProgramService;
 import com.dandelion.automationportal.model.Chapter;
-import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -38,7 +36,7 @@ class LearnServiceTest extends BaseServiceTest {
         Chapter expected = JsonTestDataStorage.getChapters().get(0);
 
         WHEN();
-        Chapter actual = learnService.findFirstChapterByKey (expected.getKey());
+        Chapter actual = learnService.findFirstChapterByKey(expected.getKey());
 
         THEN();
         assertThat(actual).isEqualToIgnoringGivenFields(expected, "id");
