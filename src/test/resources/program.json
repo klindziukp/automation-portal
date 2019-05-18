@@ -1,1 +1,9 @@
-[{"_id":{"$oid":"5b5de1ae2b7455bb82c5d3ad"},"name":"Automation","sequence":["unit","api","web","mobile","connected"]}]
+[
+{"_id":{"$oid":"5cd4635894e5de0eaaa0125d"},"name":"All","sequence":["git","maven","testng","webDriver","proxy","appium","framework","ci","testingTheory","designPatterns"]},
+{"_id":{"$oid":"5cd4636194e5de0eaaa0125e"},"name":"Automation","sequence":["unit","api","web","mobile","connected"]},
+{"_id":{"$oid":"5cd6bf2718c03e0eaa224497"},"name":"Unit Testing","sequence":["unit-general","unit-techniques","unit-mocks","unit-stubs","unit-tdd","unit-coverage"]},
+{"_id":{"$oid":"5cdfba0237f860074f044ec7"},"name":"Api Testing","sequence":["api-http","api-general","api-web-service","api-graphql","api-contract","api-microservices"]},
+{"_id":{"$oid":"5cdfbf0737f860074f044ece"},"name":"Mobile Testing","sequence":["mobile-general"]},
+{"_id":{"$oid":"5cdfbf2537f860074f044ecf"},"name":"Web Testing","sequence":["web-general"]},
+{"_id":{"$oid":"5cdfbf7f37f860074f044ed0"},"name":"ConnectedTv Testing","sequence":["connected-general"]}
+]

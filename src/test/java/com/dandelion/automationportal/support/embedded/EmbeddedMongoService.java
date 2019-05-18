@@ -53,12 +53,12 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     public void dropCollection() {
         MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
-        mongoClient.getDatabase(testEntity.getGetDataBaseName()).drop();
+        mongoClient.getDatabase(testEntity.getDataBaseName()).drop();
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
         IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION).net(
-                getNet()).db(testEntity.getGetDataBaseName()).collection(this.collectionName).upsert(true)
+                getNet()).db(testEntity.getDataBaseName()).collection(this.collectionName).upsert(true)
                 .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);

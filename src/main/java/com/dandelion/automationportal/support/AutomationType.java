@@ -1,5 +1,9 @@
 package com.dandelion.automationportal.support;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public enum AutomationType {
 
     UNIT_TESTING_PROGRAM_NAME("unit", "Unit Testing"),
@@ -17,11 +21,15 @@ public enum AutomationType {
     }
 
     public static String getAutomationNameByKey(String key) {
-        for (AutomationType automationType : AutomationType.values()) {
-            if (automationType.key.equals(key)) {
-                return automationType.name;
-            }
-        }
-        throw new RuntimeException(String.format("Unable to get automation with key : '%s'", key));
+      return Stream.of(AutomationType.values())
+              .filter(automationType -> automationType.key.equals(key))
+              .map(automationType -> automationType.name)
+              .findAny()
+              .orElseThrow(() ->new RuntimeException(String.format("Unable to get automation with key : '%s'", key)));
+
+    }
+
+    public static List<String> getAutomationKeys(){
+       return Stream.of(AutomationType.values()).map(automationType -> automationType.key).collect(Collectors.toList());
     }
 }

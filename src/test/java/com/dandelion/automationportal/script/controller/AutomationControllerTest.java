@@ -1,6 +1,7 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.AutomationController;
+import com.dandelion.automationportal.support.AutomationType;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -25,11 +26,23 @@ public class AutomationControllerTest extends BaseControllerTest {
     }
 
     @Test()
-    public void automationControllerTest(){
-        given().
+    public void automationControllerTest() {
+        verifyAutomationController("/automation");
+    }
+
+    @Test()
+    public void automationControllersTest() {
+        for (String automationKey : AutomationType.getAutomationKeys()) {
+            String path = "/automation/" + automationKey;
+            verifyAutomationController(path);
+        }
+    }
+
+    private void verifyAutomationController(String path) {
+        given().log().all().
                 standaloneSetup(automationController).
         when().
-                get("/automation").
+                get(path).
         then().
                 statusCode(HttpStatus.SC_OK);
     }
