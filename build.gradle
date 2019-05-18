@@ -55,6 +55,7 @@ jacocoTestReport {
             fileTree(dir: it, exclude: [
                     '**/model/**',
                     '**/support/**',
+                    '**/*AutomationPortalApplication*.*'
             ])
         })
     }
