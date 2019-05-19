@@ -24,7 +24,7 @@ public class VocabularyControllerTest extends BaseControllerTest {
 
     @BeforeAll
     void initEmbeddedService() {
-        initEmbeddedService(testEntity,"vocabulary");
+        initEmbeddedService(testEntity, "vocabulary");
     }
 
     @Test()
