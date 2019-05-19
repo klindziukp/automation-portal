@@ -13,6 +13,8 @@ services:
 before_install:
   - chmod +x gradlew
 
+
+
 script:
 - ./gradlew build -i --continue
 
@@ -29,3 +31,5 @@ deploy:
   api_key:
     secure: vbFzWxqKXYtMH+xk+rFv+urqi8c94AHH2LsCdztlaMyEEMVZXCAWp81uQTCHMIm7KJOMA3czejW6I2b9Ud7dtCr+ClDWo0sD685XacsZAdYtocF+nSCktfGNVkWymglGdXWy2hM3Wl9WRIfAoxpSfcplN+uaVKBVWgJu9Oc7zaeivuCce8BgSNxUW2wTGBoQZ3uzzVIDE4LYHdUXyenP+TQ0a8N6xoEXPBw/sWfos/vuGgsnxS9aH5VjMAG2FcYwYH7b6a0F1USjZFcP1bClnrFlXLoQUORfrvjySl+wvrgr4+l34YFEZpWwn9NxHPIzYBkNziLfOVa3CaJLwHvPAUMh24QreZqKdZz5BGe2h4QtbRofqGMMxoamOXJjvp6IbRs4Mel1+7cvaIWggkaJQ0NQH8IxWGFhI00E2z1pfYPnXVY7cdlHwW4k67WgXArq/d8pqIIJJloLcW2Ccp9J+f0IbvXH7cQCJZFPKl2DAyprgXEZSm6jFteyDGIXS9kgw7RfUfwGzsHo0j2OOTtMZ/WpxBiLdrrIilrQDkS7YtBX+3vv4nq09gc6ye6Nf6xJQR8AnTB5aDJuePlAZBOpEvSQ5CEDxZqwM+fw5X3ofOVTtXeMzhSG/9TAGbakW2aVi7bSBywyr5T2gG7+0RjVRIHrdGUxJBpeHhdphM1sl6w=
   app: automation-portal
+  on:
+    repo: klindziukp/automation-portal
