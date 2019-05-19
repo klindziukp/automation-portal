@@ -9,9 +9,11 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
+@EnableAutoConfiguration
 @TestInstance(Lifecycle.PER_METHOD)
 public class LearnControllerQuestionsTest extends BaseControllerTest {
 
