@@ -20,7 +20,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ContextConfiguration(classes = TestEntity.class)
 @TestPropertySource("classpath:application-test.properties")
 @ComponentScan("com.dandelion.automationportal")
-@TestInstance(Lifecycle.PER_CLASS)
 public class BaseMongoRepositoryTest {
 
     private EmbeddedService embeddedService;

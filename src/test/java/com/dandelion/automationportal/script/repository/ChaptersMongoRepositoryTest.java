@@ -6,7 +6,10 @@ import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -16,6 +19,7 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestInstance(Lifecycle.PER_METHOD)
 class ChaptersMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private ChaptersMongoRepository chaptersMongoRepository;
@@ -27,7 +31,7 @@ class ChaptersMongoRepositoryTest extends BaseMongoRepositoryTest {
         this.testEntity = testEntity;
     }
 
-    @BeforeAll
+    @BeforeEach
     void initEmbeddedService() {
         initEmbeddedService("chapters", testEntity);
     }
