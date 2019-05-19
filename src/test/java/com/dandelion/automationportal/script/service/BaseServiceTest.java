@@ -15,7 +15,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @DataMongoTest
-@ActiveProfiles("test")
+@ActiveProfiles("testservice")
 @ComponentScan("com.dandelion.automationportal")
 public class BaseServiceTest {
 
