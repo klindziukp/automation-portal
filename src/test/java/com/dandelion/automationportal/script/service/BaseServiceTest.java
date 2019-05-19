@@ -26,10 +26,6 @@ public class BaseServiceTest {
 
     static void initEmbeddedService(TestEntity testEntity, String jsonCollectionName) {
         embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
-    }
-
-    @BeforeEach
-    protected void setUp() {
         embeddedService.fillCollection();
     }
 

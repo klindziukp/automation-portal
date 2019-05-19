@@ -4,7 +4,6 @@ import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,10 +27,6 @@ public class BaseMongoRepositoryTest {
 
     void initEmbeddedService(String jsonCollectionName, TestEntity testEntity) {
         embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
-    }
-
-    @BeforeEach
-    protected void setUp() {
         embeddedService.fillCollection();
     }
 

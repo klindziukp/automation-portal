@@ -4,13 +4,17 @@ import com.dandelion.automationportal.layer.controller.VocabularyController;
 import com.dandelion.automationportal.support.TestEntity;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration
+@TestInstance(Lifecycle.PER_METHOD)
 public class VocabularyControllerTest extends BaseControllerTest {
 
     private VocabularyController vocabularyController;
@@ -22,7 +26,7 @@ public class VocabularyControllerTest extends BaseControllerTest {
         this.testEntity = testEntity;
     }
 
-    @BeforeAll
+    @BeforeEach
     void initEmbeddedService() {
         initEmbeddedService(testEntity, "vocabulary");
     }

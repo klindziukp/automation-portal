@@ -5,7 +5,10 @@ import com.dandelion.automationportal.model.VocabularyItem;
 import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Comparator;
@@ -17,6 +20,7 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestInstance(Lifecycle.PER_METHOD)
 class VocabularyServiceTest extends BaseServiceTest {
 
     private VocabularyService vocabularyService;
@@ -28,7 +32,7 @@ class VocabularyServiceTest extends BaseServiceTest {
            this.testEntity = testEntity;
     }
 
-    @BeforeAll
+    @BeforeEach
     void initEmbeddedService() {
         initEmbeddedService(testEntity, "vocabulary");
     }
