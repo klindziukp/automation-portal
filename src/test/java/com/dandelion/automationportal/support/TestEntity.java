@@ -10,7 +10,7 @@ public class TestEntity {
     private int dataBasePort;
 
     @Value("${spring.data.mongodb.database}")
-    private String getDataBaseName;
+    private String dataBaseName;
 
     public TestEntity() {
     }
@@ -20,6 +20,6 @@ public class TestEntity {
     }
 
     public String getDataBaseName() {
-        return getDataBaseName;
+        return dataBaseName;
     }
 }
