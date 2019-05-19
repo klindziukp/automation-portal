@@ -31,10 +31,10 @@ public class LearnController {
         return modelAndView;
     }
 
-    @RequestMapping("/chapter/{chapterName}")
-    public ModelAndView chapter(@PathVariable("chapterName") String chapterName) {
+    @RequestMapping("/chapter/{chapterKey}")
+    public ModelAndView chapter(@PathVariable("chapterKey") String chapterKey) {
         ModelAndView modelAndView = new ModelAndView();
-        Chapter chapter = learnService.findFirstChapterByKey(chapterName);
+        Chapter chapter = learnService.findFirstChapterByKey(chapterKey);
         modelAndView.addObject("chapter", chapter);
         modelAndView.setViewName("chapter");
         return modelAndView;
