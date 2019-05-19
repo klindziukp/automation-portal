@@ -11,15 +11,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @DataMongoTest
 @ActiveProfiles("test")
 @ComponentScan("com.dandelion.automationportal")
-@TestPropertySource("classpath:application-test.properties")
-@TestInstance(Lifecycle.PER_CLASS)
 public class BaseServiceTest {
 
     private static EmbeddedService embeddedService;
