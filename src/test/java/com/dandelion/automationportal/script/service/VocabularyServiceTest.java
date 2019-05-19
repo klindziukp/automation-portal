@@ -4,7 +4,6 @@ import com.dandelion.automationportal.layer.service.VocabularyService;
 import com.dandelion.automationportal.model.VocabularyItem;
 import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

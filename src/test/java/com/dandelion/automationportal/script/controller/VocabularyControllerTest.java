@@ -3,7 +3,6 @@ package com.dandelion.automationportal.script.controller;
 import com.dandelion.automationportal.layer.controller.VocabularyController;
 import com.dandelion.automationportal.support.TestEntity;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
