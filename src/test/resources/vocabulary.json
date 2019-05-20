@@ -1,38 +1,65 @@
 [
-{"_id":{"$oid":"5b7bcf6ec08ae95bd50b9fdc"},"key":"Apple TV","value":" Apple TV - is a digital media player and microconsole developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream to a capable television. Apple TV is an HDMI-compliant source device. To use it for viewing, it has to be connected to an enhanced-definition or high-definition widescreen television via an HDMI cable. The device has no integrated controls and can only be controlled externally, either by an Apple Remote or Siri Remote control device (with which it is sold) using its infrared/Bluetooth capability, by the Apple TV Remote app (downloadable from App Store) on iOS devices, such as the iPhone, iPod Touch, iPad, and Apple Watch, using its Wi-Fi capability, or by some third-party infrared remotes."},
-{"_id":{"$oid":"5b7bd622c08ae95bd50b9fdf"},"key":"Bento","value":"Bento is a project for reporting aggregation."},
-{"_id":{"$oid":"5b7bd645c08ae95bd50b9fe0"},"key":"BET","value":" Black Entertainment Television is an American pay television channel that is owned by the BET Networks division of Viacom. It is the most prominent television network targeting African American audiences. Programming on the network consists of original and acquired television series and theatrically and direct-to-video-released films. The network has also aired a variety of stand-up comedy, news, and current affairs programs, and formerly aired mainstream rap, hip-hop and R&B music videos; the latter of which now air on its branded sister networks."},
-{"_id":{"$oid":"5b7bd66bc08ae95bd50b9fe1"},"key":"Brandon Clark","value":"Brandon Clark is a Viacom's solutions Architect, test automation framework author"},
-{"_id":{"$oid":"5b7bd66bc08ae95bd50b9fe2"},"key":"Call","value":"Call is a simplified name for Request from client to server."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fe5"},"key":"Confluence","value":"Confluence is collaboration tool used to help teams to collaborate and share knowledge efficiently. With Confluence, your users can create pages and blogs which can be commented on and edited by all members of the team. For example, you will be able to create a roadmap easily, create notes containing checklist, create a knowledge base and centralize everything in one place. You can also attach files, like your excel planning and display it on a page for more convenience."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fe6"},"key":"Feed","value":"Feed is a data format used for providing users with frequently updated content.Usually a feed is made available by the same entity that created the content. From technical point of view feed is a document (JSON or XML) whose discrete content items include web links to the source of the content."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fe7"},"key":"Freewheel","value":"Freewheel is an advertising management platform for ad management and monetization, a private marketplace for premium television inventory, and advisory services.The company's technology platform allows video publishers to manage and execute orders across screens; gain control and monetize ad experiences across various screens regardless of platform, device, or rules; scale their advertising business across the premium ecosystem; and maximize the value of their premium content with various tools to provide insights into their inventory and their business as a whole."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fe8"},"key":"Jira","value":"Jira is a proprietary issue tracking product, developed by Atlassian. It provides bug tracking, issue tracking, and project management functions. The product name is a truncation of Gojira, the original Japanese word that was anglicised to Godzilla, itself a reference to Jira's main competitor, Bugzilla. It has been developed since 2002. According to one ranking method, as of June 2017, Jira is the most popular issue management tool."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fe9"},"key":"HipChat","value":"HipChat is a web service for internal private online chat and instant messaging. As well as one-on-one and group/topic chat, it also featured cloud-based file storage, video calling, searchable message-history and inline-image viewing.The software was available to download onto computers running Windows, Mac or Linux, as well as Android and iOS smartphones and tablets."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fea"},"key":"Mediagen","value":"Mediagen is a content delivery service, with information video content."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9feb"},"key":"MRSS","value":"MRSS is a call with meta information about parts of video."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fec"},"key":"Monetization","value":"Monetization is a project which includes Bento IOS(native), Bento Android(native) and BentoJS. BentoJS is a Javascript Library developed for use by all brands/sites that allow for standardized player analytics reporting and video ads via a number of 3rd-party vendor systems. Implementation is for Video Player Ads and reporting, also display ads and page reporting. It provides a single point-of-entry for automatically sending video reporting calls to analytics vendors, such as Omniture, ComScore and Demdex. Integrates nicely with Edge Player. Served through Aria URL. For testing - simple TestRig is used.It's a test page with EdgePlayer and integrated Bento into it."},
-{"_id":{"$oid":"5b7bd8afc08ae95bd50b9fed"},"key":"MQE","value":"Multiplatform quality engineering."},
-{"_id":{"$oid":"5b7bd961c08ae95bd50b9fee"},"key":"Bluejeans","value":"BlueJeans makes business-quality video conferencing easy, accessible and affordable. The BlueJeans app works with the BlueJeans service to provide true universal, multi-party video calls on the go with a variety of video conference systems"},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9c7"},"key":"Native player","value":"The Native Video Player is a video player component to be used in Apps. It features numerous features including ads, reporting, and captions."},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9c8"},"key":"Nielsen","value":"Third party reporting service for user activity tracking"},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9c9"},"key":"Noggin","value":"Noggin is an ad-free subscription video service for preschoolers, featuring hundreds of full episodes of beloved preschool shows, plus music and educational videos that entertain,engage,and teach children important pre-kindergarten skills.Supported for IOS,Android,Roku,AppleTV."},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9ca"},"key":"LDAP","value":"LDAP is a software protocol for enabling anyone to locate organizations, individuals, and other resources such as files and devices in a network, whether on the public Internet or on a corporate intranet.Used for Jira and Stash access."},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9cb"},"key":"Omniture","value":"Omniture also known as Adobe Analytics, SiteCatalyst. It is a set of tools for predictive and real-time analytics that can be integrated into third-party sources. It includes the reports, data and analysis to help create a holistic view of business activities by transforming customer interactions into insights. This is sometimes calledÂ marketing intelligence."},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9cc"},"key":"Play Plex","value":"The template for Viacom applications. TVLand, VH1, MTV and a dozen more. One codebase, there come various configs and feeds, so the application is personalized for the brand."},
-{"_id":{"$oid":"5b7be107d23aa81515b1f9cd"},"key":"PMT","value":"PMT is a video configuration call which contains general video parameters and data source links."},
-{"_id":{"$oid":"5b7be11ad23aa81515b1f9d6"},"key":"Test Rail","value":"TestRail is our comprehensive web-based test case management software that can be integrated with JIRA. TestRail works well with self-hosted JIRA installations, JIRA Enterprise Hosting as well as with JIRA Cloud (Atlassian Cloud & Connect). TestRail helps testers, developers and team leads to efficiently manage, track and coordinate software testing efforts, all from a centralized and easy to use web application."},
-{"_id":{"$oid":"5b7be11ad23aa81515b1f9d7"},"key":"TVE","value":"TV Everywhere (also known as authenticated streaming or authenticated video on-demand) refers to a business model wherein access to streaming video content from a television channel requires users to 'authenticate' themselves as current subscribers to the channel, via an account provided by their participating pay television provider, in order to access the content."},
-{"_id":{"$oid":"5b7be11ad23aa81515b1f9d8"},"key":"Viacom","value":"Viacom is an American multinational media conglomerate with interests primarily in film and television. It is currently the world's ninth largest broadcasting, cable, and media company in terms of revenue, and has headquarters in New York City. Voting control of Viacom is held by National Amusements, Inc., a privately owned theater company controlled by billionaire Sumner Redstone, who also holds a controlling stake in CBS Corporation. The latter currently retains control of the over-the-air broadcasting, TV production, subscription pay television, and publishing assets, which were previously owned by the original Viacom. Comprising BET Networks, Viacom Media Networks, and Paramount Pictures, Viacom operates approximately 170 networks, reaching approximately 700 million subscribers in approximately 160 countries."},
-{"_id":{"$oid":"5b7be11ad23aa81515b1f9d9"},"key":"VMN","value":"Viacom Media Networks, formerly MTV Networks"},
-{"_id":{"$oid":"5b7be11ad23aa81515b1f9da"},"key":"Roku","value":"Roku is a series of digital media players manufactured by Roku, Inc. Roku partners provide over-the-top content in the form of channels. The name comes from the Japanese word å­ (roku) meaning 'six' and was named so because it was the sixth company that Anthony Wood (founder and CEO since 2002) started. A Roku streaming device gets data (the video stream) via a wired or Wi-Fi connection from an Internet router. The data is output via an audio cable, video cable, or an HDMI connector directly on some of the device models."},
-{"_id":{"$oid":"5b7be1f4d23aa81515b1f9db"},"key":"Stash","value":"Stash is self-hosted Git repository collaboration and management for professional teams. It fits into any enterprise environment because it can be deployed within existing infrastructure or on hosted infrastructure providers such as Amazon Web Services. All our projects stored here."},
-{"_id":{"$oid":"5b7be1f4d23aa81515b1f9dc"},"key":"Stand-up","value":"Stand-up is a daily meeting that involves the core team: product owners, developers, and the scrum master. This meeting's flavor is unique to each team."},
-{"_id":{"$oid":"5b7be1f4d23aa81515b1f9dd"},"key":"Stream","value":"Stream is sub project of our team."},
-{"_id":{"$oid":"5b7be24bd23aa81515b1f9e2"},"key":"Techscan","value":"Ð¡hecking outgoing application for unknown or invalid endpoints requests."},
-{"_id":{"$oid":"5b86454253a5f471f2f0ef7d"},"key":"Core","value":"Core is a library-binding for Java-based TAF with Core Server. Contains Driver Factories, Page Element wrappers (Interact), Proxy manager,Reporting managers and utils and other functionality, that used for automated testing and CI. Use the force - read the source: <a href=\"https://stash.mtvi.com/projects/DTE/repos/mqe-core-java/browse\">https://stash.mtvi.com/projects/DTE/repos/mqe-core-java/browse</a>"},
-{"_id":{"$oid":"5b8645d553a5f471f2f0ef7f"},"key":"Core Server","value":"Core Server nois Java-based server, that encapsulates all  automation functionality (including Web, Mobile, Desktop,  Surface (Image-based) testing), providing a single source for all upstream automation projects and bindings. Simply put, itâs a server, that includes number of servlets for interacting with WebDriver, Appium, Sikuli, Proxy, Grid, Jenkins, Reporting tools, Test Case Management tool and other tools. Interacting with the Server is implemented via language specific Core bindings (e.g. mqe-core-java), thus supporting different languages is implemented (Java, JavaScript, Kotlin, Python). Use the force - read the source:  <a href=\"https://stash.mtvi.com/projects/DTE/repos/mqe-core-server\">https://stash.mtvi.com/projects/DTE/repos/mqe-core-server</a>"},
-{"_id":{"$oid":"5b86464e53a5f471f2f0ef80"},"key":"TechConnect","value":"TechConnect TechConnect is Viacom's Service Desk, the service dealing with requests and issues end-users have. Source location for the above mentioned documents: <a href=\"http://rufus.viacom.com/MTS/TechConnect/Documents1/Forms/AllItems.aspx\">http://rufus.viacom.com/MTS/TechConnect/Documents1/Forms/AllItems.aspx</a>"},
-{"_id":{"$oid":"5bd712ff42398daa9e489de3"},"key":"ADID","value":"Active Directory (ID) account name."},
-{"_id":{"$oid":"5bd7132e42398daa9e489de4"},"key":"AUT","value":"means application under test. After the designing and coding part in software development life cycle the application comes for testing then at that time the application is stated as 'application under test'."}
+  {
+    "_id": {
+      "$oid": "5b7bcf6ec08ae95bd50b9fdc"
+    },
+    "key": "Apple TV",
+    "value": " Apple TV - is a digital media player and microconsole developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream to a capable television. Apple TV is an HDMI-compliant source device. To use it for viewing, it has to be connected to an enhanced-definition or high-definition widescreen television via an HDMI cable. The device has no integrated controls and can only be controlled externally, either by an Apple Remote or Siri Remote control device (with which it is sold) using its infrared/Bluetooth capability, by the Apple TV Remote app (downloadable from App Store) on iOS devices, such as the iPhone, iPod Touch, iPad, and Apple Watch, using its Wi-Fi capability, or by some third-party infrared remotes."
+  },
+  {
+    "_id": {
+      "$oid": "5b7bd66bc08ae95bd50b9fe2"
+    },
+    "key": "Call",
+    "value": "Call is a simplified name for Request from client to server."
+  },
+  {
+    "_id": {
+      "$oid": "5b7bd8afc08ae95bd50b9fe5"
+    },
+    "key": "Confluence",
+    "value": "Confluence is collaboration tool used to help teams to collaborate and share knowledge efficiently. With Confluence, your users can create pages and blogs which can be commented on and edited by all members of the team. For example, you will be able to create a roadmap easily, create notes containing checklist, create a knowledge base and centralize everything in one place. You can also attach files, like your excel planning and display it on a page for more convenience."
+  },
+  {
+    "_id": {
+      "$oid": "5b7bd8afc08ae95bd50b9fe6"
+    },
+    "key": "Feed",
+    "value": "Feed is a data format used for providing users with frequently updated content.Usually a feed is made available by the same entity that created the content. From technical point of view feed is a document (JSON or XML) whose discrete content items include web links to the source of the content."
+  },
+  {
+    "_id": {
+      "$oid": "5b7bd8afc08ae95bd50b9fe8"
+    },
+    "key": "Jira",
+    "value": "Jira is a proprietary issue tracking product, developed by Atlassian. It provides bug tracking, issue tracking, and project management functions. The product name is a truncation of Gojira, the original Japanese word that was anglicised to Godzilla, itself a reference to Jira's main competitor, Bugzilla. It has been developed since 2002. According to one ranking method, as of June 2017, Jira is the most popular issue management tool."
+  },
+  {
+    "_id": {
+      "$oid": "5b7be11ad23aa81515b1f9da"
+    },
+    "key": "Roku",
+    "value": "Roku is a series of digital media players manufactured by Roku, Inc. Roku partners provide over-the-top content in the form of channels. The name comes from the Japanese word å­ (roku) meaning 'six' and was named so because it was the sixth company that Anthony Wood (founder and CEO since 2002) started. A Roku streaming device gets data (the video stream) via a wired or Wi-Fi connection from an Internet router. The data is output via an audio cable, video cable, or an HDMI connector directly on some of the device models."
+  },
+  {
+    "_id": {
+      "$oid": "5b7be1f4d23aa81515b1f9db"
+    },
+    "key": "Stash",
+    "value": "Stash is self-hosted Git repository collaboration and management for professional teams. It fits into any enterprise environment because it can be deployed within existing infrastructure or on hosted infrastructure providers such as Amazon Web Services. All our projects stored here."
+  },
+  {
+    "_id": {
+      "$oid": "5b7be1f4d23aa81515b1f9dc"
+    },
+    "key": "Stand-up",
+    "value": "Stand-up is a daily meeting that involves the core team: product owners, developers, and the scrum master. This meeting's flavor is unique to each team."
+  },
+  {
+    "_id": {
+      "$oid": "5bd7132e42398daa9e489de4"
+    },
+    "key": "AUT",
+    "value": "means application under test. After the designing and coding part in software development life cycle the application comes for testing then at that time the application is stated as 'application under test'."
+  }
 ]
