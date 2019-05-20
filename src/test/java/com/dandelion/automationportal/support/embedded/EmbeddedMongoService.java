@@ -57,9 +57,16 @@ public class EmbeddedMongoService implements EmbeddedService {
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
-        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder().version(Version.Main.PRODUCTION).net(
-                getNet()).db(testEntity.getDataBaseName()).collection(this.collectionName).upsert(true)
-                .dropCollection(false).jsonArray(true).importFile(jsonFile).build();
+        IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
+                .version(Version.Main.PRODUCTION)
+                .net(getNet())
+                .db(testEntity.getDataBaseName())
+                .collection(this.collectionName)
+                .upsert(true)
+                .dropCollection(false)
+                .jsonArray(true)
+                .importFile(jsonFile)
+                .build();
 
         return MongoImportStarter.getDefaultInstance().prepare(mongoImportConfig);
     }
