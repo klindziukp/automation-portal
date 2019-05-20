@@ -14,7 +14,7 @@
 [![RestAssured](https://img.shields.io/static/v1.svg?label=RestAssured&message=3.3.0&color=2197ba)](http://rest-assured.io/)
 [![Junit](https://img.shields.io/static/v1.svg?label=Junit&message=5.4.2&color=2197ba)](https://junit.org/junit5/docs/snapshot/user-guide/)
 
-[![Jacoco](https://img.shields.io/static/v1.svg?label=Jacoco&message=latest&color=efbdee)](https://www.eclemma.org/jacoco/)
+[![Jacoco](https://img.shields.io/static/v1.svg?label=Jacoco&message=CodeCovt&color=efbdee)](https://www.eclemma.org/jacoco/)
 [![TravisCi](https://img.shields.io/static/v1.svg?label=TravisCI&message=CIaaS&color=efbdee)](https://docs.travis-ci.com/user/for-beginners/)
 [![Heroku](https://img.shields.io/static/v1.svg?label=Heroku&message=PaaS&color=efbdee)](https://www.heroku.com/)
 
