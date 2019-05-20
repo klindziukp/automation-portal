@@ -3,8 +3,8 @@
 
 [![SpringBoot](https://img.shields.io/static/v1.svg?label=SpringBoot&message=2.1.5&color=green)](https://spring.io/projects/spring-boot)
 [![SpringDataMongo](https://img.shields.io/static/v1.svg?label=SpringDataMongo&message=2.1.8&color=green)](https://spring.io/projects/spring-data-mongodb)
-[![SpringDataRest](https://img.shields.io/static/v1.svg?label=SpringDataRest&message=2.1.8&color=green)](https://spring.io/projects/spring-data-rest)
-[![SpringThymeleaf](https://img.shields.io/static/v1.svg?label=SpringDataRest&message=3.0.11&color=green)](https://www.thymeleaf.org/)
+[![SpringDataRest](https://img.shields.io/static/v1.svg?label=SpringDataRest&message=2.1.8&color=green)](https://spring.io/projects/spring-data-rest) 
+[![SpringThymeleaf](https://img.shields.io/static/v1.svg?label=SpringThymeleaf&message=3.0.11&color=green)](https://www.thymeleaf.org/)
 
 [![Java](https://img.shields.io/static/v1.svg?label=Java&message=8&color=2197ba)](https://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
 [![Gradle](https://img.shields.io/static/v1.svg?label=Gradle&message=5.2.1&color=2197ba)](https://gradle.org/)
