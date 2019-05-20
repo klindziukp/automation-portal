@@ -1,12 +1,10 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.support.TestEntity;
-import com.dandelion.automationportal.support.TestPropertyService;
 import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
 import com.dandelion.automationportal.support.embedded.EmbeddedService;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,14 +28,8 @@ public class BaseControllerTest {
 
     private static EmbeddedService embeddedService;
 
-    static void initEmbeddedService(String jsonCollectionName) {
-        TestPropertyService testPropertyService = new TestPropertyService("application-testcontroller");
-        TestEntity testEntity = new TestEntity(testPropertyService);
+    void initEmbeddedService(TestEntity testEntity, String jsonCollectionName) {
         embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
-    }
-
-    @BeforeEach
-    protected void setUp() {
         embeddedService.fillCollection();
         setBaseUriAndPort();
     }

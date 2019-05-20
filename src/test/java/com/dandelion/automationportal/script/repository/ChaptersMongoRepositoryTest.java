@@ -2,10 +2,13 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.ChaptersMongoRepository;
 import com.dandelion.automationportal.model.Chapter;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -15,18 +18,21 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestInstance(Lifecycle.PER_METHOD)
 class ChaptersMongoRepositoryTest extends BaseMongoRepositoryTest {
 
-    ChaptersMongoRepository chaptersMongoRepository;
+    private ChaptersMongoRepository chaptersMongoRepository;
+    private TestEntity testEntity;
 
     @Autowired
-    public ChaptersMongoRepositoryTest(ChaptersMongoRepository chaptersMongoRepository) {
+    public ChaptersMongoRepositoryTest(ChaptersMongoRepository chaptersMongoRepository, TestEntity testEntity) {
         this.chaptersMongoRepository = chaptersMongoRepository;
+        this.testEntity = testEntity;
     }
 
-    @BeforeAll
-    static void initEmbeddedService(){
-        initEmbeddedService("chapters");
+    @BeforeEach
+    void initEmbeddedService() {
+        initEmbeddedService("chapters", testEntity);
     }
 
     @Test()

@@ -2,10 +2,13 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.ProgramMongoRepository;
 import com.dandelion.automationportal.model.Program;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -15,18 +18,21 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestInstance(Lifecycle.PER_METHOD)
 class ProgramMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private ProgramMongoRepository programMongoRepository;
+    private TestEntity testEntity;
 
     @Autowired
-    public ProgramMongoRepositoryTest(ProgramMongoRepository programMongoRepository) {
+    public ProgramMongoRepositoryTest(ProgramMongoRepository programMongoRepository, TestEntity testEntity) {
         this.programMongoRepository = programMongoRepository;
+        this.testEntity = testEntity;
     }
 
-    @BeforeAll
-    static void initEmbeddedService(){
-        initEmbeddedService("program");
+    @BeforeEach
+    void initEmbeddedService() {
+        initEmbeddedService("program", testEntity);
     }
 
     @Test()

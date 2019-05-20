@@ -3,9 +3,12 @@ package com.dandelion.automationportal.script.service;
 import com.dandelion.automationportal.layer.service.LearnService;
 import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
+import com.dandelion.automationportal.support.TestEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -16,18 +19,21 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@TestInstance(Lifecycle.PER_METHOD)
 class LearnServiceTest extends BaseServiceTest {
 
     private LearnService learnService;
+    private TestEntity testEntity;
 
     @Autowired
-    public LearnServiceTest(LearnService learnService) {
+    public LearnServiceTest(LearnService learnService, TestEntity testEntity) {
         this.learnService = learnService;
+        this.testEntity = testEntity;
     }
 
-    @BeforeAll
-    static void initEmbeddedService() {
-        initEmbeddedService("chapters");
+    @BeforeEach
+    void initEmbeddedService() {
+        initEmbeddedService(testEntity, "chapters");
     }
 
     @Test()

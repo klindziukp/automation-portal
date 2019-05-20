@@ -1,13 +1,18 @@
 package com.dandelion.automationportal.support;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
 public class TestEntity {
 
+    @Value("${spring.data.mongodb.port}")
     private int dataBasePort;
-    private String dataBaseName;
 
-    public TestEntity(TestPropertyService testPropertyService) {
-        this.dataBasePort = testPropertyService.getDatabasePort();
-        this.dataBaseName = testPropertyService.getDatabaseName();
+    @Value("${spring.data.mongodb.database}")
+    private String getDataBaseName;
+
+    public TestEntity() {
     }
 
     public int getDataBasePort() {
@@ -15,6 +20,6 @@ public class TestEntity {
     }
 
     public String getDataBaseName() {
-        return dataBaseName;
+        return getDataBaseName;
     }
 }
