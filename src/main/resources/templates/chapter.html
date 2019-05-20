@@ -46,24 +46,15 @@
 								aria-controls="nav-questions" aria-selected="true">Questions</a>
 							<a class="nav-item nav-link " id="nav-tasks-tab pill"
 								data-toggle="tab" href="#nav-tasks" role="tab"
-								aria-controls="nav-tasks" aria-selected="false">Tasks</a> <a
-								th:if="${not #lists.isEmpty(chapter.knowledgeTransfer)}"
-								class="nav-item nav-link " id="nav-kt-tab pill"
-								data-toggle="tab" href="#nav-kt" role="tab"
-								aria-controls="nav-kt" aria-selected="false">Knowledge
-								Transfer</a> <a th:if="${not #lists.isEmpty(chapter.links)}"
+								aria-controls="nav-tasks" aria-selected="false">Tasks</a>
+							<a th:if="${not #lists.isEmpty(chapter.links)}"
 								class="nav-item nav-link " id="nav-links-tab pill"
 								data-toggle="tab" href="#nav-links" role="tab"
-								aria-controls="nav-links" aria-selected="false">Links</a> <a
-								th:if="${not #lists.isEmpty(chapter.notes)}"
+								aria-controls="nav-links" aria-selected="false">Links</a>
+							<a th:if="${not #lists.isEmpty(chapter.notes)}"
 								class="nav-item nav-link " id="nav-notes-tab pill"
 								data-toggle="tab" href="#nav-notes" role="tab"
-								aria-controls="nav-notes" aria-selected="false">Notes</a> <a
-								th:if="${not #lists.isEmpty(chapter.acceptanceCriteria)}"
-								class="nav-item nav-link " id="nav-ac-tab pill"
-								data-toggle="tab" href="#nav-ac" role="tab"
-								aria-controls="nav-ac" aria-selected="false">Acceptance
-								criteria</a>
+								aria-controls="nav-notes" aria-selected="false">Notes</a>
 						</div>
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
@@ -102,21 +93,6 @@
 								</ul>
 							</div>
 						</div>
-						<div th:if="${not #lists.isEmpty(chapter.knowledgeTransfer)}"
-							class="tab-pane fade" id="nav-kt" role="tabpanel"
-							aria-labelledby="nav-kt-tab">
-							<div class="tab-content-block">
-								<ul class="list-bullet">
-									<th:block th:each="ktItem : ${chapter.knowledgeTransfer}">
-										<li th:text="${ktItem.text}">Some default kt item</li>
-										<th:block th:each="subItem : ${ktItem.subItems}">
-											<p th:text="${' - ' + subItem.text}">Some default kt
-												subitem</p>
-										</th:block>
-									</th:block>
-								</ul>
-							</div>
-						</div>
 						<div th:if="${not #lists.isEmpty(chapter.links)}"
 							class="tab-pane fade" id="nav-links" role="tabpanel"
 							aria-labelledby="nav-links-tab">
@@ -140,21 +116,6 @@
 										<li th:text="${note.text}">Some default note</li>
 										<th:block th:each="subnote : ${note.subItems}">
 											<p th:text="${' - ' + subnote.text}">Some default subnote</p>
-										</th:block>
-									</th:block>
-								</ul>
-							</div>
-						</div>
-						<div th:if="${not #lists.isEmpty(chapter.acceptanceCriteria)}"
-							class="tab-pane fade" id="nav-ac" role="tabpanel"
-							aria-labelledby="nav-ac-tab">
-							<div class="tab-content-block">
-								<ul class="list-bullet">
-									<th:block th:each="criteria : ${chapter.acceptanceCriteria}">
-										<li th:text="${criteria.text}">Some default criteria</li>
-										<th:block th:each="subcriteria : ${criteria.subItems}">
-											<p th:text="${' - ' + subcriteria.text}">Some default
-												subcriteria</p>
 										</th:block>
 									</th:block>
 								</ul>

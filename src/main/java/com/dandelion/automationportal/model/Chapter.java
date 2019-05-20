@@ -19,12 +19,8 @@ public class Chapter {
 	private String parent;
 	private String description;
 	private String generalInfo;
-	private int approxTimeHours;
 	private List<ContentItem> questions;
-	private List<ContentItem> selfStudyQuestions;
 	private List<ContentItem> notes;
-	private List<ContentItem> acceptanceCriteria;
 	private List<ContentItem> tasks;
-	private List<ContentItem> knowledgeTransfer;
 	private List<ContentItem> links;
 }

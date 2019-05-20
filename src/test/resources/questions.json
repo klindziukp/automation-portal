@@ -1,166 +1,1202 @@
-[{"_id":{"$oid":"5b5b52ae2b7455bb82c5d314"},"chapterKey":"git","question":"What is Git?","answer":"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d316"},"chapterKey":"git","question":"How to set user name and email?","answer":"This is important thing because every Git commit uses this information and it is immutably baked into the commits you start creating:</br><b> $ git config<br> --global user.name \"John Doe\"</br>$ git config<br> --global user.email johndoe@example.com</p></b>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d317"},"chapterKey":"git","question":"What is git working directory?","answer":"A <b>working tree</b> consist of files that you are currently working on. Working directory is the directory with your source files under git control. Git is tracking the difference between your working directory and local repository, and between your local repository and (one of) remote repositories."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d318"},"chapterKey":"git","question":"What is git index(Staging)?","answer":"An <b>index</b> is a staging area where new commits are prepared. The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the \"index\", but the phrase \"staging area\" works just as well."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31a"},"chapterKey":"git","question":"What is pull request?","answer":"<b>PR</b> is a mechanism for a developer to notify team members that they have completed a feature. This lets everybody involved know that they need to review the code and merge it into the master branch. It is more than just a notification-it is a dedicated forum for discussing the proposed feature."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31b"},"chapterKey":"git","question":"What is git merge?","answer":"<b>Merging</b> is way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch. It will combine multiple sequences of commits into one unified history. Mostly, git merge is used to combine two branches."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31d"},"chapterKey":"git","question":"What is git cherry-pick?","answer":"Apply the changes introduced by some existing commits from another branch. <b>Cherry picking</b> in Git is designed to apply some commit from one branch into another branch. It can be done if you made a mistake and committed a change into wrong branch,but do not want to merge the whole branch."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31f"},"chapterKey":"git","question":"What is .gitignore file?","answer":"Ignored files are tracked in a special file named <b>.gitignore</b> that is checked in at the root of your repository. This file must be edited and committed by hand when you have new files to ignore. <b>.gitignore</b> files contain patterns that are matched against file names in your repository to determine whether or not they should be ignored."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d322"},"chapterKey":"git","question":"What is git pull?","answer":"<b>git pull</b> will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kickoff the merge conflict resolution flow.</br><b>git pull = git fetch + git merge</b>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d324"},"chapterKey":"maven","question":"What is POM?","answer":"POM stands for Project Object Model. It is fundamental Unit of Work in Maven.It is an XML file. It always resides in the base directory of the project as <b>pom.xml</b>. It contains information about the project and various configuration details used by Maven to build the project(s)."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d325"},"chapterKey":"maven","question":"What information does POM contain?","answer":"POM contains the some of the following configuration information: project dependencies, plugins, goals, build profiles, project version developers, mailing list."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d327"},"chapterKey":"maven","question":"What are Maven build lifecycle default phases?","answer":"The default lifecycle comprises of the following phases:</br><b>validate</br>compile</br>test</br>package</br> verify</br> install</br> deploy</br></b>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d328"},"chapterKey":"maven","question":"What the command 'mvn test' do?","answer":"<b>mvn test</b> - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32a"},"chapterKey":"maven","question":"What are Maven repositories?","answer":"<b>local</b>:folder  on your local machine. It  keeps your project's all dependencies.</br><b>central</b>:repository provided by Maven community.It contains a large number of commonly used libraries.</br><b>remote</b>:developer's own custom repository containing required libraries or other project jars.</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32b"},"chapterKey":"maven","question":"What is remote repository?","answer":"Apart from central repository, you may have needed artifacts deployed on other remote locations. In your corporate office there may be projects or modules specific to organization only. Organization can create remote repository and deploy these private artifacts. This remote repository will be accessible only inside organization."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32d"},"chapterKey":"maven","question":"What is a goal in Maven terminology?","answer":"A goal represents a specific task which contributes to the building and managing of a project. It may be bound to zero or more build phases. A goal not bound to any build phase could be executed outside of the build lifecycle by direct invocation."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d330"},"chapterKey":"maven","question":"What is dependency exclusion?","answer":"Any transitive dependency can be exclude using \"exclusion\" element. As example, A depends upon B and B depends upon C then A can mark C as excluded."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d332"},"chapterKey":"testng","question":"What is TestNG?","answer":"<b>TestNG</b> is an innovative test framework built on top of the jUnit framework. Its primary consumers are Java developers who use it for the unit testing purpose. It comes with many useful features like testNG annotations and TestNG assertions that give a lot of flexibility to testers."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d333"},"chapterKey":"testng","question":"What are the core features of TestNG?","answer":"Core features:</br>concurrency</br>dependency</br>prioritization</br></br>grouping</br>parameterization</br>data sourcing</br>."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d334"},"chapterKey":"testng","question":"What is soft assert in TestNG?","answer":"<b>Soft Assert</b> collects errors during test. It doesn't throw an exception when an assert fails and would continue with the next step after the assert. If there is any exception and you want to throw it then you need to use assertAll method as a last statement in the test and test suite again continue with next test as it is."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d335"},"chapterKey":"testng","question":"What is the use of TestNG.xml file?","answer":"The <b>TestNG.xml</b> file is used for configuring the whole test suite. In <b>TestNG.xml</b> file, we can create test suite,create test groups mark tests for parallel execution, add listeners and pass parameters to test scripts. We can also use this testng.xml file for triggering the test suite from command prompt/terminal or Jenkins."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d336"},"chapterKey":"testng","question":"How to run multiple TestNG tests in parallel?","answer":"TestNG supports concurrent executions of tests.We can utilize this feature to run the tests in different browsers simultaneously. In the TestNG.xml,there is <b>suite</b> tag which has a <b>parallel</b> attribute. This tag can parallelize the test execution at different levels."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d338"},"chapterKey":"testng","question":"What is parametrized test?","answer":"Parameterized tests allow a developer to run the same test over and over again using different values."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33a"},"chapterKey":"testng","question":"What is TestNG Factory?","answer":"<b>@Factory</b> annotation helps in dynamic execution of test cases. Using @Factory annotation we can pass parameters to the whole test class at run time. The parameters passed can be used by one or more test methods of that class."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33b"},"chapterKey":"testng","question":"What is difference between Factory and DataProvider?","answer":"<b>Factory</b> method creates instances of test class and run all the test methods in that class with different set of data. Whereas, <b>DataProvider</b> is bound to individual test methods and run the specific methods multiple times."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33d"},"chapterKey":"testng","question":"What is IAnnotationTransformer in TesNG?","answer":"<b>IAnnotationTransformer</b> is a TestNG listener which allows you to modify TestNG annotation and configure it further. It allows you to modify your annotation without using XML and without recompiling your source."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33f"},"chapterKey":"testng","question":"What is IInvokedMethodListener?","answer":"Whenever a class implements this listener, TestNG picks up your test for execution, it first makes a call to <b>beforeInvocation()</b> method and runs whatever has been scripted in this method. In a similar way, it again makes a call to <b>afterInvocation()</b> method after a test has been run."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d340"},"chapterKey":"testng","question":"What is Annotation?","answer":"<b>Annotations</b>, a form of metadata, provide data about a program that is not part of the program itself. Annotations have no direct effect on the operation of the code they annotate."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d341"},"chapterKey":"webDriver","question":"What is WebDriver?","answer":"WebDriver is a tool for automating web application testing, and in particular to verify that they work as expected."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d343"},"chapterKey":"webDriver","question":"What is Explicit wait?","answer":"The explicit wait is used to tell the Web Driver to wait for certain conditions the maximum time exceeded before throwing an exception. The explicit wait is an intelligent kind of wait,it can be applied only for specified elements."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d349"},"chapterKey":"webDriver","question":"List out different types of locators?","answer":"By.id() </br>By.name()</br>By.tagName()</br>By.className()</br>By.linkText()</br>By.partialLinkText()</br>By.xpath()</br>By.cssSelector()</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34b"},"chapterKey":"webDriver","question":"What is main difference between XPath and CSS?","answer":"The fundamental difference between XPath and css selector is using XPaths we can traverse up in the document i.e. we can move to parent elements.Whereas using CSS selector we can only move downwards in the document."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34d"},"chapterKey":"webDriver","question":"How to wait for a specific frame to load?","answer":"Use:</br> WebDriverWait wait = new WebDriverWait(driver,10);</br>ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName);"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34f"},"chapterKey":"webDriver","question":"What is Actions class?","answer":"The Action class is user-facing API for emulating complex user action events."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d351"},"chapterKey":"proxy","question":"What is HTTPS?","answer":"<b>HTTPS</b> is the secure version of HTTP,the protocol over which data is sent between your browser and the website. It means all communications between your browser and the website are encrypted. HTTPS use one of two secure protocols to encrypt communications - <b>SSL</b> or <b>TLS</b>."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d352"},"chapterKey":"proxy","question":"What is HTTP/HTTPS Request?","answer":"<b>Request</b> is message from a client to a server includes, within the first line of that message, the method to be applied to the resource,the identifier of the resource,and the protocol version in use. Response has next structure:</br>- Status Line</br>- Headers</br>- An optional Body of the Request</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d353"},"chapterKey":"proxy","question":"What is HTTP/HTTPS Response?","answer":"<b>Response</b> is the packet of information sent by Server to the Client in response to an earlier Request made by Client. Response contains the information requested by the Client.Response has next structure:</br>- Status Line</br>- Headers</br>- An optional Body of the Request</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d354"},"chapterKey":"proxy","question":"What is SSL Certificate?","answer":"<b>SSL Certificate</b> is file that digitally bind a cryptographic key to an organization's details. It contains the public key needed to begin the secure session. Browser and website initiate the 'SSL handshake', that involves the generation of shared secrets to establish a uniquely secure connection between yourself and the website."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d356"},"chapterKey":"proxy","question":"What is Proxy Server?","answer":"<b>Proxy server</b> is a server  that acts as an intermediary for requests from clients seeking resources from other servers. A client connects to the proxy server, requesting some service,or other resource available from a different server and the proxy server evaluates the request as a way to simplify and control its complexity."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d358"},"chapterKey":"proxy","question":"What is Browser Mob Proxy?","answer":"<b>BrowserMob Proxy</b> is a simple utility that allows you to manipulate HTTP/HTTPS requests and responses, capture HTTP/HTTPS content, and export performance data as a HAR file. BMP works well as a standalone proxy server, but it is especially useful when embedded in Selenium tests."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35a"},"chapterKey":"proxy","question":"What is Charles rewrite tool?","answer":"The Rewrite tool enables you to create rules that modify requests and responses as they pass through Charles. Rules such as adding or changing a header or search and replace some text in the response body."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35e"},"chapterKey":"proxy","question":"What is Blacklisting?","answer":"The <b>Blacklisting</b> enables you to enter domain names which should be blocked. When your web browser tries to request any page from a blacklisted domain name it is blocked. You can also enter wildcards to block subdomains. Blacklisting is useful when you are testing a site that loads resources from another server."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d360"},"chapterKey":"appium","question":"Which kind of Apps can be automated?","answer":"<b>Native apps</b> are those written using the iOS,Android,or Windows SDKs. <b>Mobile web apps</b> are web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome or the built-in 'Browser' app on Android). <b>Hybrid apps</b> have a wrapper around a \"webview\" - a native control that enables interaction with web."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d362"},"chapterKey":"appium","question":"What is Client/Server Appium concept?","answer":"<b>Appium is webserver that exposes a REST API</b>. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution. You can write you test  in any language that has a http client API."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d364"},"chapterKey":"appium","question":"What is Appium Desired Capabilities?","answer":"<b>Desired capabilities</b> are a set of keys and values (i.e., a map or hash) sent to the Appium server to tell the server what kind of automation session we're interested in starting up. There are also various capabilities which can modify the behavior of the server during automation."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d366"},"chapterKey":"appium","question":"What is Appium Desktop?","answer":"<b>Appium Desktop</b> is a GUI wrapper around the Appium server. It comes bundled with everything required to run the Appium server, so you don't need to worry about Node. It also comes with an Inspector, which enables you to check out the hierarchy of your app. This can come in handy when writing tests."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d368"},"chapterKey":"appium","question":"How to inspect elements on the IOS apps?","answer":"With the help of using <b>Appium Inspector</b> that is a GUI based tool you can identify elements on IOS apps. These GUI based tools are quite similar to that of selenium IDE. Or you can use <b>Appium-iOS-Inspector</b> written by Mikola Mokhnach."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36b"},"chapterKey":"appium","question":"What is UIAutomator?","answer":"<b>UI Automator</b> is a UI testing framework suitable for cross-app functional UI testing across system and installed apps. This framework provides a set of APIs to build UI tests that perform interactions on user apps and system apps. The UI Automator APIs allows you to perform operations."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36d"},"chapterKey":"appium","question":"What is Ideviceinstaller?","answer":"<b>ideviceinstaller</b> is a tool to interact with the installation_proxy of an iOS device allowing to install, upgrade, uninstall, archive, restore and enumerate installed or archived apps. It makes use of the fabulous libimobiledevice library that allows communication with iOS devices."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36e"},"chapterKey":"framework","question":"What is Automation Framework?","answer":"<b>Framework</b> is a set of guidelines, assumptions and process developed by experts in order to perform a task(s) in an effective,efficient and optimized way."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36f"},"chapterKey":"framework","question":"What is the architecture of our framework?","answer":"Our framework has <b>Client-Server</b> architecture:</br>The client sends the command to the server, the server executes it and the result is sent to the client.executed by Java Servlet Technology."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d371"},"chapterKey":"framework","question":"What is ProxyLogUtils.class?","answer":"Class that contains utility methods for working with logs received from a proxy server."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d373"},"chapterKey":"framework","question":"How can we wait for the presence of an element?","answer":"We can wait for the element presence element to exist with the help of methods:</br><b>waitForPresent()</b> - wait for element will be present but not visible.</br><b>waitForVisible()</b> - wait for element will be visible."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d374"},"chapterKey":"framework","question":"What is Marshalling?","answer":"<b>Marshaling</b> is the process of transforming the memory representation of an object to a data format suitable for storage or transmission, and it is typically used when data must be moved between different parts of a computer program or from one program to another."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d377"},"chapterKey":"framework","question":"What is Apache Commons?","answer":"The <b>Apache Commons</b> is a project of the Apache Software Foundation. The purpose of the Commons is to provide reusable, open source Java software. The Commons is composed of three parts: proper, sandbox, and dormant."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d378"},"chapterKey":"framework","question":"What is Feed?","answer":"<b>Feed</b> is a data format used for providing users with frequently updated content. Usually a feed is made available by the same entity that created the content. From technical point of view feed is a document (JSON or XML-based) whose discrete content items include web links to the source of the content."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d379"},"chapterKey":"framework","question":"What is Allure Framework?","answer":"<b>Allure Framework</b> is a flexible lightweight multi-language test report tool with the possibility to add screenshots, logs and so on. It provides modular architecture and neat web reports with the ability to store attachments, steps, parameters and many more."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37b"},"chapterKey":"framework","question":"Where is ...Driver started?","answer":"Any driver started in CapabilityFactory.class"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37c"},"chapterKey":"framework","question":"What layers are present in our framework?","answer":"Framework layers</br>- Data Providers, configuration</br>- Page objects and tests, test data</br>- DSL: Services, Business Objects</br>- Reporting, Logging</br>- Utilities</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37d"},"chapterKey":"ci","question":"What is CI?","answer":"<b>Continuous Integration (CI)</b> is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. By integrating regularly, you can detect errors quickly, and locate them more easily."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37f"},"chapterKey":"ci","question":"What are features of Continuous Integration?","answer":"<b>Single repository</b>:Code is stored in single repository.</br><b>Build automation</b>:After code changes it's automatically compiled.</br><b>Testing</b>:Code is self tested as code is changed and built.</br><b>Notify</b>:Notify the status of build to all users.</br><b>Automatic deploy</b>:CI deploys code automatically.</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d381"},"chapterKey":"ci","question":"What is Jenkins?","answer":"<b>Jenkins</b> is an open source continuous integration tool written in Java. It keeps a track on version control system and to initiate and monitor a build system if changes occur."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d382"},"chapterKey":"ci","question":"What is CI in Jenkins?","answer":"In software development, teams work on different segments of same web application so you have to perform integration test by integrating all modules. In order to do that an automated process for each piece of code is performed on daily bases so that all your codes get tested. This process is known as CI."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d383"},"chapterKey":"ci","question":"What is thedDifference between Maven and Jenkins?","answer":"Maven build tool whereas Jenkins is a continuous integration tool."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d315"},"chapterKey":"git","question":"Main stages of Git?","answer":"<b>Untracked(Working directory):</b> the file exists, but is not part of git's version control.</br><b>Staged(Index):</b> the file has been added to git's version control but changes have not been committed.</br><b>Committed(Repository):</b> the change has been committed."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d319"},"chapterKey":"git","question":"What is git repository?","answer":"Git <b>repository</b> is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. It is simply a place where the history of your work is stored. It often lives in a .git subdirectory of your working copy - a copy of the most recent state of the files you're working on."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31c"},"chapterKey":"git","question":"What is git stash?","answer":"<b>git stash</b> temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else,and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you are mid-way through a code change and aren't quite ready to commit."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d31e"},"chapterKey":"git","question":"What is merge conflict?","answer":"Sometimes there are competing changes that Git needs your help with to decide which changes to incorporate in the final merge. Often,<b>merge conflicts</b> happen when people make different changes to the same line of the same file, or when one person edits a file and another person deletes the same file. You must resolve the conflict before you can merge the branches."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d320"},"chapterKey":"git","question":"What is git reset?","answer":"The <b>git reset</b> command is a complex and versatile tool for undoing changes. It has three primary forms of invocation. Forms correspond to command line arguments</br> <b>--soft, --mixed, --hard.</b> The 3 arguments each correspond to Git's three internal state management mechanism's, The Commit Tree (HEAD),The Staging Index,and The Working Directory."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d321"},"chapterKey":"git","question":"What is get fetch?","answer":"<b>git fetch</b> gathers any commits from the target branch that do not exist in your current branch and stores them in your local repository. It does not merge them and notupdate your local repo's working state,leaving your current work intact."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d323"},"chapterKey":"maven","question":"What is Maven?","answer":"<b>Maven</b> is a project management and comprehension tool. Maven provides developers a complete build lifecycle framework. Development team can automate the project's build infrastructure in almost no time as Maven uses a standard directory layout and a default build lifecycle."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d326"},"chapterKey":"maven","question":"What is Maven build lifecycle?","answer":"Build Lifecycle is a well defined sequence of phases which define the order in which the goals are to be executed. Here phase represents a stage in life cycle."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d329"},"chapterKey":"maven","question":"What is Maven default lifecycle flow?","answer":"When the default lifecycle is used,Maven will first validate the project,then will try to compile the sources, run those against the tests,package the binaries (e.g. jar),run integration tests,verify the integration tests, install the verified package to the local repository,then deploy the installed package to a remote repository."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32c"},"chapterKey":"maven","question":"What is settings.xml?","answer":"<b>settings.xml</b> file contains elements used to define values which configure execution in various ways, like the pom.xml,but should not be bundled to any specific project,or distributed to an audience. These include values such as the local repository location,alternate remote repository servers,and authentication information."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32e"},"chapterKey":"maven","question":"What is dependency scope?","answer":"Dependency scope includes dependencies as per the current stage of the build.</br><b>compile</b>:available in classpath.</br><b>provided</b>:provided at runtime.</br><b>runtime</b>:not required for compilation,but required for execution.</br><b>test</b>:available for the test compilation and execution phases.</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d32f"},"chapterKey":"maven","question":"Why are Maven plugins used?","answer":"Maven Plugins are used to:</br>create jar file</br>create war file</br>compile code files</br> unit testing of code</br>create project documentation</br>create project reports</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d331"},"chapterKey":"maven","question":"What is Maven surefire plugin?","answer":"Plugin that runs tests and generates reports based on the results of their execution.</br>The Surefire Plugin has only one goal:</br><b>surefire:test</b> runs the unit tests of an application."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d337"},"chapterKey":"testng","question":"How to skip a test method from execution in TestNG?","answer":"Throw<b> new SkipException</b>.Once SkipException thrown, remaining part of that test method will not be executed and control will goes directly to next test method execution."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d339"},"chapterKey":"testng","question":"What is DataProvider?","answer":"A test method that uses <b>DataProvider</b> will be executed the specific methods multiple number of times based on the data provided by the DataProvider. The test method will be executed using the same instance of the test class to which the test method belongs."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33c"},"chapterKey":"testng","question":"What is TestListeners in TestNG?","answer":"<b>Listener</b> is defined as interface that modifes the default TestNG's behavior. As the name suggests Listeners \"listen\" to the event defined in the selenium script and behave accordingly. It is used in selenium by implementing Listeners Interface. It allows customizing TestNG reports or logs."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d33e"},"chapterKey":"testng","question":"What is ISuiteListener?","answer":"Whenever a class implements this listener, TestNG picks up your suite for execution, it first makes a call to <b>onStart()</b> method and runs whatever has been scripted in this method. In a similar way, it again makes a call to <b>onFinish()</b> method after a suite has been run."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d342"},"chapterKey":"webDriver","question":"What is Implicit wait?","answer":"The implicit wait will tell to the web driver to wait for certain amount of time before it throws a \"No Such Element Exception\".The default setting is 0. Once we set the time, web driver will wait for that time before throwing an exception."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d344"},"chapterKey":"webDriver","question":"What is Fluent wait?","answer":"Each FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. The user may configure the wait to ignore specific types of exceptions whilst waiting, such as NoSuchElementExceptions when searching for an element on the page."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d345"},"chapterKey":"webDriver","question":"What is Page Object Pattern?","answer":"PO is object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI. The benefit is that if the UI changes for the page, the tests themselves don't need to change,only the code within the page object needs to change."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d346"},"chapterKey":"webDriver","question":"What is Page Factory?","answer":"The PageFactory is an extension to the PO pattern. It is used to initialize the elements of the P O or instantiate the POs itself. It is used to initialize elements of a Page class without having to use 'FindElement' or 'FindElements'. Annotations can be used to supply descriptive names of target objects to improve code readability."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d347"},"chapterKey":"webDriver","question":"What is Fluent Page Object Pattern?","answer":"A fluent interface is typically implemented by using method cascading (concretely method chaining) to relay the instruction context of a subsequent call. The context is defined through the return value of a called method-self-referential, where the new context is equivalent to the last context."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d348"},"chapterKey":"webDriver","question":"What is Desired Capability?","answer":"The desired capability is a series of key/value pairs that stores the browser properties like browsername, browser version,the path of the browser driver in the system, etc. to determine the behaviour of the browser at run time."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34a"},"chapterKey":"webDriver","question":"Close vs Quit?","answer":"<b>close()</b> - closes the Browser window which is in focus. If there are more than one  window opened, then the <b>close()</b> command will only close the window which is having focus at that time. It wont close the remaining  windows.</b>quit()</b>  is generally used to shut down the WebDrivers instance. Hence it closes all the windows."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34c"},"chapterKey":"webDriver","question":"How to refresh browser?","answer":"The list of commands to refresh a page:</br>navigate().refresh()</br> getCurrentUrl()</br>navigate().to(driver.getCurrentUrl())</br> sendKeys(Keys.F5)</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d34e"},"chapterKey":"webDriver","question":"How to delete Cookies?","answer":"Use:</br>driver.manage().cookies.deleteAllCookies();"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d350"},"chapterKey":"proxy","question":"What is HTTP?","answer":"<b>HTTP</b> is an application protocol for distributed, collaborative,  and hypermedia information systems. HTTP is an application protocol that runs on top of the TCP/IP suite of protocols (the foundation protocols for the Internet)."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d355"},"chapterKey":"proxy","question":"What is MITM?","answer":"<b>Man-In-The-Middle</b> attack is a type of cyberattack where a malicious actor inserts him into a conversation between two parties, impersonates both parties and gains access to information that the two parties were trying to send to each other. MITM allows  to intercept, send and receive data."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d357"},"chapterKey":"proxy","question":"What is Har file?","answer":"The <b>HTTP Archive</b> format or <b>HAR</b>, is a JSON-formatted archive file format for logging of a web browser's interaction with a site. The common extension for these files is .har."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d359"},"chapterKey":"proxy","question":"What is Charles Proxy?","answer":"<b>Charles</b> is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35b"},"chapterKey":"proxy","question":"What is Charles rewrite rule?","answer":"Each <b>Rewrite</b> describes a single rewrite operation. The rule may affect the headers, the body, or parts of the request URL; it may operate on the request and or the response; it may then define search and replace or just replace style rewriting."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35c"},"chapterKey":"proxy","question":"What is Packet sniffing?","answer":"<b>Packet sniffing</b> is a testing activity connected with capturing packets of information while it's traveling all over the computer network. A tool gathers a raw data, and its next task is converting it in a form easily understandable by a technician."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35d"},"chapterKey":"proxy","question":"What is Charles map remote?","answer":"The <b>Map Remote</b> tool changes the request location,per the configured mappings, so that the response is transparently served from the new location as if that was the original request."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d35f"},"chapterKey":"appium","question":"What is Appium?","answer":"<b>Appium</b> is an open-source tool for automating native, mobile web, and hybrid applications on iOS mobile, Android mobile, and Windows desktop platforms."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d361"},"chapterKey":"appium","question":"What is RESTful API?","answer":"<b>RESTful API</b> - is based on representational state transfer (REST) technology, an architectural style and approach to communications often used in web services development."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d363"},"chapterKey":"appium","question":"What is Appium session?","answer":"<b>Automation is performed in the context of a session.</b> Client initiate a session with a server and sending a POST /session request to the server, with a JSON object called the 'desired capabilities' object. Server will start up the automation session and respond with a session ID which is used for sending further commands."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d365"},"chapterKey":"appium","question":"What are Appium clients?","answer":"<b>Appium clients</b> - client libraries (in Java, Ruby, Python, PHP, JavaScript, and C#) which support Appium's extensions to the WebDriver protocol. When using Appium, you want to use these client libraries instead of your regular WebDriver client."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d367"},"chapterKey":"appium","question":"How to inspect elements on the native Android App?","answer":"With the help of the <b>UIAutomator</b> tool that in present in android SDK, you will be able to access those object locators that are part of the Android native app. Or you can use Appium Desktop."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d369"},"chapterKey":"appium","question":"What is TouchAction?","answer":"<b>TouchAction</b> objects contain a chain of events. Touch objects are created and are given a chain of events. The available events from the specification are: * press * release * moveTo * tap * wait * longPress * cancel * perform. Appium performs the events in sequence.You can add a wait event to control the timing of the gesture."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36a"},"chapterKey":"appium","question":"What is ADB?","answer":"<b>Android Debug Bridge (adb)</b> is a versatile command-line tool that lets you communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps, and it provides access to a Unix shell that you can use to run a variety of commands on a device."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d36c"},"chapterKey":"appium","question":"What is XCUITest?","answer":"<b>XCUITest</b> is the automation framework that ships with Apple's XCode. The XCTest framework lets iOS app developers create and run unit tests, performance tests and UI tests for XCode projects."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d370"},"chapterKey":"framework","question":"What are Interact classes?","answer":"<b>Interacts</b> are the wrapper classes over the basic (Selenium, Appium and etc) elements that extend the existing functionality."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d372"},"chapterKey":"framework","question":"Where are the locators for the elements stored?","answer":"In our framework, the locators  are stored in <b>.json</b> files, which are located in the <b>resources</b> folder."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d375"},"chapterKey":"framework","question":"What is JSON?","answer":"<b>JSON</b> is a data storage and based on key-value pair of JavaScript object literals. It is a text-based open standard designed for human-readable data interchange which is derived from the JavaScript programming language for representing simple data structures and associative arrays, called objects."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d376"},"chapterKey":"framework","question":"What is Jackson?","answer":"<b>Jackson</b> is a very popular and efficient java based library to serialize or map java objects to JSON and vice versa."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37a"},"chapterKey":"framework","question":"How to perform click/tap on element?","answer":"If you want click on an element,you should do it in one the following ways:</br>- <b>element().waitForPresent().click()</b>- <b>element().waitForVisible().click()</b>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d37e"},"chapterKey":"ci","question":"What is Continuous Deployment?","answer":"<b>Continuous Deployment</b> is basically getting code into production. Things should be easy and repeatable. That is where Continuous Deployment comes into play.Deployment should not be manual."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d380"},"chapterKey":"ci","question":"What steps are in continuous integration?","answer":"<b>CI Steps:</b></br>Compilation</br>Unit Tests</br>Code Quality Gates</br>Integration Tests</br>Deployment</br>Chain Tests</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d384"},"chapterKey":"ci","question":"What is the relation between Hudson and Jenkins?","answer":"<b>Hudson</b> was the earlier name and version of current Jenkins. After some issue, the project name was changed from Hudson to Jenkins."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d386"},"chapterKey":"ci","question":"What is build pipeline in Jenkins?","answer":"Job chaining in Jenkins is the process of automatically starting other job(s) after the execution of a job. This approach lets you build multi-step build pipelines or trigger the rebuild of a project if one of its dependencies is updated."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d387"},"chapterKey":"ci","question":"What are Jobs in Jenkins?","answer":"Jenkins can be used to perform the typical build server work,such as doing continuous/official/nightly builds, run tests,or perform some repetitive batch tasks. This is called 'free-style software project' in Jenkins."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d388"},"chapterKey":"ci","question":"What are ways a build job can be triggered?","answer":"There are three basic ways a build job can be triggered:</br>- Start a build job once another build job has completed</br>- Kick off builds at periodical intervals</br>- Poll the SCM for changes</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38a"},"chapterKey":"ci","question":"How you can clone a Git repository via Jenkins?","answer":"To clone a Git repository via Jenkins, you have to enter the e-mail and user name for your Jenkins system. For that,you have to switch into your job directory and execute the 'git config' command."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38d"},"chapterKey":"testingTheory","question":"What is Test plan?","answer":"A document describing the scope, approach, resources and schedule of intended test activities. It identifies  test items, the features to be tested,testing tasks, degree of tester independence, the test environment,the test design techniques and entry and exit criteria to be used, and any risks requiring contingency planning."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38e"},"chapterKey":"testingTheory","question":"What is Test case?","answer":"A <b>Test case</b> is a set of conditions or variables under which a tester will determine whether a system under test satisfies requirements or works correctly."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38f"},"chapterKey":"testingTheory","question":"What is Test script?","answer":"A <b>Test Script</b> is a set of instructions (written using a scripting/programming language) that is performed on a system under test to verify that the system performs as expected. Test scripts are used in automated testing."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d390"},"chapterKey":"testingTheory","question":"What is Smoke Testing?","answer":"<b>Smoke Testing</b>, also known as 'Build Verification Testing', is a type of software testing that comprises of a non-exhaustive set of tests that aim at ensuring that the most important functions work. The results of this testing is used to decide if a build is stable enough to proceed with further testing."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d392"},"chapterKey":"testingTheory","question":"What is Performance Testing?","answer":"<b>Performance Testing</b> is a type of software testing that intends to determine how a system performs in terms of responsiveness and stability under a certain load."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d394"},"chapterKey":"testingTheory","question":"Test Automation Approaches?","answer":"Test Automation Approaches:</br>- Record and Playback</br>- Scripts</br>- Keyword driven</br>- Data-Driven</br>- Behavior-Driven</br>- Hybrid"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d396"},"chapterKey":"testingTheory","question":"What is Data-Driven TA approach?","answer":"<b>Data-driven</b> is a test automation framework which stores test data in a table or spread spreadsheet format. This allows automation engineers to have a single test script which can execute tests for all the test data in the table."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d399"},"chapterKey":"testingTheory","question":"What is black box testing?","answer":"<b>Black box</b> testing is the software testing method which is used to test the software without knowing the internal structure of code or program. This testing is usually done to check the functionality of an application."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39b"},"chapterKey":"designPatterns","question":"What is SOLID principles?","answer":"In object-oriented computer programming, the term <b>SOLID</b> is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39d"},"chapterKey":"designPatterns","question":"What is Open/Closed principle?","answer":"<b>Software components should be open for extension, but closed for modification.</b> It means that your classes should be designed such a way that whenever fellow developers wants to change the flow of control in specific conditions in application, all they need to extend your class and override some functions."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39f"},"chapterKey":"designPatterns","question":"What is Interface segregation principle?","answer":"<b>Clients should not be forced to implement unnecessary methods which they will not use.</b> Many client-specific interfaces are better than one general-purpose interface."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a1"},"chapterKey":"designPatterns","question":"What are Design patterns?","answer":"<b>Design patterns</b> represent the best practices used by software developers. Design patterns are solutions to general problems that developers faced during software development. These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a5"},"chapterKey":"designPatterns","question":"What is Strategy pattern?","answer":"In <b>Strategy pattern</b>, a class behavior or its algorithm can be changed at run time. In Strategy pattern, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. The strategy object changes the executing algorithm of the context object."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a6"},"chapterKey":"designPatterns","question":"What is Gang of Four (GOF)?","answer":"In 1994, four authors <b>Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides</b> published a book titled <b>Design Patterns - Elements of Reusable Object-Oriented Software</b> which initiated the concept of Design Pattern in Software development. These authors are collectively known as Gang of Four (GOF)."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a8"},"chapterKey":"designPatterns","question":"What is Iterator pattern?","answer":"<b>Iterator</b> pattern is very commonly used design pattern in Java  programming environment. This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. Iterator pattern falls under behavioral pattern category."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a9"},"chapterKey":"designPatterns","question":"What is Factroy pattern?","answer":"<b>Factory pattern</b>  comes under creational pattern as this pattern provides one of the best ways to create an object. In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1a"},"chapterKey":"webService","question":"What is a Web Service?","answer":"<b>Web services</b> are open standard (XML, SOAP, HTTP etc.) based Web applications that interact with other web applications for the purpose of exchanging data. Web Services can convert your existing applications into Web-applications."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1c"},"chapterKey":"webService","question":"What are different types of Web Services?","answer":"<b>SOAP Web Services</b>: Runs on SOAP protocol and uses XML technology for sending data.<br> <b>Restful Web Services</b>: Itâs an architectural style and runs on HTTP/HTTPS protocol almost all the time."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1e"},"chapterKey":"webService","question":"What are disadvantages of SOAP Web Services?","answer":" - Only XML can be used, JSON and other lightweight formats are not supported. <br> - SOAP is slow because payload is large for a simple string message, since it uses XML format.<br> - Anytime there is change in the server side contract, client stub classes need to be generated again.<br> - Canât be tested easily in browser."},
-{"_id":{"$oid":"5c861d0bd03db5462312db20"},"chapterKey":"webService","question":"What is WSDL?","answer":"WSDL stands for <b>Web Service Description Language</b>. WSDL is an XML-based language for describing web services and how to access them."},
-{"_id":{"$oid":"5c861d23d03db5462312db22"},"chapterKey":"webService","question":"Which protocol is used by RESTful web services?","answer":"RESTful web services make use of <b>HTTP protocol</b> as a medium of communication between client and server."},
-{"_id":{"$oid":"5c861d23d03db5462312db23"},"chapterKey":"webService","question":"What are advantages of SOAP Web Services?","answer":"- Supports multiple technologies for data transfer such as text, xml, json, image etc.<br> - No contract defined between server and client.<br> - REST is a lightweight protocol.<br> - REST methods can be tested easily over browser.<br>"},
-{"_id":{"$oid":"5c861d23d03db5462312db25"},"chapterKey":"webService","question":"What is a Resource in Restful web services?","answer":"<b>Resource</b> is the fundamental concept of Restful architecture. A resource is an object with a type, relationship with other resources and methods that operate on it. Resources are identified with their URI, HTTP methods they support and request/response data type and format of data."},
-{"_id":{"$oid":"5c861d23d03db5462312db27"},"chapterKey":"webService","question":"What is URI?","answer":"URI stands for <b>Uniform Resource Identifier</b>. Each resource in REST architecture is identified by its URI. Purpose of an URI is to locate a resource(s) on the server hosting the web service."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d385"},"chapterKey":"ci","question":"What is Jenkins Pipeline?","answer":"<b>Jenkins Pipeline</b> is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d389"},"chapterKey":"ci","question":"What is cron?","answer":"The software utility <b>cron</b> is a time-based job scheduler in Unix-like computer operating systems. People who set up and maintain software environments use cron to schedule jobs (commands or shell scripts) to run periodically at fixed times, dates, or intervals."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38b"},"chapterKey":"ci","question":"What are the two components Jenkins is mainly integrated with?","answer":"Jenkins mainly integrated with next components:</br>- Version Control system(Git)</br>- build tools like Apache Maven.</br>"},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d38c"},"chapterKey":"testingTheory","question":"What is Software testing?","answer":"<b>Software testing</b> - checking the correspondence between the actual and expected behavior of the program, performed on a finite set of tests selected in a certain way."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d391"},"chapterKey":"testingTheory","question":"What is Regression Testing?","answer":"<b>Regression testing</b> is testing existing software applications to make sure that a change or addition has not broken any existing functionality. Its purpose is to catch bugs that may have been accidentally introduced into a new build or release candidate, and to make sure that fixing one thing has not broken another thing."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d393"},"chapterKey":"testingTheory","question":"What is Functional Testing?","answer":"<b>Functional Testing</b> is a type of software testing whereby the system is tested against the functional requirements/specifications. Functional testing ensures that the requirements are properly satisfied by the application."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d395"},"chapterKey":"testingTheory","question":"What is Keyword-Driven TA approach?","answer":"<b>Keyword-driven testing</b>,is a software testing methodology suitable for both manual and automated testing. Method separates the documentation of test cases including the data to use from the prescription of the way the test cases are executed. Test creation process for design stage and an execution stage."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d397"},"chapterKey":"testingTheory","question":"What is Behavior-Driven Testing?","answer":"<b>Behavior Driven Testing</b> is an uncommon term in software testing compared to Behavior Driven Development. Tests in behavior driven testing are most often focused on the behavior of users rather than the technical functions of the software. BDT is the best choice when you want to show your business point of view."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d398"},"chapterKey":"testingTheory","question":"What is Testing Metrics?","answer":"<b>Testing Metric</b> is a quantitative measure of the degree to which a system, system component, or process possesses a given attribute. In other words, metrics helps estimating the progress, quality and health of a software testing effort."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39a"},"chapterKey":"testingTheory","question":"What is a bug?","answer":"A <b>software bug<b> is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39c"},"chapterKey":"designPatterns","question":"What is Single Responsibility principle?","answer":"<b>One class should have one and only one responsibility.</b> You should write, change and maintain a class for only one purpose. If it is model class then it should strictly represent only one  entity. This will give you the flexibility to make changes in future without worrying the impacts of changes for another entity."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d39e"},"chapterKey":"designPatterns","question":"What is Liskov Substitution principle?","answer":"<b>Derived types must be completely substitutable for their base types.</b> The classes fellow developer created by extending your class should be able to fit in application without failure. If a fellow developer poorly extended some part of your class and injected into framework then it should not break the framework."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a0"},"chapterKey":"designPatterns","question":"What is Dependency inversion principle?","answer":"<b>Depend on abstractions, not on concretions.</b> You should design your software in such a way that various modules can be separated from each other using an abstract layer to bind them together. The classical use of this principle of BeanFactory in Spring framework."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a2"},"chapterKey":"designPatterns","question":"What is Observer design pattern?","answer":"<b>Observer</b> pattern is based upon notification, there are two kinds of object Subject and Observer. Whenever there is change on subject's state observer will receive notification."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a3"},"chapterKey":"designPatterns","question":"What is Decorator pattern?","answer":"<b>Decorator pattern</b> allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a4"},"chapterKey":"designPatterns","question":"What is Builder pattern?","answer":"<b>Builder</b> pattern builds a complex object using simple objects and using a step by step approach.This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object. A Builder class builds the final object step by step."},
-{"_id":{"$oid":"5b5b52ae2b7455bb82c5d3a7"},"chapterKey":"designPatterns","question":"What is Proxy pattern?","answer":"In <b>proxy pattern</b>, a class represents functionality of another class. This type of design pattern comes under structural pattern. In proxy pattern, we create object having original object to interface its functionality to outer world."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1b"},"chapterKey":"webService","question":"What are the advantages of Web Services?","answer":"<b>Reusability</b>: One web service can be used by many client applications at the same time;<br> <b>Interoperability</b>: Web services are accessible over network and runs on HTTP/SOAP protocol and uses XML/JSON to transport data;<br> <b>Easy to deploy and integrate</b>."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1d"},"chapterKey":"webService","question":"What are advantages of SOAP Web Services?","answer":"- WSDL document provides contract and technical details of the web services for client applications without exposing the underlying implementation technologies.<br> - SOAP uses XML data for payload, so it can be easily read by any technology. - SOAP protocol is universally accepted, so itâs an industry standard approach with many  available open source implementations."},
-{"_id":{"$oid":"5c861d0bd03db5462312db1f"},"chapterKey":"webService","question":"How a SOAP message is structured?","answer":"A SOAP message is consists of <b>SOAP Envelope, SOAP Headers, and SOAP Body</b>."},
-{"_id":{"$oid":"5c861d23d03db5462312db21"},"chapterKey":"webService","question":"What is REST Web Services?","answer":"<b>REST is the acronym for REpresentational State Transfer</b>. REST is an architectural style for developing applications that can be accessed over the network. REST is a stateless client-server architecture where web services are resources and can be identified by their URIs.XML, JSON, text or any other type of data for request and response are allowed."},
-{"_id":{"$oid":"5c861d23d03db5462312db24"},"chapterKey":"webService","question":"What are disadvantages of SOAP Web Services?","answer":"- Since there is no contract defined between service and client, it has to be communicated through other means such as documentation or emails.<br> - Since it works on HTTP, there canât be asynchronous calls. Sessions canât be maintained."},
-{"_id":{"$oid":"5c861d23d03db5462312db26"},"chapterKey":"webService","question":"What are HTTP methods supported by REST?","answer":"<ul><li>GET</li><li>POST</li><li>PUT</li><li>DELETE</li><li>OPTIONS</li><li>HEAD</li></ul>"},
-{"_id":{"$oid":"5c861d23d03db5462312db28"},"chapterKey":"webService","question":"What is idempotence?","answer":"<b>Idempotence</b> is the property of certain operations in mathematics and computer science whereby they can be applied multiple times without changing the result beyond the initial application."}
+[
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d314"
+    },
+    "chapterKey": "git",
+    "question": "What is Git?",
+    "answer": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d316"
+    },
+    "chapterKey": "git",
+    "question": "How to set user name and email?",
+    "answer": "This is important thing because every Git commit uses this information and it is immutably baked into the commits you start creating:</br><b> $ git config<br> --global user.name \"John Doe\"</br>$ git config<br> --global user.email johndoe@example.com</p></b>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d317"
+    },
+    "chapterKey": "git",
+    "question": "What is git working directory?",
+    "answer": "A <b>working tree</b> consist of files that you are currently working on. Working directory is the directory with your source files under git control. Git is tracking the difference between your working directory and local repository, and between your local repository and (one of) remote repositories."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d318"
+    },
+    "chapterKey": "git",
+    "question": "What is git index(Staging)?",
+    "answer": "An <b>index</b> is a staging area where new commits are prepared. The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the \"index\", but the phrase \"staging area\" works just as well."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31a"
+    },
+    "chapterKey": "git",
+    "question": "What is pull request?",
+    "answer": "<b>PR</b> is a mechanism for a developer to notify team members that they have completed a feature. This lets everybody involved know that they need to review the code and merge it into the master branch. It is more than just a notification-it is a dedicated forum for discussing the proposed feature."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31b"
+    },
+    "chapterKey": "git",
+    "question": "What is git merge?",
+    "answer": "<b>Merging</b> is way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch. It will combine multiple sequences of commits into one unified history. Mostly, git merge is used to combine two branches."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31d"
+    },
+    "chapterKey": "git",
+    "question": "What is git cherry-pick?",
+    "answer": "Apply the changes introduced by some existing commits from another branch. <b>Cherry picking</b> in Git is designed to apply some commit from one branch into another branch. It can be done if you made a mistake and committed a change into wrong branch,but do not want to merge the whole branch."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31f"
+    },
+    "chapterKey": "git",
+    "question": "What is .gitignore file?",
+    "answer": "Ignored files are tracked in a special file named <b>.gitignore</b> that is checked in at the root of your repository. This file must be edited and committed by hand when you have new files to ignore. <b>.gitignore</b> files contain patterns that are matched against file names in your repository to determine whether or not they should be ignored."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d322"
+    },
+    "chapterKey": "git",
+    "question": "What is git pull?",
+    "answer": "<b>git pull</b> will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. If you have pending changes in progress this will cause conflicts and kickoff the merge conflict resolution flow.</br><b>git pull = git fetch + git merge</b>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d324"
+    },
+    "chapterKey": "maven",
+    "question": "What is POM?",
+    "answer": "POM stands for Project Object Model. It is fundamental Unit of Work in Maven.It is an XML file. It always resides in the base directory of the project as <b>pom.xml</b>. It contains information about the project and various configuration details used by Maven to build the project(s)."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d325"
+    },
+    "chapterKey": "maven",
+    "question": "What information does POM contain?",
+    "answer": "POM contains the some of the following configuration information: project dependencies, plugins, goals, build profiles, project version developers, mailing list."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d327"
+    },
+    "chapterKey": "maven",
+    "question": "What are Maven build lifecycle default phases?",
+    "answer": "The default lifecycle comprises of the following phases:</br><b>validate</br>compile</br>test</br>package</br> verify</br> install</br> deploy</br></b>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d328"
+    },
+    "chapterKey": "maven",
+    "question": "What the command 'mvn test' do?",
+    "answer": "<b>mvn test</b> - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32a"
+    },
+    "chapterKey": "maven",
+    "question": "What are Maven repositories?",
+    "answer": "<b>local</b>:folder  on your local machine. It  keeps your project's all dependencies.</br><b>central</b>:repository provided by Maven community.It contains a large number of commonly used libraries.</br><b>remote</b>:developer's own custom repository containing required libraries or other project jars.</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32b"
+    },
+    "chapterKey": "maven",
+    "question": "What is remote repository?",
+    "answer": "Apart from central repository, you may have needed artifacts deployed on other remote locations. In your corporate office there may be projects or modules specific to organization only. Organization can create remote repository and deploy these private artifacts. This remote repository will be accessible only inside organization."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32d"
+    },
+    "chapterKey": "maven",
+    "question": "What is a goal in Maven terminology?",
+    "answer": "A goal represents a specific task which contributes to the building and managing of a project. It may be bound to zero or more build phases. A goal not bound to any build phase could be executed outside of the build lifecycle by direct invocation."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d330"
+    },
+    "chapterKey": "maven",
+    "question": "What is dependency exclusion?",
+    "answer": "Any transitive dependency can be exclude using \"exclusion\" element. As example, A depends upon B and B depends upon C then A can mark C as excluded."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d332"
+    },
+    "chapterKey": "testng",
+    "question": "What is TestNG?",
+    "answer": "<b>TestNG</b> is an innovative test framework built on top of the jUnit framework. Its primary consumers are Java developers who use it for the unit testing purpose. It comes with many useful features like testNG annotations and TestNG assertions that give a lot of flexibility to testers."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d333"
+    },
+    "chapterKey": "testng",
+    "question": "What are the core features of TestNG?",
+    "answer": "Core features:</br>concurrency</br>dependency</br>prioritization</br></br>grouping</br>parameterization</br>data sourcing</br>."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d334"
+    },
+    "chapterKey": "testng",
+    "question": "What is soft assert in TestNG?",
+    "answer": "<b>Soft Assert</b> collects errors during test. It doesn't throw an exception when an assert fails and would continue with the next step after the assert. If there is any exception and you want to throw it then you need to use assertAll method as a last statement in the test and test suite again continue with next test as it is."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d335"
+    },
+    "chapterKey": "testng",
+    "question": "What is the use of TestNG.xml file?",
+    "answer": "The <b>TestNG.xml</b> file is used for configuring the whole test suite. In <b>TestNG.xml</b> file, we can create test suite,create test groups mark tests for parallel execution, add listeners and pass parameters to test scripts. We can also use this testng.xml file for triggering the test suite from command prompt/terminal or Jenkins."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d336"
+    },
+    "chapterKey": "testng",
+    "question": "How to run multiple TestNG tests in parallel?",
+    "answer": "TestNG supports concurrent executions of tests.We can utilize this feature to run the tests in different browsers simultaneously. In the TestNG.xml,there is <b>suite</b> tag which has a <b>parallel</b> attribute. This tag can parallelize the test execution at different levels."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d338"
+    },
+    "chapterKey": "testng",
+    "question": "What is parametrized test?",
+    "answer": "Parameterized tests allow a developer to run the same test over and over again using different values."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33a"
+    },
+    "chapterKey": "testng",
+    "question": "What is TestNG Factory?",
+    "answer": "<b>@Factory</b> annotation helps in dynamic execution of test cases. Using @Factory annotation we can pass parameters to the whole test class at run time. The parameters passed can be used by one or more test methods of that class."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33b"
+    },
+    "chapterKey": "testng",
+    "question": "What is difference between Factory and DataProvider?",
+    "answer": "<b>Factory</b> method creates instances of test class and run all the test methods in that class with different set of data. Whereas, <b>DataProvider</b> is bound to individual test methods and run the specific methods multiple times."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33d"
+    },
+    "chapterKey": "testng",
+    "question": "What is IAnnotationTransformer in TesNG?",
+    "answer": "<b>IAnnotationTransformer</b> is a TestNG listener which allows you to modify TestNG annotation and configure it further. It allows you to modify your annotation without using XML and without recompiling your source."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33f"
+    },
+    "chapterKey": "testng",
+    "question": "What is IInvokedMethodListener?",
+    "answer": "Whenever a class implements this listener, TestNG picks up your test for execution, it first makes a call to <b>beforeInvocation()</b> method and runs whatever has been scripted in this method. In a similar way, it again makes a call to <b>afterInvocation()</b> method after a test has been run."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d340"
+    },
+    "chapterKey": "testng",
+    "question": "What is Annotation?",
+    "answer": "<b>Annotations</b>, a form of metadata, provide data about a program that is not part of the program itself. Annotations have no direct effect on the operation of the code they annotate."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d341"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is WebDriver?",
+    "answer": "WebDriver is a tool for automating web application testing, and in particular to verify that they work as expected."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d343"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Explicit wait?",
+    "answer": "The explicit wait is used to tell the Web Driver to wait for certain conditions the maximum time exceeded before throwing an exception. The explicit wait is an intelligent kind of wait,it can be applied only for specified elements."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d349"
+    },
+    "chapterKey": "webDriver",
+    "question": "List out different types of locators?",
+    "answer": "By.id() </br>By.name()</br>By.tagName()</br>By.className()</br>By.linkText()</br>By.partialLinkText()</br>By.xpath()</br>By.cssSelector()</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34b"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is main difference between XPath and CSS?",
+    "answer": "The fundamental difference between XPath and css selector is using XPaths we can traverse up in the document i.e. we can move to parent elements.Whereas using CSS selector we can only move downwards in the document."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34d"
+    },
+    "chapterKey": "webDriver",
+    "question": "How to wait for a specific frame to load?",
+    "answer": "Use:</br> WebDriverWait wait = new WebDriverWait(driver,10);</br>ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName);"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34f"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Actions class?",
+    "answer": "The Action class is user-facing API for emulating complex user action events."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d351"
+    },
+    "chapterKey": "proxy",
+    "question": "What is HTTPS?",
+    "answer": "<b>HTTPS</b> is the secure version of HTTP,the protocol over which data is sent between your browser and the website. It means all communications between your browser and the website are encrypted. HTTPS use one of two secure protocols to encrypt communications - <b>SSL</b> or <b>TLS</b>."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d352"
+    },
+    "chapterKey": "proxy",
+    "question": "What is HTTP/HTTPS Request?",
+    "answer": "<b>Request</b> is message from a client to a server includes, within the first line of that message, the method to be applied to the resource,the identifier of the resource,and the protocol version in use. Response has next structure:</br>- Status Line</br>- Headers</br>- An optional Body of the Request</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d353"
+    },
+    "chapterKey": "proxy",
+    "question": "What is HTTP/HTTPS Response?",
+    "answer": "<b>Response</b> is the packet of information sent by Server to the Client in response to an earlier Request made by Client. Response contains the information requested by the Client.Response has next structure:</br>- Status Line</br>- Headers</br>- An optional Body of the Request</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d354"
+    },
+    "chapterKey": "proxy",
+    "question": "What is SSL Certificate?",
+    "answer": "<b>SSL Certificate</b> is file that digitally bind a cryptographic key to an organization's details. It contains the public key needed to begin the secure session. Browser and website initiate the 'SSL handshake', that involves the generation of shared secrets to establish a uniquely secure connection between yourself and the website."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d356"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Proxy Server?",
+    "answer": "<b>Proxy server</b> is a server  that acts as an intermediary for requests from clients seeking resources from other servers. A client connects to the proxy server, requesting some service,or other resource available from a different server and the proxy server evaluates the request as a way to simplify and control its complexity."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d358"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Browser Mob Proxy?",
+    "answer": "<b>BrowserMob Proxy</b> is a simple utility that allows you to manipulate HTTP/HTTPS requests and responses, capture HTTP/HTTPS content, and export performance data as a HAR file. BMP works well as a standalone proxy server, but it is especially useful when embedded in Selenium tests."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35a"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Charles rewrite tool?",
+    "answer": "The Rewrite tool enables you to create rules that modify requests and responses as they pass through Charles. Rules such as adding or changing a header or search and replace some text in the response body."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35e"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Blacklisting?",
+    "answer": "The <b>Blacklisting</b> enables you to enter domain names which should be blocked. When your web browser tries to request any page from a blacklisted domain name it is blocked. You can also enter wildcards to block subdomains. Blacklisting is useful when you are testing a site that loads resources from another server."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d360"
+    },
+    "chapterKey": "appium",
+    "question": "Which kind of Apps can be automated?",
+    "answer": "<b>Native apps</b> are those written using the iOS,Android,or Windows SDKs. <b>Mobile web apps</b> are web apps accessed using a mobile browser (Appium supports Safari on iOS and Chrome or the built-in 'Browser' app on Android). <b>Hybrid apps</b> have a wrapper around a \"webview\" - a native control that enables interaction with web."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d362"
+    },
+    "chapterKey": "appium",
+    "question": "What is Client/Server Appium concept?",
+    "answer": "<b>Appium is webserver that exposes a REST API</b>. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution. You can write you test  in any language that has a http client API."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d364"
+    },
+    "chapterKey": "appium",
+    "question": "What is Appium Desired Capabilities?",
+    "answer": "<b>Desired capabilities</b> are a set of keys and values (i.e., a map or hash) sent to the Appium server to tell the server what kind of automation session we're interested in starting up. There are also various capabilities which can modify the behavior of the server during automation."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d366"
+    },
+    "chapterKey": "appium",
+    "question": "What is Appium Desktop?",
+    "answer": "<b>Appium Desktop</b> is a GUI wrapper around the Appium server. It comes bundled with everything required to run the Appium server, so you don't need to worry about Node. It also comes with an Inspector, which enables you to check out the hierarchy of your app. This can come in handy when writing tests."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d368"
+    },
+    "chapterKey": "appium",
+    "question": "How to inspect elements on the IOS apps?",
+    "answer": "With the help of using <b>Appium Inspector</b> that is a GUI based tool you can identify elements on IOS apps. These GUI based tools are quite similar to that of selenium IDE. Or you can use <b>Appium-iOS-Inspector</b> written by Mikola Mokhnach."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d36b"
+    },
+    "chapterKey": "appium",
+    "question": "What is UIAutomator?",
+    "answer": "<b>UI Automator</b> is a UI testing framework suitable for cross-app functional UI testing across system and installed apps. This framework provides a set of APIs to build UI tests that perform interactions on user apps and system apps. The UI Automator APIs allows you to perform operations."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d36d"
+    },
+    "chapterKey": "appium",
+    "question": "What is Ideviceinstaller?",
+    "answer": "<b>ideviceinstaller</b> is a tool to interact with the installation_proxy of an iOS device allowing to install, upgrade, uninstall, archive, restore and enumerate installed or archived apps. It makes use of the fabulous libimobiledevice library that allows communication with iOS devices."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d37d"
+    },
+    "chapterKey": "ci",
+    "question": "What is CI?",
+    "answer": "<b>Continuous Integration (CI)</b> is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. By integrating regularly, you can detect errors quickly, and locate them more easily."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d37f"
+    },
+    "chapterKey": "ci",
+    "question": "What are features of Continuous Integration?",
+    "answer": "<b>Single repository</b>:Code is stored in single repository.</br><b>Build automation</b>:After code changes it's automatically compiled.</br><b>Testing</b>:Code is self tested as code is changed and built.</br><b>Notify</b>:Notify the status of build to all users.</br><b>Automatic deploy</b>:CI deploys code automatically.</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d381"
+    },
+    "chapterKey": "ci",
+    "question": "What is Jenkins?",
+    "answer": "<b>Jenkins</b> is an open source continuous integration tool written in Java. It keeps a track on version control system and to initiate and monitor a build system if changes occur."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d382"
+    },
+    "chapterKey": "ci",
+    "question": "What is CI in Jenkins?",
+    "answer": "In software development, teams work on different segments of same web application so you have to perform integration test by integrating all modules. In order to do that an automated process for each piece of code is performed on daily bases so that all your codes get tested. This process is known as CI."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d383"
+    },
+    "chapterKey": "ci",
+    "question": "What is thedDifference between Maven and Jenkins?",
+    "answer": "Maven build tool whereas Jenkins is a continuous integration tool."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d315"
+    },
+    "chapterKey": "git",
+    "question": "Main stages of Git?",
+    "answer": "<b>Untracked(Working directory):</b> the file exists, but is not part of git's version control.</br><b>Staged(Index):</b> the file has been added to git's version control but changes have not been committed.</br><b>Committed(Repository):</b> the change has been committed."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d319"
+    },
+    "chapterKey": "git",
+    "question": "What is git repository?",
+    "answer": "Git <b>repository</b> is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. It is simply a place where the history of your work is stored. It often lives in a .git subdirectory of your working copy - a copy of the most recent state of the files you're working on."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31c"
+    },
+    "chapterKey": "git",
+    "question": "What is git stash?",
+    "answer": "<b>git stash</b> temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else,and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you are mid-way through a code change and aren't quite ready to commit."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d31e"
+    },
+    "chapterKey": "git",
+    "question": "What is merge conflict?",
+    "answer": "Sometimes there are competing changes that Git needs your help with to decide which changes to incorporate in the final merge. Often,<b>merge conflicts</b> happen when people make different changes to the same line of the same file, or when one person edits a file and another person deletes the same file. You must resolve the conflict before you can merge the branches."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d320"
+    },
+    "chapterKey": "git",
+    "question": "What is git reset?",
+    "answer": "The <b>git reset</b> command is a complex and versatile tool for undoing changes. It has three primary forms of invocation. Forms correspond to command line arguments</br> <b>--soft, --mixed, --hard.</b> The 3 arguments each correspond to Git's three internal state management mechanism's, The Commit Tree (HEAD),The Staging Index,and The Working Directory."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d321"
+    },
+    "chapterKey": "git",
+    "question": "What is get fetch?",
+    "answer": "<b>git fetch</b> gathers any commits from the target branch that do not exist in your current branch and stores them in your local repository. It does not merge them and notupdate your local repo's working state,leaving your current work intact."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d323"
+    },
+    "chapterKey": "maven",
+    "question": "What is Maven?",
+    "answer": "<b>Maven</b> is a project management and comprehension tool. Maven provides developers a complete build lifecycle framework. Development team can automate the project's build infrastructure in almost no time as Maven uses a standard directory layout and a default build lifecycle."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d326"
+    },
+    "chapterKey": "maven",
+    "question": "What is Maven build lifecycle?",
+    "answer": "Build Lifecycle is a well defined sequence of phases which define the order in which the goals are to be executed. Here phase represents a stage in life cycle."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d329"
+    },
+    "chapterKey": "maven",
+    "question": "What is Maven default lifecycle flow?",
+    "answer": "When the default lifecycle is used,Maven will first validate the project,then will try to compile the sources, run those against the tests,package the binaries (e.g. jar),run integration tests,verify the integration tests, install the verified package to the local repository,then deploy the installed package to a remote repository."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32c"
+    },
+    "chapterKey": "maven",
+    "question": "What is settings.xml?",
+    "answer": "<b>settings.xml</b> file contains elements used to define values which configure execution in various ways, like the pom.xml,but should not be bundled to any specific project,or distributed to an audience. These include values such as the local repository location,alternate remote repository servers,and authentication information."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32e"
+    },
+    "chapterKey": "maven",
+    "question": "What is dependency scope?",
+    "answer": "Dependency scope includes dependencies as per the current stage of the build.</br><b>compile</b>:available in classpath.</br><b>provided</b>:provided at runtime.</br><b>runtime</b>:not required for compilation,but required for execution.</br><b>test</b>:available for the test compilation and execution phases.</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d32f"
+    },
+    "chapterKey": "maven",
+    "question": "Why are Maven plugins used?",
+    "answer": "Maven Plugins are used to:</br>create jar file</br>create war file</br>compile code files</br> unit testing of code</br>create project documentation</br>create project reports</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d331"
+    },
+    "chapterKey": "maven",
+    "question": "What is Maven surefire plugin?",
+    "answer": "Plugin that runs tests and generates reports based on the results of their execution.</br>The Surefire Plugin has only one goal:</br><b>surefire:test</b> runs the unit tests of an application."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d337"
+    },
+    "chapterKey": "testng",
+    "question": "How to skip a test method from execution in TestNG?",
+    "answer": "Throw<b> new SkipException</b>.Once SkipException thrown, remaining part of that test method will not be executed and control will goes directly to next test method execution."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d339"
+    },
+    "chapterKey": "testng",
+    "question": "What is DataProvider?",
+    "answer": "A test method that uses <b>DataProvider</b> will be executed the specific methods multiple number of times based on the data provided by the DataProvider. The test method will be executed using the same instance of the test class to which the test method belongs."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33c"
+    },
+    "chapterKey": "testng",
+    "question": "What is TestListeners in TestNG?",
+    "answer": "<b>Listener</b> is defined as interface that modifes the default TestNG's behavior. As the name suggests Listeners \"listen\" to the event defined in the selenium script and behave accordingly. It is used in selenium by implementing Listeners Interface. It allows customizing TestNG reports or logs."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d33e"
+    },
+    "chapterKey": "testng",
+    "question": "What is ISuiteListener?",
+    "answer": "Whenever a class implements this listener, TestNG picks up your suite for execution, it first makes a call to <b>onStart()</b> method and runs whatever has been scripted in this method. In a similar way, it again makes a call to <b>onFinish()</b> method after a suite has been run."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d342"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Implicit wait?",
+    "answer": "The implicit wait will tell to the web driver to wait for certain amount of time before it throws a \"No Such Element Exception\".The default setting is 0. Once we set the time, web driver will wait for that time before throwing an exception."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d344"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Fluent wait?",
+    "answer": "Each FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. The user may configure the wait to ignore specific types of exceptions whilst waiting, such as NoSuchElementExceptions when searching for an element on the page."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d345"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Page Object Pattern?",
+    "answer": "PO is object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI. The benefit is that if the UI changes for the page, the tests themselves don't need to change,only the code within the page object needs to change."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d346"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Page Factory?",
+    "answer": "The PageFactory is an extension to the PO pattern. It is used to initialize the elements of the P O or instantiate the POs itself. It is used to initialize elements of a Page class without having to use 'FindElement' or 'FindElements'. Annotations can be used to supply descriptive names of target objects to improve code readability."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d347"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Fluent Page Object Pattern?",
+    "answer": "A fluent interface is typically implemented by using method cascading (concretely method chaining) to relay the instruction context of a subsequent call. The context is defined through the return value of a called method-self-referential, where the new context is equivalent to the last context."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d348"
+    },
+    "chapterKey": "webDriver",
+    "question": "What is Desired Capability?",
+    "answer": "The desired capability is a series of key/value pairs that stores the browser properties like browsername, browser version,the path of the browser driver in the system, etc. to determine the behaviour of the browser at run time."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34a"
+    },
+    "chapterKey": "webDriver",
+    "question": "Close vs Quit?",
+    "answer": "<b>close()</b> - closes the Browser window which is in focus. If there are more than one  window opened, then the <b>close()</b> command will only close the window which is having focus at that time. It wont close the remaining  windows.</b>quit()</b>  is generally used to shut down the WebDrivers instance. Hence it closes all the windows."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34c"
+    },
+    "chapterKey": "webDriver",
+    "question": "How to refresh browser?",
+    "answer": "The list of commands to refresh a page:</br>navigate().refresh()</br> getCurrentUrl()</br>navigate().to(driver.getCurrentUrl())</br> sendKeys(Keys.F5)</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d34e"
+    },
+    "chapterKey": "webDriver",
+    "question": "How to delete Cookies?",
+    "answer": "Use:</br>driver.manage().cookies.deleteAllCookies();"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d350"
+    },
+    "chapterKey": "proxy",
+    "question": "What is HTTP?",
+    "answer": "<b>HTTP</b> is an application protocol for distributed, collaborative,  and hypermedia information systems. HTTP is an application protocol that runs on top of the TCP/IP suite of protocols (the foundation protocols for the Internet)."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d355"
+    },
+    "chapterKey": "proxy",
+    "question": "What is MITM?",
+    "answer": "<b>Man-In-The-Middle</b> attack is a type of cyberattack where a malicious actor inserts him into a conversation between two parties, impersonates both parties and gains access to information that the two parties were trying to send to each other. MITM allows  to intercept, send and receive data."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d357"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Har file?",
+    "answer": "The <b>HTTP Archive</b> format or <b>HAR</b>, is a JSON-formatted archive file format for logging of a web browser's interaction with a site. The common extension for these files is .har."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d359"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Charles Proxy?",
+    "answer": "<b>Charles</b> is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35b"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Charles rewrite rule?",
+    "answer": "Each <b>Rewrite</b> describes a single rewrite operation. The rule may affect the headers, the body, or parts of the request URL; it may operate on the request and or the response; it may then define search and replace or just replace style rewriting."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35c"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Packet sniffing?",
+    "answer": "<b>Packet sniffing</b> is a testing activity connected with capturing packets of information while it's traveling all over the computer network. A tool gathers a raw data, and its next task is converting it in a form easily understandable by a technician."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35d"
+    },
+    "chapterKey": "proxy",
+    "question": "What is Charles map remote?",
+    "answer": "The <b>Map Remote</b> tool changes the request location,per the configured mappings, so that the response is transparently served from the new location as if that was the original request."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d35f"
+    },
+    "chapterKey": "appium",
+    "question": "What is Appium?",
+    "answer": "<b>Appium</b> is an open-source tool for automating native, mobile web, and hybrid applications on iOS mobile, Android mobile, and Windows desktop platforms."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d361"
+    },
+    "chapterKey": "appium",
+    "question": "What is RESTful API?",
+    "answer": "<b>RESTful API</b> - is based on representational state transfer (REST) technology, an architectural style and approach to communications often used in web services development."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d363"
+    },
+    "chapterKey": "appium",
+    "question": "What is Appium session?",
+    "answer": "<b>Automation is performed in the context of a session.</b> Client initiate a session with a server and sending a POST /session request to the server, with a JSON object called the 'desired capabilities' object. Server will start up the automation session and respond with a session ID which is used for sending further commands."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d365"
+    },
+    "chapterKey": "appium",
+    "question": "What are Appium clients?",
+    "answer": "<b>Appium clients</b> - client libraries (in Java, Ruby, Python, PHP, JavaScript, and C#) which support Appium's extensions to the WebDriver protocol. When using Appium, you want to use these client libraries instead of your regular WebDriver client."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d367"
+    },
+    "chapterKey": "appium",
+    "question": "How to inspect elements on the native Android App?",
+    "answer": "With the help of the <b>UIAutomator</b> tool that in present in android SDK, you will be able to access those object locators that are part of the Android native app. Or you can use Appium Desktop."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d369"
+    },
+    "chapterKey": "appium",
+    "question": "What is TouchAction?",
+    "answer": "<b>TouchAction</b> objects contain a chain of events. Touch objects are created and are given a chain of events. The available events from the specification are: * press * release * moveTo * tap * wait * longPress * cancel * perform. Appium performs the events in sequence.You can add a wait event to control the timing of the gesture."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d36a"
+    },
+    "chapterKey": "appium",
+    "question": "What is ADB?",
+    "answer": "<b>Android Debug Bridge (adb)</b> is a versatile command-line tool that lets you communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps, and it provides access to a Unix shell that you can use to run a variety of commands on a device."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d36c"
+    },
+    "chapterKey": "appium",
+    "question": "What is XCUITest?",
+    "answer": "<b>XCUITest</b> is the automation framework that ships with Apple's XCode. The XCTest framework lets iOS app developers create and run unit tests, performance tests and UI tests for XCode projects."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d37e"
+    },
+    "chapterKey": "ci",
+    "question": "What is Continuous Deployment?",
+    "answer": "<b>Continuous Deployment</b> is basically getting code into production. Things should be easy and repeatable. That is where Continuous Deployment comes into play.Deployment should not be manual."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d380"
+    },
+    "chapterKey": "ci",
+    "question": "What steps are in continuous integration?",
+    "answer": "<b>CI Steps:</b></br>Compilation</br>Unit Tests</br>Code Quality Gates</br>Integration Tests</br>Deployment</br>Chain Tests</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d384"
+    },
+    "chapterKey": "ci",
+    "question": "What is the relation between Hudson and Jenkins?",
+    "answer": "<b>Hudson</b> was the earlier name and version of current Jenkins. After some issue, the project name was changed from Hudson to Jenkins."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d386"
+    },
+    "chapterKey": "ci",
+    "question": "What is build pipeline in Jenkins?",
+    "answer": "Job chaining in Jenkins is the process of automatically starting other job(s) after the execution of a job. This approach lets you build multi-step build pipelines or trigger the rebuild of a project if one of its dependencies is updated."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d387"
+    },
+    "chapterKey": "ci",
+    "question": "What are Jobs in Jenkins?",
+    "answer": "Jenkins can be used to perform the typical build server work,such as doing continuous/official/nightly builds, run tests,or perform some repetitive batch tasks. This is called 'free-style software project' in Jenkins."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d388"
+    },
+    "chapterKey": "ci",
+    "question": "What are ways a build job can be triggered?",
+    "answer": "There are three basic ways a build job can be triggered:</br>- Start a build job once another build job has completed</br>- Kick off builds at periodical intervals</br>- Poll the SCM for changes</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38a"
+    },
+    "chapterKey": "ci",
+    "question": "How you can clone a Git repository via Jenkins?",
+    "answer": "To clone a Git repository via Jenkins, you have to enter the e-mail and user name for your Jenkins system. For that,you have to switch into your job directory and execute the 'git config' command."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38d"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Test plan?",
+    "answer": "A document describing the scope, approach, resources and schedule of intended test activities. It identifies  test items, the features to be tested,testing tasks, degree of tester independence, the test environment,the test design techniques and entry and exit criteria to be used, and any risks requiring contingency planning."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38e"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Test case?",
+    "answer": "A <b>Test case</b> is a set of conditions or variables under which a tester will determine whether a system under test satisfies requirements or works correctly."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38f"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Test script?",
+    "answer": "A <b>Test Script</b> is a set of instructions (written using a scripting/programming language) that is performed on a system under test to verify that the system performs as expected. Test scripts are used in automated testing."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d390"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Smoke Testing?",
+    "answer": "<b>Smoke Testing</b>, also known as 'Build Verification Testing', is a type of software testing that comprises of a non-exhaustive set of tests that aim at ensuring that the most important functions work. The results of this testing is used to decide if a build is stable enough to proceed with further testing."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d392"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Performance Testing?",
+    "answer": "<b>Performance Testing</b> is a type of software testing that intends to determine how a system performs in terms of responsiveness and stability under a certain load."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d394"
+    },
+    "chapterKey": "testingTheory",
+    "question": "Test Automation Approaches?",
+    "answer": "Test Automation Approaches:</br>- Record and Playback</br>- Scripts</br>- Keyword driven</br>- Data-Driven</br>- Behavior-Driven</br>- Hybrid"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d396"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Data-Driven TA approach?",
+    "answer": "<b>Data-driven</b> is a test automation framework which stores test data in a table or spread spreadsheet format. This allows automation engineers to have a single test script which can execute tests for all the test data in the table."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d399"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is black box testing?",
+    "answer": "<b>Black box</b> testing is the software testing method which is used to test the software without knowing the internal structure of code or program. This testing is usually done to check the functionality of an application."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39b"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is SOLID principles?",
+    "answer": "In object-oriented computer programming, the term <b>SOLID</b> is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39d"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Open/Closed principle?",
+    "answer": "<b>Software components should be open for extension, but closed for modification.</b> It means that your classes should be designed such a way that whenever fellow developers wants to change the flow of control in specific conditions in application, all they need to extend your class and override some functions."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39f"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Interface segregation principle?",
+    "answer": "<b>Clients should not be forced to implement unnecessary methods which they will not use.</b> Many client-specific interfaces are better than one general-purpose interface."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a1"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What are Design patterns?",
+    "answer": "<b>Design patterns</b> represent the best practices used by software developers. Design patterns are solutions to general problems that developers faced during software development. These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a5"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Strategy pattern?",
+    "answer": "In <b>Strategy pattern</b>, a class behavior or its algorithm can be changed at run time. In Strategy pattern, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. The strategy object changes the executing algorithm of the context object."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a6"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Gang of Four (GOF)?",
+    "answer": "In 1994, four authors <b>Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides</b> published a book titled <b>Design Patterns - Elements of Reusable Object-Oriented Software</b> which initiated the concept of Design Pattern in Software development. These authors are collectively known as Gang of Four (GOF)."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a8"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Iterator pattern?",
+    "answer": "<b>Iterator</b> pattern is very commonly used design pattern in Java  programming environment. This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. Iterator pattern falls under behavioral pattern category."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a9"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Factroy pattern?",
+    "answer": "<b>Factory pattern</b>  comes under creational pattern as this pattern provides one of the best ways to create an object. In Factory pattern, we create object without exposing the creation logic to the client and refer to newly created object using a common interface."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1a"
+    },
+    "chapterKey": "webService",
+    "question": "What is a Web Service?",
+    "answer": "<b>Web services</b> are open standard (XML, SOAP, HTTP etc.) based Web applications that interact with other web applications for the purpose of exchanging data. Web Services can convert your existing applications into Web-applications."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1c"
+    },
+    "chapterKey": "webService",
+    "question": "What are different types of Web Services?",
+    "answer": "<b>SOAP Web Services</b>: Runs on SOAP protocol and uses XML technology for sending data.<br> <b>Restful Web Services</b>: Itâs an architectural style and runs on HTTP/HTTPS protocol almost all the time."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1e"
+    },
+    "chapterKey": "webService",
+    "question": "What are disadvantages of SOAP Web Services?",
+    "answer": " - Only XML can be used, JSON and other lightweight formats are not supported. <br> - SOAP is slow because payload is large for a simple string message, since it uses XML format.<br> - Anytime there is change in the server side contract, client stub classes need to be generated again.<br> - Canât be tested easily in browser."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db20"
+    },
+    "chapterKey": "webService",
+    "question": "What is WSDL?",
+    "answer": "WSDL stands for <b>Web Service Description Language</b>. WSDL is an XML-based language for describing web services and how to access them."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db22"
+    },
+    "chapterKey": "webService",
+    "question": "Which protocol is used by RESTful web services?",
+    "answer": "RESTful web services make use of <b>HTTP protocol</b> as a medium of communication between client and server."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db23"
+    },
+    "chapterKey": "webService",
+    "question": "What are advantages of SOAP Web Services?",
+    "answer": "- Supports multiple technologies for data transfer such as text, xml, json, image etc.<br> - No contract defined between server and client.<br> - REST is a lightweight protocol.<br> - REST methods can be tested easily over browser.<br>"
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db25"
+    },
+    "chapterKey": "webService",
+    "question": "What is a Resource in Restful web services?",
+    "answer": "<b>Resource</b> is the fundamental concept of Restful architecture. A resource is an object with a type, relationship with other resources and methods that operate on it. Resources are identified with their URI, HTTP methods they support and request/response data type and format of data."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db27"
+    },
+    "chapterKey": "webService",
+    "question": "What is URI?",
+    "answer": "URI stands for <b>Uniform Resource Identifier</b>. Each resource in REST architecture is identified by its URI. Purpose of an URI is to locate a resource(s) on the server hosting the web service."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d385"
+    },
+    "chapterKey": "ci",
+    "question": "What is Jenkins Pipeline?",
+    "answer": "<b>Jenkins Pipeline</b> is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d389"
+    },
+    "chapterKey": "ci",
+    "question": "What is cron?",
+    "answer": "The software utility <b>cron</b> is a time-based job scheduler in Unix-like computer operating systems. People who set up and maintain software environments use cron to schedule jobs (commands or shell scripts) to run periodically at fixed times, dates, or intervals."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38b"
+    },
+    "chapterKey": "ci",
+    "question": "What are the two components Jenkins is mainly integrated with?",
+    "answer": "Jenkins mainly integrated with next components:</br>- Version Control system(Git)</br>- build tools like Apache Maven.</br>"
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d38c"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Software testing?",
+    "answer": "<b>Software testing</b> - checking the correspondence between the actual and expected behavior of the program, performed on a finite set of tests selected in a certain way."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d391"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Regression Testing?",
+    "answer": "<b>Regression testing</b> is testing existing software applications to make sure that a change or addition has not broken any existing functionality. Its purpose is to catch bugs that may have been accidentally introduced into a new build or release candidate, and to make sure that fixing one thing has not broken another thing."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d393"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Functional Testing?",
+    "answer": "<b>Functional Testing</b> is a type of software testing whereby the system is tested against the functional requirements/specifications. Functional testing ensures that the requirements are properly satisfied by the application."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d395"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Keyword-Driven TA approach?",
+    "answer": "<b>Keyword-driven testing</b>,is a software testing methodology suitable for both manual and automated testing. Method separates the documentation of test cases including the data to use from the prescription of the way the test cases are executed. Test creation process for design stage and an execution stage."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d397"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Behavior-Driven Testing?",
+    "answer": "<b>Behavior Driven Testing</b> is an uncommon term in software testing compared to Behavior Driven Development. Tests in behavior driven testing are most often focused on the behavior of users rather than the technical functions of the software. BDT is the best choice when you want to show your business point of view."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d398"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is Testing Metrics?",
+    "answer": "<b>Testing Metric</b> is a quantitative measure of the degree to which a system, system component, or process possesses a given attribute. In other words, metrics helps estimating the progress, quality and health of a software testing effort."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39a"
+    },
+    "chapterKey": "testingTheory",
+    "question": "What is a bug?",
+    "answer": "A <b>software bug<b> is an error, flaw, failure or fault in a computer program or system that causes it to produce an incorrect or unexpected result, or to behave in unintended ways."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39c"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Single Responsibility principle?",
+    "answer": "<b>One class should have one and only one responsibility.</b> You should write, change and maintain a class for only one purpose. If it is model class then it should strictly represent only one  entity. This will give you the flexibility to make changes in future without worrying the impacts of changes for another entity."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d39e"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Liskov Substitution principle?",
+    "answer": "<b>Derived types must be completely substitutable for their base types.</b> The classes fellow developer created by extending your class should be able to fit in application without failure. If a fellow developer poorly extended some part of your class and injected into framework then it should not break the framework."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a0"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Dependency inversion principle?",
+    "answer": "<b>Depend on abstractions, not on concretions.</b> You should design your software in such a way that various modules can be separated from each other using an abstract layer to bind them together. The classical use of this principle of BeanFactory in Spring framework."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a2"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Observer design pattern?",
+    "answer": "<b>Observer</b> pattern is based upon notification, there are two kinds of object Subject and Observer. Whenever there is change on subject's state observer will receive notification."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a3"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Decorator pattern?",
+    "answer": "<b>Decorator pattern</b> allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a4"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Builder pattern?",
+    "answer": "<b>Builder</b> pattern builds a complex object using simple objects and using a step by step approach.This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object. A Builder class builds the final object step by step."
+  },
+  {
+    "_id": {
+      "$oid": "5b5b52ae2b7455bb82c5d3a7"
+    },
+    "chapterKey": "designPatterns",
+    "question": "What is Proxy pattern?",
+    "answer": "In <b>proxy pattern</b>, a class represents functionality of another class. This type of design pattern comes under structural pattern. In proxy pattern, we create object having original object to interface its functionality to outer world."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1b"
+    },
+    "chapterKey": "webService",
+    "question": "What are the advantages of Web Services?",
+    "answer": "<b>Reusability</b>: One web service can be used by many client applications at the same time;<br> <b>Interoperability</b>: Web services are accessible over network and runs on HTTP/SOAP protocol and uses XML/JSON to transport data;<br> <b>Easy to deploy and integrate</b>."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1d"
+    },
+    "chapterKey": "webService",
+    "question": "What are advantages of SOAP Web Services?",
+    "answer": "- WSDL document provides contract and technical details of the web services for client applications without exposing the underlying implementation technologies.<br> - SOAP uses XML data for payload, so it can be easily read by any technology. - SOAP protocol is universally accepted, so itâs an industry standard approach with many  available open source implementations."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d0bd03db5462312db1f"
+    },
+    "chapterKey": "webService",
+    "question": "How a SOAP message is structured?",
+    "answer": "A SOAP message is consists of <b>SOAP Envelope, SOAP Headers, and SOAP Body</b>."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db21"
+    },
+    "chapterKey": "webService",
+    "question": "What is REST Web Services?",
+    "answer": "<b>REST is the acronym for REpresentational State Transfer</b>. REST is an architectural style for developing applications that can be accessed over the network. REST is a stateless client-server architecture where web services are resources and can be identified by their URIs.XML, JSON, text or any other type of data for request and response are allowed."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db24"
+    },
+    "chapterKey": "webService",
+    "question": "What are disadvantages of SOAP Web Services?",
+    "answer": "- Since there is no contract defined between service and client, it has to be communicated through other means such as documentation or emails.<br> - Since it works on HTTP, there canât be asynchronous calls. Sessions canât be maintained."
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db26"
+    },
+    "chapterKey": "webService",
+    "question": "What are HTTP methods supported by REST?",
+    "answer": "<ul><li>GET</li><li>POST</li><li>PUT</li><li>DELETE</li><li>OPTIONS</li><li>HEAD</li></ul>"
+  },
+  {
+    "_id": {
+      "$oid": "5c861d23d03db5462312db28"
+    },
+    "chapterKey": "webService",
+    "question": "What is idempotence?",
+    "answer": "<b>Idempotence</b> is the property of certain operations in mathematics and computer science whereby they can be applied multiple times without changing the result beyond the initial application."
+  }
 ]

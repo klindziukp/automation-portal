@@ -8,7 +8,6 @@
     "parent": "web",
     "description": "Using Selenium WebDriver in MQE frameworks.",
     "generalInfo": "Selenium automates browsers. That's it! <br> What you do with that power is entirely up to you. Primarily, it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) be automated as well.  Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks. <br> The biggest change in Selenium recently has been the inclusion of the WebDriver API. Driving a browser natively as a user would either locally or on a remote machine using the Selenium Server it marks a leap forward in terms of browser automation.  Selenium WebDriver fits in the same role as RC did, and has incorporated the original 1.x bindings. It refers to both the language bindings and the implementations of the individual browser controlling code. This is commonly referred to as just \"WebDriver\" or sometimes as Selenium 2.  Selenium 1.0 + WebDriver = Selenium 2.0 WebDriver is designed in a simpler and more concise programming interface along with addressing some limitations in the Selenium-RC API. WebDriver is a compact Object Oriented API when compared to Selenium1.0 It drives the browser much more effectively and overcomes the limitations of Selenium 1.x which affected our functional test coverage, like the file upload or download, pop-ups and dialogs barrier WebDriver overcomes the limitation of Selenium RC's Single Host origin policy WebDriver is the name of the key interface against which tests should be written in Java, the implementing classes one should use are listed as below:  ChromeDriver, EventFiringWebDriver, FirefoxDriver, HtmlUnitDriver, InternetExplorerDriver, PhantomJSDriver, RemoteWebDriver, SafariDriver",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is Selenium WebDriver?"
@@ -51,9 +50,7 @@
       },
       {
         "text": "How to run tests in parallel?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "How does Selenium WebDriver works?"
       },
@@ -68,38 +65,6 @@
       },
       {
         "text": "What is ThreadLocal? What is InheritedThreadlocal?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Basic understanding how Selenium WebDriver works."
-      },
-      {
-        "text": "Knowledge how to start drivers for different browsers."
-      },
-      {
-        "text": "Knowledge of WebDriver interface API."
-      },
-      {
-        "text": "Knowledge of Page Object, Page Component Object patterns."
-      },
-      {
-        "text": "Understanding of using Page Object Composition and Inheritance."
-      },
-      {
-        "text": "Knowledge of Implicit and Explicit waits, Fluent waits."
-      },
-      {
-        "text": "Understanding how to run tests in parallel."
-      },
-      {
-        "text": "Understanding of ThreadLocal and when it can be used."
-      },
-      {
-        "text": "Knowledge of Actions, JavaScriptExecutor classes."
-      },
-      {
-        "text": "Understanding what is Selenium Grid, how to start and configure hub, nodes."
       }
     ],
     "tasks": [
@@ -235,8 +200,7 @@
       {
         "text": "https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -245,7 +209,6 @@
     "key": "proxy",
     "name": "Proxy",
     "description": "Using proxy in TAF. Charles Proxy.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is a Proxy server and how does it work?"
@@ -273,32 +236,6 @@
       },
       {
         "text": "What is BrowserMob Proxy?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is Proxy Server and how does it work."
-      },
-      {
-        "text": "Knowledge of HTTP/HTTPS protocol."
-      },
-      {
-        "text": "Knowledge what is Browser Mob Proxy."
-      },
-      {
-        "text": "Knowledge of Charles Proxy."
-      },
-      {
-        "text": "Understanding what is HAR file."
-      },
-      {
-        "text": "Understanding how to add Rewrite rule."
-      },
-      {
-        "text": "Ability to set up sniffing traffic HTTP/HTTPS traffic on mobile device."
-      },
-      {
-        "text": "Understanding how to configure external proxy."
       }
     ],
     "tasks": [
@@ -367,8 +304,7 @@
       {
         "text": "https://www.charlesproxy.com/documentation/tools/"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -377,7 +313,6 @@
     "key": "appium",
     "name": "Appium",
     "description": "Mobile automation. Appium.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "Application types? What’s the difference (Native apps, Web apps, Hybrid apps)?"
@@ -420,32 +355,6 @@
       },
       {
         "text": "Prerequisites for Android Automation (Android SDK, device/simulator)?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is Appium and how does it work?"
-      },
-      {
-        "text": "Knowledge how to start Appium server and basic CLI options."
-      },
-      {
-        "text": "Knowledge of basic Appium Desired Capabilities."
-      },
-      {
-        "text": "Understanding hot to find elements for iOS, Android apps."
-      },
-      {
-        "text": "Knowledge of Appium locator strategies and difference for iOS 9.3 (and below) and for iOS10+."
-      },
-      {
-        "text": "Knowledge of basic mobile actions."
-      },
-      {
-        "text": "Understanding what is Appium Java Client."
-      },
-      {
-        "text": "Knowledge of prerequisites for iOS, Android Automation with Appium"
       }
     ],
     "tasks": [
@@ -502,8 +411,7 @@
       {
         "text": "http://appium.io/docs/en/writing-running-appium/ios/ios-predicate/"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -512,7 +420,6 @@
     "key": "ci",
     "name": "Continuous Integration",
     "description": "Automated testing in Continuous Integration.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is Continuous Integration(CI) and Continuous Deployment (CD)? Benefits of CI/CD."
@@ -534,31 +441,12 @@
       },
       {
         "text": "How to create a job in Jenkins?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Popular CI Tools?"
       },
       {
         "text": "HTML Publisher plugin, AnsiColor plugin."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is CI/CD and it’s benefits."
-      },
-      {
-        "text": "Understanding what is Jenkins."
-      },
-      {
-        "text": "Understanding how to set up Jenkins job."
-      },
-      {
-        "text": "Knowledge different build triggers and how to set them."
-      },
-      {
-        "text": "Ability to set up email notifications for test results."
       }
     ],
     "tasks": [
@@ -606,8 +494,7 @@
       {
         "text": "https://www.tutorialspoint.com/jenkins/jenkins_overview.htm"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -616,7 +503,6 @@
     "key": "testing-theory",
     "name": "Testing Theory",
     "description": "Testing Theory",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "Automated testing benefits? Disadvantages of automated testing?"
@@ -665,9 +551,7 @@
       },
       {
         "text": "What is Behavior-Driven Testing?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "What is ROI?"
       },
@@ -699,26 +583,6 @@
         "text": "Metrics: how to assess automated testing effectiveness?"
       }
     ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding pros and cons of Automated testing and what (not) to automate."
-      },
-      {
-        "text": "Understanding how to write good test case."
-      },
-      {
-        "text": "Knowledge what is  test pyramid, levels of testing, types of testing, basic testing techniques."
-      },
-      {
-        "text": "Understanding Smoke and Regression testing and difference between them."
-      },
-      {
-        "text": "Understanding what is Functional, Performance testing."
-      },
-      {
-        "text": "Understanding of Test Automation Approaches."
-      }
-    ],
     "tasks": [
       {
         "text": "Create test cases for implemented scenarios in Modules ‘Framework’"
@@ -746,8 +610,7 @@
       {
         "text": "http://www4.ncsu.edu/~tjmenzie/cs510/pdf/SWEBOKv3.pdf"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -756,7 +619,6 @@
     "key": "design-patterns",
     "name": "Design Patterns",
     "description": "Architecture principles and Design Patterns in TAF.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is SOLID principles?"
@@ -802,32 +664,6 @@
       },
       {
         "text": "What is Refactoring?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding of SOLID principles."
-      },
-      {
-        "text": "Understanding of what is Design pattern."
-      },
-      {
-        "text": "Understanding of Singleton design pattern, double-checked locking Singleton."
-      },
-      {
-        "text": "Understanding of Abstract Factory, Factory method design pattern. Understanding difference between them."
-      },
-      {
-        "text": "Understanding of Strategy design pattern."
-      },
-      {
-        "text": "Understanding of Decorator design pattern."
-      },
-      {
-        "text": "Understanding of Builder Pattern."
-      },
-      {
-        "text": "Understanding what is Refactoring."
       }
     ],
     "tasks": [
@@ -886,263 +722,7 @@
       {
         "text": "http://www.tutorialspoint.com/design_pattern/index.htm"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
-  },
-  {
-    "_id": {
-      "$oid": "5b58be9937e10c41dbd8387d"
-    },
-    "key": "framework",
-    "name": "Framework",
-    "description": "MQE Core Server, MQE Core Java, MQE Test Automation Framework basics. ",
-    "valuableInto": "NOTE: if you see (KT first) to some question - ask your mentor to make Knowledge Transfer (KT) first to make a short intro to assist you in self-learning the issue",
-    "approxTimeHours": "1",
-    "questions": [
-      {
-        "text": "What is Client-Server architecture? What is Servlet?"
-      },
-      {
-        "text": "What is Allure framework?"
-      },
-      {
-        "text": "What is marshalling/unmarshalling?"
-      },
-      {
-        "text": "What is Apache Commons library?"
-      },
-      {
-        "text": "Where are stored MQE frameworks? (KT first)"
-      },
-      {
-        "text": "How do mqe-core-server, mqe-core-java, TAF work together? (KT first)"
-      },
-      {
-        "text": "Framework layers: (KT first)",
-        "subItems": [
-          {
-            "text": "Configuration, tests run, data providers"
-          },
-          {
-            "text": "DSL: Services, Business Objects"
-          },
-          {
-            "text": "Page objects and tests, test data"
-          },
-          {
-            "text": "Reporting, Logging"
-          },
-          {
-            "text": "Utilities"
-          }
-        ]
-      },
-      {
-        "text": "What is ...Interact? …Interact class methods and where to find methods implementation. (KT first)"
-      },
-      {
-        "text": "Driver start: CapabilityFactory class and driver configuration. (KT first)"
-      },
-      {
-        "text": "Common framework utils, purpose and implementation: TestRun, Config, TestIDs, AppLib? (KT first)"
-      },
-      {
-        "text": "Proxy in framework: ProxyManager, Proxy(Log)Utils? (KT first)"
-      },
-      {
-        "text": "Where are locators for elements stored? Locator.class implementation. (KT first)"
-      },
-      {
-        "text": "Configuration parameters in TestNGSuiteConfig.xml. How to use from java code?"
-      },
-      {
-        "text": "Reporting: Allure framework. How is allure configured?  (KT first)"
-      },
-      {
-        "text": "Reporting: test annotations. What information can be found about a test in Allure report? (KT first)"
-      },
-      {
-        "text": "Reporting: what information is attached to tests (passed vs failed) in Allure report? (KT first)"
-      },
-      {
-        "text": "How is implemented rerun of failed tests? How are these tests showed in Allure report? (KT first)"
-      },
-      {
-        "text": "How to run test on Jenkins? How to configure Jenkins build? Where is Allure report link located in Jenkins build?  (KT first)"
-      },
-      {
-        "text": "How to run tests locally? Running tests via TestNG, Maven."
-      },
-      {
-        "text": "Which libraries are used in the framework for marshalling?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "What is stacktrace and how to use it?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Knowledge where are TAF, Core Server, Core located."
-      },
-      {
-        "text": "Understanding what is Core Server, Core and how TAF works with them."
-      },
-      {
-        "text": "Knowledge of release process for Core Server, Core and how to report a bug."
-      },
-      {
-        "text": "Understanding framework structure and common classes, used in all MQE frameworks."
-      },
-      {
-        "text": "Understanding what is Allure framework and how to use Allure report."
-      },
-      {
-        "text": "Understanding how is rerun implemented."
-      },
-      {
-        "text": "Understanding what is (un)marshalling and how is it used in framework."
-      },
-      {
-        "text": "Knowledge how to run tests locally and be ready to start implementing/updating/fixing tests."
-      },
-      {
-        "text": "Understanding what is MQE Lab and how to run tests in Lab."
-      },
-      {
-        "text": "Knowledge how to configure, run Jenkins job and analyze job results."
-      },
-      {
-        "text": "Knowledge who is Brandon Clark?"
-      }
-    ],
-    "tasks": [
-      {
-        "text": "Start any test locally. Ask your mentor to assist with configuration for local run and chose test together."
-      },
-      {
-        "text": "Run this test with configured sniffing traffic to Charles. Use external proxy."
-      },
-      {
-        "text": "Run the same test in MQE Lab (on Jenkins). Analyze generated report."
-      },
-      {
-        "text": "Analyze report for failed test. Where to find stacktrace/screenshot/logs/app page source?"
-      },
-      {
-        "text": "Implement new test. Please ask your mentor to provide a scenario."
-      }
-    ],
-    "knowledgeTransfer": [
-      {
-        "text": "Where is the framework located. Link to the repo, credentials if needed."
-      },
-      {
-        "text": "What is Client-Server architecture? What is Servlet?"
-      },
-      {
-        "text": "What is Core Server (mqe-core-server)? What is Core (mqe-core-java)? How does TAF work with them?"
-      },
-      {
-        "text": "Release process of mqe-test-core, mqe-core-server. How are bugs reported?"
-      },
-      {
-        "text": "Framework layers:",
-        "subItems": [
-          {
-            "text": "Configuration, tests run, data providers"
-          },
-          {
-            "text": "DSL: Services, Business Objects"
-          },
-          {
-            "text": "Page objects and tests, test data"
-          },
-          {
-            "text": "Reporting, Logging"
-          },
-          {
-            "text": "Utilities"
-          }
-        ]
-      },
-      {
-        "text": "Short intro into common classes that are used in all MQE frameworks: CapabilityFactory,  listeners, proxy utils, AppLib, Config, TestIDs, TestRun, BaseTest."
-      },
-      {
-        "text": "Short intro into Locator class and locator jsons."
-      },
-      {
-        "text": "Intro to ...Interact classes. List of available Interacts (WebInteract, MobileInteract and etc.). Show where to find method implementation in mqe-core-server. Web(Mobile)Interact implementation features and waiters."
-      },
-      {
-        "text": "Where are located: driver start, configuration, termination. CapabilityFactory class intro."
-      },
-      {
-        "text": "Into into Allure configurations and how to use Allure report."
-      },
-      {
-        "text": "Rerunning failed tests, integration with Allure report."
-      },
-      {
-        "text": "Using marshalling/unmarshalling (xml, JSON) in the framework. Which libraries are used?"
-      },
-      {
-        "text": "What is reflection and how is it used in the framework?"
-      },
-      {
-        "text": "How is Apache Commons library used in the framework?"
-      },
-      {
-        "text": "What is MQE Lab? How to run tests in Lab?"
-      },
-      {
-        "text": "Link to Jenkins job. How to configure, run tests? How to find and analyze results."
-      },
-      {
-        "text": "Who is Brandon Clark?"
-      },
-      {
-        "text": "Provide a short simple scenario for implementation as a part of introduction to framework."
-      }
-    ],
-    "links": [
-      {
-        "text": "https://www.tutorialspoint.com/servlets/index.htm"
-      },
-      {
-        "text": "https://en.wikipedia.org/wiki/Decorator_pattern"
-      },
-      {
-        "text": "https://dzone.com/articles/introduction-to-jaxb-20"
-      },
-      {
-        "text": "https://www.swtestacademy.com/allure-testng/"
-      },
-      {
-        "text": "http://allure.qatools.ru/"
-      },
-      {
-        "text": "http://www.baeldung.com/jackson-object-mapper-tutorial"
-      },
-      {
-        "text": "http://tutorials.jenkov.com/java-json/jackson-objectmapper.html"
-      },
-      {
-        "text": "http://www.baeldung.com/jackson"
-      },
-      {
-        "text": "https://habr.com/company/naumen/blog/228279/"
-      },
-      {
-        "text": "https://dzone.com/articles/parsing-xml-using-dom-sax-and"
-      },
-      {
-        "text": "http://tutorials.jenkov.com/java-reflection/index.html"
-      }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -1151,7 +731,6 @@
     "key": "git",
     "name": "Git",
     "description": "Version Control System: Git.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is Version control?"
@@ -1200,9 +779,7 @@
       },
       {
         "text": "Undoing changes in working directory, staging area."
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Git vs Svn?"
       },
@@ -1255,38 +832,6 @@
       },
       {
         "text": "Don’t use –f parameter for git push if you don’t understand what it is"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is Git and it’s benefits"
-      },
-      {
-        "text": "Understanding of Git workflow"
-      },
-      {
-        "text": "Understanding of changes states and workflow (Working directory/Staging area(Index)/Repository)"
-      },
-      {
-        "text": "Ability to work with Git via command line"
-      },
-      {
-        "text": "Ability to set up, clone a repo"
-      },
-      {
-        "text": "Ability to pull changes from remote repository"
-      },
-      {
-        "text": "Understanding and using .gitignore file"
-      },
-      {
-        "text": "Understanding and using branches"
-      },
-      {
-        "text": "Ability to create Pull Requests, merge branches, resolve conflicts"
-      },
-      {
-        "text": "Ability to undo local changes"
       }
     ],
     "tasks": [
@@ -1343,8 +888,7 @@
       {
         "text": "https://tproger.ru/translations/most-common-git-screwupsquestions-and-solutions/"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -1353,7 +897,6 @@
     "key": "maven",
     "name": "Maven",
     "description": "What is Maven and how does it work? Maven in MQE Frameworks.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is Maven?"
@@ -1396,9 +939,7 @@
       },
       {
         "text": "What Is dependency exclusion? How to exclude dependency?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "What is Super POM and Effective POM?"
       },
@@ -1416,32 +957,6 @@
       },
       {
         "text": "How do you reference a property defined in your pom.xml file?"
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is Maven and how it works."
-      },
-      {
-        "text": "Knowledge what are dependencies and dependency hierarchy."
-      },
-      {
-        "text": "Knowledge of 3 types of repositories (local, central, remote)."
-      },
-      {
-        "text": "Understanding how to configure access to remote repository (settings.xml)."
-      },
-      {
-        "text": "Understanding Maven lifecycle (what happens on each phase)."
-      },
-      {
-        "text": "Knowledge basic Maven plugins and it’s purpose (compiler/surefire/checkstyle plugins)."
-      },
-      {
-        "text": "Understanding what is local repository and how find it."
-      },
-      {
-        "text": "Knowledge how to exclude dependency."
       }
     ],
     "tasks": [
@@ -1495,8 +1010,7 @@
       {
         "text": "https://www.jetbrains.com/help/idea/maven.html"
       }
-    ],
-    "_class": "com.dandelion.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -1506,7 +1020,6 @@
     "name": "TestNG",
     "description": "Using TestNG in MQE Frameworks.",
     "generalInfo": "<p> TestNG is a testing framework inspired from JUnit and NUnit but introducing some new functionalities that make it more powerful and easier to use: <br> - Annotations. <br> - Run your tests in arbitrarily big thread pools with various policies available (all methods in their own thread, one thread per test class, etc...).<br> - Test that your code is multithread safe. <br> - Flexible test configuration. <br> - Support for data-driven testing (with @DataProvider). <br> - Support for parameters. <br> - Powerful execution model (no more TestSuite). <br> - Supported by a variety of tools and plug-ins (Eclipse, IDEA, Maven, etc...). <br> - Embeds BeanShell for further flexibility. <br> - Default JDK functions for runtime and logging (no dependencies). <br> - Dependent methods for application server testing. <br> - TestNG is designed to cover all categories of tests:  unit, functional, end-to-end, integration, etc...",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -1558,40 +1071,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -1672,8 +1154,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.epam.mentoringportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -1683,7 +1164,6 @@
     "name": "Unit testing",
     "description": "Unit testing",
     "generalInfo": "Unit testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -1735,40 +1215,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -1849,8 +1298,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -1860,7 +1308,6 @@
     "name": "Api testing",
     "description": "Api testing",
     "generalInfo": "Api testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -1912,40 +1359,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2026,8 +1442,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2037,7 +1452,6 @@
     "name": "Web testing",
     "description": "Web testing",
     "generalInfo": "Web testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2089,40 +1503,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2203,8 +1586,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2214,7 +1596,6 @@
     "name": "Mobile testing",
     "description": "Mobile testing",
     "generalInfo": "Mobile testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2266,40 +1647,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2380,8 +1730,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2391,7 +1740,6 @@
     "name": "Connected Tv testing",
     "description": "Connected Tv testing",
     "generalInfo": "Connected Tv testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2443,40 +1791,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2557,8 +1874,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2569,7 +1885,6 @@
     "parent": "unit",
     "description": "Unit testing general info",
     "generalInfo": "UNIT TESTING is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of any software. It usually has one or a few inputs and usually a single output. In procedural programming, a unit may be an individual program, function, procedure, etc. In object-oriented programming, the smallest unit is a method, which may belong to a base/ super class, abstract class or derived/ child class. (Some treat a module of an application as a unit. This is to be discouraged as there will probably be many individual units within that module.) Unit testing frameworks, drivers, stubs, and mock/ fake objects are used to assist in unit testing.",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2621,40 +1936,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2735,8 +2019,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2747,7 +2030,6 @@
     "parent": "unit",
     "description": "Unit testing techniques",
     "generalInfo": "Unit testing techniques",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2799,40 +2081,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -2913,8 +2164,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -2925,7 +2175,6 @@
     "parent": "unit",
     "description": "Unit testing mocks",
     "generalInfo": "Unit testing mocks",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -2977,40 +2226,9 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
+      },
       {
         "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3091,8 +2309,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -3103,7 +2320,6 @@
     "parent": "unit",
     "description": "Unit testing stubs",
     "generalInfo": "Unit testing stubs",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -3155,40 +2371,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3269,8 +2451,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -3281,7 +2462,6 @@
     "parent": "unit",
     "description": "Test driven development",
     "generalInfo": "Test driven development",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -3333,40 +2513,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3447,8 +2593,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -3459,7 +2604,6 @@
     "parent": "unit",
     "description": "Unit testing code coverage",
     "generalInfo": "Unit testing code coverage",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -3511,40 +2655,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3625,8 +2735,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -3637,7 +2746,6 @@
     "parent": "api",
     "description": "Api general info",
     "generalInfo": "Api general info",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -3689,40 +2797,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3803,8 +2877,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -3815,7 +2888,6 @@
     "parent": "api",
     "description": "Api web services",
     "generalInfo": "Api web services",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -3867,40 +2939,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -3981,8 +3019,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4047,40 +3084,6 @@
         "text": "How to run tests programmatically?"
       }
     ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
-      }
-    ],
     "tasks": [
       {
         "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
@@ -4159,8 +3162,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4171,7 +3173,6 @@
     "parent": "api",
     "description": "Api Contract testing",
     "generalInfo": "Api Contract testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -4223,40 +3224,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -4337,8 +3304,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4349,7 +3315,6 @@
     "parent": "api",
     "description": "Api Microservices testing",
     "generalInfo": "Api Microservices testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -4401,40 +3366,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -4515,8 +3446,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4527,7 +3457,6 @@
     "parent": "api",
     "description": "Api Microservices testing",
     "generalInfo": "Api Microservices testing",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -4579,40 +3508,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -4693,8 +3588,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4705,7 +3599,6 @@
     "parent": "web",
     "description": "Web testing general information",
     "generalInfo": "Web testing general information",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -4757,40 +3650,6 @@
       },
       {
         "text": "How to run tests programmatically?"
-      }
-    ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
       }
     ],
     "tasks": [
@@ -4871,8 +3730,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -4937,40 +3795,6 @@
         "text": "How to run tests programmatically?"
       }
     ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
-      }
-    ],
     "tasks": [
       {
         "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
@@ -5049,8 +3873,7 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   },
   {
     "_id": {
@@ -5061,7 +3884,6 @@
     "parent": "connected",
     "description": "Connected testing general information",
     "generalInfo": "Connected testing general information",
-    "approxTimeHours": "1",
     "questions": [
       {
         "text": "What is TestNG? How does it works."
@@ -5115,40 +3937,6 @@
         "text": "How to run tests programmatically?"
       }
     ],
-    "selfStudyQuestions": [
-      {
-        "text": "Testng vs Junit 5."
-      }
-    ],
-    "acceptanceCriteria": [
-      {
-        "text": "Understanding what is TestNG."
-      },
-      {
-        "text": "Knowledge of TestNG annotations."
-      },
-      {
-        "text": "Ability to configure test groups, tests dependency."
-      },
-      {
-        "text": "Understanding of difference between Soft and Hard Asserts."
-      },
-      {
-        "text": "Understanding of Factory and DataProvider, difference between them."
-      },
-      {
-        "text": "Understanding of basic listeners and how they can be used: ISuiteListener, ITestListener, IAnnotationTransformer, IMethodInterceptor."
-      },
-      {
-        "text": "Knowledge how to run tests in parallel."
-      },
-      {
-        "text": "Knowledge how to run TestNG programmatically."
-      },
-      {
-        "text": "Knowledge what is IRetryAnalyzer."
-      }
-    ],
     "tasks": [
       {
         "text": "Create a test сlass with one test method configured with DataProvider. Create one more test that is dependent on the first one. How much times will be ran each test?"
@@ -5227,7 +4015,6 @@
       {
         "text": "https://stackoverflow.com/questions/33476985/how-to-skip-or-ignore-execution-of-tests-in-testng"
       }
-    ],
-    "_class": "com.dandelion.automationportal.model.Chapter"
+    ]
   }
 ]
