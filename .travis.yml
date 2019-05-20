@@ -1,7 +1,6 @@
 env:
   global:
     - CODECOV_TOKEN=15648159-3a07-4733-a3ef-72374f94791d
-    - MONGOLAB_URI=mongodb://klindziuk:klindziuk@cluster0-xxpuz.mongodb.net/test?retryWrites=true
 
 language: java
 
