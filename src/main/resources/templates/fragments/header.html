@@ -54,6 +54,20 @@
 				<li class="nav-item">
 					<a class="navbar-link" href="#" th:href="@{/vocabulary}">Vocabulary</a>
 				</li>
+				<div class="dropdown dropdown-front">
+					<a class="btn-link dropdown-toggle " role="button" type="button-link" id="help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Need Help?
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-background" role="menu" aria-labelledby="help">
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/help}">Any Help </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/help/interview}">Interview </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/help/questions}">Questions</a></li>
+					</ul>
+				</div>
+				<li class="nav-item">
+					<a class="navbar-link" href="#" th:href="@{/team}">Dandelions</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
