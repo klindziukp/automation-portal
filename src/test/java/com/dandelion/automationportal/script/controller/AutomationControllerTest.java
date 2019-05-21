@@ -47,9 +47,9 @@ public class AutomationControllerTest extends BaseControllerTest {
     private void verifyAutomationController(String path) {
         given().log().all().
                 standaloneSetup(automationController).
-                when().
+        when().
                 get(path).
-                then().
+        then().
                 statusCode(HttpStatus.SC_OK);
     }
 }

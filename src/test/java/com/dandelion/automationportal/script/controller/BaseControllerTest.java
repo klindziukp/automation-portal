@@ -39,7 +39,7 @@ public class BaseControllerTest {
         embeddedService.dropCollection();
     }
 
-    private void setBaseUriAndPort(){
+    private void setBaseUriAndPort() {
         RestAssured.port = port;
         RestAssured.baseURI = host;
     }
