@@ -16,6 +16,7 @@
 
 [![Jacoco](https://img.shields.io/static/v1.svg?label=Jacoco&message=CodeCovt&color=efbdee)](https://www.eclemma.org/jacoco/)
 [![TravisCi](https://img.shields.io/static/v1.svg?label=TravisCI&message=CIaaS&color=efbdee)](https://docs.travis-ci.com/user/for-beginners/)
+[![MongoDbCloud](https://img.shields.io/static/v1.svg?label=MongoDbCloud&message=Atlas&color=efbdee)](https://www.mongodb.com/cloud)
 [![Heroku](https://img.shields.io/static/v1.svg?label=Heroku&message=PaaS&color=efbdee)](https://www.heroku.com/)
 
 
