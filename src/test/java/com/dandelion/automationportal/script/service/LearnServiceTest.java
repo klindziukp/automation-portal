@@ -3,7 +3,7 @@ package com.dandelion.automationportal.script.service;
 import com.dandelion.automationportal.layer.service.LearnService;
 import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,17 +23,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class LearnServiceTest extends BaseServiceTest {
 
     private LearnService learnService;
-    private TestEntity testEntity;
+    private DatabaseEntity databaseEntity;
 
     @Autowired
-    public LearnServiceTest(LearnService learnService, TestEntity testEntity) {
+    public LearnServiceTest(LearnService learnService, DatabaseEntity databaseEntity) {
         this.learnService = learnService;
-        this.testEntity = testEntity;
+        this.databaseEntity = databaseEntity;
     }
 
     @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService(testEntity, "chapters");
+    void initDatabase() {
+        initDatabase(databaseEntity);
     }
 
     @Test()

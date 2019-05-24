@@ -1,36 +1,30 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.VocabularyController;
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.test.context.TestPropertySource;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-@EnableAutoConfiguration
-@TestInstance(Lifecycle.PER_METHOD)
+@TestPropertySource(properties = "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration")
 public class VocabularyControllerTest extends BaseControllerTest {
 
-    private VocabularyController vocabularyController;
-    private TestEntity testEntity;
-
     @Autowired
-    public VocabularyControllerTest(VocabularyController vocabularyController, TestEntity testEntity) {
-        this.vocabularyController = vocabularyController;
-        this.testEntity = testEntity;
+    private VocabularyController vocabularyController;
+
+    public VocabularyControllerTest() {}
+
+    @BeforeClass
+    public static void initEmbeddedService() {
+        initDataBase();
     }
 
-    @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService(testEntity, "vocabulary");
-    }
-
-    @Test()
+    @Test
     public void vocabularyControllerTest(){
         given().
                 standaloneSetup(vocabularyController).

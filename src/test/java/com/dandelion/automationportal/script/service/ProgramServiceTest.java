@@ -2,7 +2,7 @@ package com.dandelion.automationportal.script.service;
 
 import com.dandelion.automationportal.layer.service.ProgramService;
 import com.dandelion.automationportal.model.Program;
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,17 +21,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ProgramServiceTest extends BaseServiceTest {
 
     private ProgramService programService;
-    private TestEntity testEntity;
+    private DatabaseEntity databaseEntity;
 
     @Autowired
-    public ProgramServiceTest(ProgramService programService, TestEntity testEntity) {
+    public ProgramServiceTest(ProgramService programService, DatabaseEntity databaseEntity) {
         this.programService = programService;
-        this.testEntity = testEntity;
+        this.databaseEntity = databaseEntity;
     }
 
     @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService(testEntity, "program");
+    void initDatabase() {
+        initDatabase(databaseEntity);
     }
 
     @Test()

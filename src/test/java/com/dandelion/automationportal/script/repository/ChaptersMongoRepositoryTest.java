@@ -2,7 +2,7 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.ChaptersMongoRepository;
 import com.dandelion.automationportal.model.Chapter;
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,17 +22,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ChaptersMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private ChaptersMongoRepository chaptersMongoRepository;
-    private TestEntity testEntity;
+    private DatabaseEntity databaseEntity;
 
     @Autowired
-    public ChaptersMongoRepositoryTest(ChaptersMongoRepository chaptersMongoRepository, TestEntity testEntity) {
+    public ChaptersMongoRepositoryTest(ChaptersMongoRepository chaptersMongoRepository, DatabaseEntity databaseEntity) {
         this.chaptersMongoRepository = chaptersMongoRepository;
-        this.testEntity = testEntity;
+        this.databaseEntity = databaseEntity;
     }
 
     @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService("chapters", testEntity);
+    void initDatabase() {
+        initDatabase(databaseEntity);
     }
 
     @Test()

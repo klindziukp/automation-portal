@@ -4,15 +4,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TestEntity {
+public class DatabaseEntity {
+
+    @Value("${spring.data.mongodb.host}")
+    private String dataBaseHost;
 
     @Value("${spring.data.mongodb.port}")
     private int dataBasePort;
 
     @Value("${spring.data.mongodb.database}")
-    private String getDataBaseName;
+    private String dataBaseName;
 
-    public TestEntity() {
+    public DatabaseEntity() {
     }
 
     public int getDataBasePort() {
@@ -20,6 +23,10 @@ public class TestEntity {
     }
 
     public String getDataBaseName() {
-        return getDataBaseName;
+        return dataBaseName;
+    }
+
+    public String getDataBaseHost() {
+        return dataBaseHost;
     }
 }

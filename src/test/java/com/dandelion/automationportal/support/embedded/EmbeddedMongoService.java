@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.support.embedded;
 
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.mongodb.MongoClient;
 import de.flapdoodle.embed.mongo.Command;
@@ -23,16 +23,23 @@ import java.io.File;
 import java.io.IOException;
 import java.net.UnknownHostException;
 
-public class EmbeddedMongoService implements EmbeddedService {
+public class EmbeddedMongoService implements DatabaseService {
 
     private String collectionName;
     private String jsonName;
-    private TestEntity testEntity;
+    private String host;
+    private DatabaseEntity databaseEntity;
 
-    public EmbeddedMongoService(String jsonCollectionName, TestEntity testEntity) {
+    public EmbeddedMongoService(String jsonCollectionName, DatabaseEntity databaseEntity) {
         this.collectionName = jsonCollectionName;
         this.jsonName = jsonCollectionName + ".json";
-        this.testEntity = testEntity;
+        this.databaseEntity = databaseEntity;
+        this.host = "127.0.0.1";
+    }
+
+    public EmbeddedMongoService(String jsonCollectionName, DatabaseEntity databaseEntity, String host) {
+        this(jsonCollectionName, databaseEntity);
+        this.host = host;
     }
 
     public void fillCollection() {
@@ -52,15 +59,15 @@ public class EmbeddedMongoService implements EmbeddedService {
     }
 
     public void dropCollection() {
-        MongoClient mongoClient = new MongoClient("127.0.0.1", getNet().getPort());
-        mongoClient.getDatabase(testEntity.getDataBaseName()).drop();
+        MongoClient mongoClient = new MongoClient(this.host, getNet().getPort());
+        mongoClient.getDatabase(databaseEntity.getDataBaseName()).drop();
     }
 
     private MongoImportExecutable mongoImportExecutable(String jsonFile) throws IOException {
         IMongoImportConfig mongoImportConfig = new MongoImportConfigBuilder()
                 .version(Version.Main.PRODUCTION)
                 .net(getNet())
-                .db(testEntity.getDataBaseName())
+                .db(databaseEntity.getDataBaseName())
                 .collection(this.collectionName)
                 .upsert(true)
                 .dropCollection(false)
@@ -79,7 +86,7 @@ public class EmbeddedMongoService implements EmbeddedService {
 
     private Net getNet() {
         try {
-            return new Net(testEntity.getDataBasePort(), Network.localhostIsIPv6());
+            return new Net(databaseEntity.getDataBasePort(), Network.localhostIsIPv6());
         } catch (UnknownHostException uhEx) {
             uhEx.printStackTrace();
             throw new RuntimeException(uhEx);

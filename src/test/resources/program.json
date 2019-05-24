@@ -1,8 +1,5 @@
 [
   {
-    "_id": {
-      "$oid": "5cd4635894e5de0eaaa0125d"
-    },
     "name": "All",
     "sequence": [
       "git",
@@ -18,9 +15,6 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd4636194e5de0eaaa0125e"
-    },
     "name": "Automation",
     "sequence": [
       "unit",
@@ -31,9 +25,6 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6bf2718c03e0eaa224497"
-    },
     "name": "Unit Testing",
     "sequence": [
       "unit-general",
@@ -45,9 +36,6 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfba0237f860074f044ec7"
-    },
     "name": "Api Testing",
     "sequence": [
       "api-http",
@@ -59,27 +47,18 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbf0737f860074f044ece"
-    },
     "name": "Mobile Testing",
     "sequence": [
       "mobile-general"
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbf2537f860074f044ecf"
-    },
     "name": "Web Testing",
     "sequence": [
       "web-general"
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbf7f37f860074f044ed0"
-    },
     "name": "ConnectedTv Testing",
     "sequence": [
       "connected-general"

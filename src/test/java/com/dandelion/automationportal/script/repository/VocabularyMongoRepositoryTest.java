@@ -2,7 +2,7 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.layer.repository.mongo.VocabularyMongoRepository;
 import com.dandelion.automationportal.model.VocabularyItem;
-import com.dandelion.automationportal.support.TestEntity;
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,17 +24,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class VocabularyMongoRepositoryTest extends BaseMongoRepositoryTest {
 
     private VocabularyMongoRepository vocabularyMongoRepository;
-    private TestEntity testEntity;
+    private DatabaseEntity databaseEntity;
 
     @Autowired
-    public VocabularyMongoRepositoryTest(VocabularyMongoRepository vocabularyMongoRepository, TestEntity testEntity) {
+    public VocabularyMongoRepositoryTest(VocabularyMongoRepository vocabularyMongoRepository, DatabaseEntity databaseEntity) {
         this.vocabularyMongoRepository = vocabularyMongoRepository;
-        this.testEntity = testEntity;
+        this.databaseEntity = databaseEntity;
     }
 
     @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService("vocabulary", testEntity);
+    void initDatabase() {
+        initDatabase(databaseEntity);
     }
 
     @Test()
