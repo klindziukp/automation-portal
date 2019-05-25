@@ -1,32 +1,33 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.VocabularyController;
-import com.dandelion.automationportal.support.DatabaseEntity;
 import org.apache.http.HttpStatus;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.test.context.TestPropertySource;
+import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-@TestPropertySource(properties = "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration")
+@EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
 public class VocabularyControllerTest extends BaseControllerTest {
 
-    @Autowired
     private VocabularyController vocabularyController;
 
-    public VocabularyControllerTest() {}
+    @Autowired
+    public VocabularyControllerTest(VocabularyController vocabularyController) {
+        this.vocabularyController = vocabularyController;
+    }
 
-    @BeforeClass
-    public static void initEmbeddedService() {
+    @BeforeEach
+    public void initEmbeddedService() {
         initDataBase();
     }
 
     @Test
     public void vocabularyControllerTest(){
-        given().
+        given().log().all().
                 standaloneSetup(vocabularyController).
         when().
                 get("/vocabulary").

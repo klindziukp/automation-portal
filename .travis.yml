@@ -8,6 +8,7 @@ jdk:
   - oraclejdk8
 
 services:
+  - docker
   - mongodb
 
 before_install:

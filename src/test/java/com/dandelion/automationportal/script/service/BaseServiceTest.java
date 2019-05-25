@@ -21,6 +21,7 @@ public class BaseServiceTest {
 
     void initDatabase(DatabaseEntity databaseEntity) {
         testDatabaseService = new TestDatabaseService(databaseEntity);
+        testDatabaseService.dropDatabase();
         testDatabaseService.createDatabase();
     }
 

@@ -41,6 +41,7 @@ dependencies {
     compile 'com.github.ulisesbocchio:jasypt-spring-boot-starter:2.1.1'
     compile 'com.jupiter-tools:spring-test-mongo:0.13'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile "org.testcontainers:junit-jupiter:1.11.2"
 
     testCompile 'de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0'
     testCompile "org.testcontainers:testcontainers:1.11.2"
