@@ -1,7 +1,6 @@
 package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.support.DatabaseEntity;
-import com.dandelion.automationportal.support.embedded.DatabaseService;
 import com.dandelion.automationportal.support.embedded.TestDatabaseService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.ExtendWith;

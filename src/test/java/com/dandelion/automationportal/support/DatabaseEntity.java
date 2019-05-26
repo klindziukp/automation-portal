@@ -29,4 +29,16 @@ public class DatabaseEntity {
     public String getDataBaseHost() {
         return dataBaseHost;
     }
+
+    public void setDataBaseHost(String dataBaseHost) {
+        this.dataBaseHost = dataBaseHost;
+    }
+
+    public void setDataBasePort(int dataBasePort) {
+        this.dataBasePort = dataBasePort;
+    }
+
+    public void setDataBaseName(String dataBaseName) {
+        this.dataBaseName = dataBaseName;
+    }
 }

@@ -1,7 +1,6 @@
 package com.dandelion.automationportal.support.embedded;
 
 import com.dandelion.automationportal.support.DatabaseEntity;
-import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import com.dandelion.automationportal.support.util.JsonUtil;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -14,35 +13,30 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class TestDatabaseService {
+public class TestDatabaseService implements MongoDatabaseService {
 
+    private static final String JSON_EXTENSION = ".json";
+
+    private DatabaseEntity databaseEntity;
     private String databaseName;
-    private String host;
-    private int port;
+    private String fullJsonPath;
 
     public TestDatabaseService(DatabaseEntity databaseEntity) {
-        this.host = databaseEntity.getDataBaseHost();
-        this.port = databaseEntity.getDataBasePort();
+        this.databaseEntity = databaseEntity;
         this.databaseName = databaseEntity.getDataBaseName();
+        this.fullJsonPath = String.join(File.separator, System.getProperty("user.dir"), "src", "test", "resources", databaseName, "");
     }
 
-    public TestDatabaseService(String host, int port, String databaseName) {
-        this.host = host;
-        this.port = port;
-        this.databaseName = databaseName;
-    }
-
+    @Override
     public void createDatabase() {
-        MongoClient mongoClient = new MongoClient(host, port);
-        MongoDatabase mongoDatabase = mongoClient.getDatabase(this.databaseName);
-
+        MongoClient mongoClient = getMongoClient();
+        MongoDatabase mongoDatabase = mongoClient.getDatabase(this.databaseEntity.getDataBaseName());
         try {
-            Files.list(Paths.get(JsonTestDataStorage.JSON_FOLDER_PATH)).forEach(path -> {
+            Files.list(Paths.get(fullJsonPath)).forEach(path -> {
                 String fileName = path.getFileName().toString();
-                File file = new File(JsonTestDataStorage.JSON_FOLDER_PATH + fileName);
+                File file = new File(fullJsonPath + fileName);
                 insertDocuments(mongoDatabase, file);
             });
-
             mongoClient.close();
         } catch (IOException ioEx) {
             ioEx.printStackTrace();
@@ -50,18 +44,40 @@ public class TestDatabaseService {
         }
     }
 
+    @Override
     public void dropDatabase() {
-        MongoClient mongoClient = new MongoClient(this.host, this.port);
+        MongoClient mongoClient = getMongoClient();
         mongoClient.getDatabase(databaseName).drop();
         mongoClient.close();
     }
 
-    private void insertDocuments(MongoDatabase database, File jsonFile) {
-        MongoCollection<Document> collection = database.getCollection(jsonFile.getName().replaceAll(".json", ""));
+    @Override
+    public void createCollection(String collectionName) {
+        MongoClient mongoClient = getMongoClient();
+        MongoDatabase mongoDatabase = mongoClient.getDatabase(this.databaseEntity.getDataBaseName());
+        String filePath = String.join(fullJsonPath, collectionName, JSON_EXTENSION);
+        insertDocuments(mongoDatabase, new File(filePath));
+        mongoClient.close();
+    }
+
+    @Override
+    public void dropCollection(String collectionName) {
+        MongoClient mongoClient = getMongoClient();
+        MongoDatabase mongoDatabase = mongoClient.getDatabase(this.databaseEntity.getDataBaseName());
+        mongoDatabase.getCollection(collectionName).drop();
+        mongoClient.close();
+    }
+
+    private MongoClient getMongoClient() {
+        return new MongoClient(databaseEntity.getDataBaseHost(), databaseEntity.getDataBasePort());
+    }
+
+    private void insertDocuments(MongoDatabase mongoDatabase, File jsonFile) {
+        MongoCollection<Document> collection = mongoDatabase.getCollection(
+                jsonFile.getName().replaceAll(JSON_EXTENSION, ""));
         List<Document> documents = JsonUtil.fromJson(jsonFile);
         for (Document document : documents) {
             collection.insertOne(document);
         }
     }
-
 }

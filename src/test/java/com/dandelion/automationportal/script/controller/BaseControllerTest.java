@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.script.controller;
 
+import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.embedded.TestDatabaseService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,29 +17,22 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @ActiveProfiles("testcontroller")
 public class BaseControllerTest {
 
-    private static TestDatabaseService testDatabaseService;
     private static final int MONGO_EXPOSED_PORT = 27017;
-    private static GenericContainer mongoGenericContainer = new GenericContainer("mongo:4.0.3")
-            .withExposedPorts(MONGO_EXPOSED_PORT);
+    private static GenericContainer mongoGenericContainer = new GenericContainer("mongo:4.0.3").withExposedPorts(MONGO_EXPOSED_PORT);
 
-    private static String databaseHost;
-    private static int databasePort;
+    private static TestDatabaseService testDatabaseService;
+    private static DatabaseEntity databaseEntity;
 
     @BeforeAll
     public static void setUpContainer(){
         mongoGenericContainer.start();
-        System.out.println("Is container running ? : " + mongoGenericContainer.isRunning());
-        System.out.println( mongoGenericContainer.getContainerIpAddress());
-
-        databaseHost = mongoGenericContainer.getContainerIpAddress();
-        databasePort = mongoGenericContainer.getMappedPort(MONGO_EXPOSED_PORT);
-
-        System.setProperty("embedded.container.mongodb.host", databaseHost);
-        System.setProperty("embedded.container.mongodb.port", String.valueOf(databasePort));
+        databaseEntity = initDataBaseEntity(mongoGenericContainer);
+        System.setProperty("embedded.container.mongodb.host", databaseEntity.getDataBaseHost());
+        System.setProperty("embedded.container.mongodb.port", String.valueOf(databaseEntity.getDataBasePort()));
     }
 
     protected static void initDataBase() {
-        testDatabaseService = new TestDatabaseService(databaseHost, databasePort, "automation");
+        testDatabaseService = new TestDatabaseService(databaseEntity);
         testDatabaseService.dropDatabase();
         testDatabaseService.createDatabase();
     }
@@ -46,5 +40,13 @@ public class BaseControllerTest {
     @AfterEach
     protected void tearDown() {
         testDatabaseService.dropDatabase();
+    }
+
+    private static DatabaseEntity initDataBaseEntity(GenericContainer genericContainer) {
+        DatabaseEntity databaseEntity = new DatabaseEntity();
+        databaseEntity.setDataBaseHost(genericContainer.getContainerIpAddress());
+        databaseEntity.setDataBasePort(genericContainer.getMappedPort(MONGO_EXPOSED_PORT));
+        databaseEntity.setDataBaseName("automation");
+        return databaseEntity;
     }
 }
