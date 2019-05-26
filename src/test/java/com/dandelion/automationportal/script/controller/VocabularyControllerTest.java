@@ -21,7 +21,7 @@ public class VocabularyControllerTest extends BaseControllerTest {
     }
 
     @BeforeEach
-    public void initEmbeddedService() {
+    public void initDatabase() {
         initDataBase();
     }
 

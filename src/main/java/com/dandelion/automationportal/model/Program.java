@@ -20,8 +20,7 @@ public class Program {
 
     public Chapter getChapter(String key) {
         return chapters.stream().
-                filter(chapter -> chapter.getKey().equals(key)).findFirst()
-                .orElseThrow(() -> new RuntimeException(String.format("Unable to get chapter with key : '%s'", key)));
+                filter(chapter -> chapter.getKey().equals(key)).findFirst().orElseThrow(
+                () -> new RuntimeException(String.format("Unable to get chapter with key : '%s'", key)));
     }
-
 }

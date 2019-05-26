@@ -23,7 +23,7 @@ public class AutomationControllerTest extends BaseControllerTest {
     }
 
     @BeforeEach
-    public void initEmbeddedService() {
+    public void initDatabase() {
         initDataBase();
     }
 

@@ -22,7 +22,7 @@ public class LearnControllerQuestionsTest extends BaseControllerTest {
     }
 
     @BeforeEach
-    public void initService() {
+    public void initDatabse() {
         initDataBase();
     }
 
