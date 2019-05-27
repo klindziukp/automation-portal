@@ -14,7 +14,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
         "spring.data.mongodb.uri=mongodb://${embedded.container.mongodb.host}:${embedded.container.mongodb.port}/automation",
 })
 @Testcontainers
-@ActiveProfiles("testcontroller")
+@ActiveProfiles("test-integration")
 public class BaseControllerTest {
 
     private static final int MONGO_EXPOSED_PORT = 27017;
