@@ -54,8 +54,8 @@ class CodeReviewServiceTest extends BaseServiceTest {
 
         GIVEN();
         List<CodeReviewItem> allTopics = JsonTestDataStorage.getCodeReviewItems();
-        String expectedKey = JsonTestDataStorage.getCodeReviewItems().get(0).getKey();
-        List<CodeReviewItem> expected = allTopics.stream().filter(topic -> topic.getKey().equals(expectedKey)).collect(Collectors.toList());
+        String expectedKey = JsonTestDataStorage.getCodeReviewItems().get(0).getTopicKey();
+        List<CodeReviewItem> expected = allTopics.stream().filter(topic -> topic.getTopicKey().equals(expectedKey)).collect(Collectors.toList());
 
         WHEN();
         List<CodeReviewItem> actual = codeReviewService.getCodeReviewItemsByTopicKey(expectedKey);

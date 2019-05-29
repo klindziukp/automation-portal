@@ -21,7 +21,7 @@ public class CodeReviewServiceImpl implements CodeReviewService {
 
     @Override
     public List<CodeReviewItem> getCodeReviewItemsByTopicKey(String topicKey) {
-        return codeReviewRepository.findAllTopicsByTopicKey(topicKey);
+        return codeReviewRepository.findAllByTopicKey(topicKey);
     }
 
     @Override

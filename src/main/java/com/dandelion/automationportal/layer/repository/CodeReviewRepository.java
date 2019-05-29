@@ -6,5 +6,5 @@ import java.util.List;
 public interface CodeReviewRepository {
 
     List<CodeReviewItem> findAll();
-    List<CodeReviewItem> findAllTopicsByTopicKey(String topicKey);
+    List<CodeReviewItem> findAllByTopicKey(String topicKey);
 }
