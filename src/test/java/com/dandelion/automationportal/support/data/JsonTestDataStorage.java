@@ -1,8 +1,10 @@
 package com.dandelion.automationportal.support.data;
 
 import com.dandelion.automationportal.model.Chapter;
+import com.dandelion.automationportal.model.CodeReviewItem;
 import com.dandelion.automationportal.model.Program;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
+import com.dandelion.automationportal.model.Topic;
 import com.dandelion.automationportal.model.VocabularyItem;
 import com.dandelion.automationportal.support.util.JsonUtil;
 
@@ -27,6 +29,18 @@ public final class JsonTestDataStorage {
 
 	public static List<Chapter> getChapters() {
 		return getListOfItems("automation/chapters.json", Chapter.class);
+	}
+
+    public static List<CodeReviewItem> getCodeReviewItems() {
+        return getListOfItems("automation/codereview.json", CodeReviewItem.class);
+    }
+
+	public static List<Topic> getTopics() {
+		return getListOfItems("automation/topics.json", Topic.class);
+	}
+
+	public static List<String> getTopicsKeys(String parentKey){
+		return getTopics().stream().filter(topic -> topic.getParent().equals(parentKey)).map(Topic::getKey).collect(Collectors.toList());
 	}
 
 	public static List<Program> getPrograms() {

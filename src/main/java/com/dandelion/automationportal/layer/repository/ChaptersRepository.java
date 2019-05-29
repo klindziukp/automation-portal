@@ -8,4 +8,5 @@ public interface ChaptersRepository {
 
     Chapter findFirstChapterByKey(String key);
     List<Chapter> findAll();
+    List<Chapter> findAllChaptersByKey(String key);
 }

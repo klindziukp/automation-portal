@@ -43,13 +43,21 @@
 					<a class="navbar-link" href="#" th:href="@{/program}">Continuous Integration</a>
 				</li>
 								<li class="nav-item">
-					<a class="navbar-link" href="#" th:href="@{/program}">Tools</a>
+					<a class="navbar-link" href="#" th:href="@{/tools}">Tools</a>
 				</li>
+				<div class="dropdown dropdown-front">
+					<a class="btn-link dropdown-toggle " role="button" type="button-link" id="codeReview" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Code Review
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-background" role="menu" aria-labelledby="help">
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/code-review}">All </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/code-review/code-review-general}">General Info </a></li>
+						<li><a class="navbar-link-dropdown" href="#" th:href="@{/code-review/code-review-types}">Code Review Types</a></li>
+					</ul>
+				</div>
 				<li class="nav-item">
-					<a class="navbar-link" href="#" th:href="@{/program}">Code Review</a>
-				</li>
-				<li class="nav-item">
-					<a class="navbar-link" href="#" th:href="@{/setup}">Testing Theory</a>
+					<a class="navbar-link" href="#" th:href="@{/testing-theory}">Testing Theory</a>
 				</li>
 				<li class="nav-item">
 					<a class="navbar-link" href="#" th:href="@{/vocabulary}">Vocabulary</a>

@@ -33,7 +33,7 @@ public class AutomationControllerTest extends BaseControllerTest {
     }
 
     @ParameterizedTest
-    @MethodSource("com.dandelion.automationportal.support.AutomationType#getAutomationKeys")
+    @MethodSource("com.dandelion.automationportal.support.TopicType#getAutomationKeys")
     public void automationControllersTest(String automationKey) {
         String path = "/automation/" + automationKey;
         verifyAutomationController(path);

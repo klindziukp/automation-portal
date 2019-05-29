@@ -63,5 +63,12 @@
     "sequence": [
       "connected-general"
     ]
+  },
+  {
+    "name": "Code Review",
+    "sequence": [
+      "code-review-general",
+      "code-review-types"
+    ]
   }
 ]
