@@ -2,6 +2,7 @@ package com.dandelion.automationportal.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,7 +19,7 @@ public class VocabularyItem implements Comparable<VocabularyItem> {
     private String value;
 
     @Override
-    public int compareTo(VocabularyItem vocabularyItem) {
+    public int compareTo(@NotNull VocabularyItem vocabularyItem) {
         return this.key.compareTo(vocabularyItem.getKey());
     }
 }

@@ -30,6 +30,12 @@ public class CodeReviewControllerTest extends BaseControllerTest {
         initDataBase();
     }
 
+    @Test
+    public void codeReviewControllerTest() {
+        String path = "/code-review";
+        verifyLearnController(path);
+    }
+
     @ParameterizedTest
     @MethodSource("getCodeReviewItems")
     public void codeReviewControllerItemsTest(String codeReviewItemName) {

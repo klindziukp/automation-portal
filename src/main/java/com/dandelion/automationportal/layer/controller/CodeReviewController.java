@@ -29,7 +29,7 @@ public class CodeReviewController {
         ModelAndView modelAndView = new ModelAndView();
         Program program = programService.findProgramByName("Code Review");
         modelAndView.addObject("program", program);
-        modelAndView.setViewName("code-review");
+        modelAndView.setViewName("code-review-list");
         return modelAndView;
     }
 
