@@ -5,9 +5,8 @@ import com.dandelion.automationportal.model.Chapter;
 import com.dandelion.automationportal.model.SelfCheckQuestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class LearnController {
         this.learnService = learnService;
     }
 
-    @RequestMapping(value = "/self-check/{chapterKey}", method = RequestMethod.GET)
+    @GetMapping("/self-check/{chapterKey}")
     public ModelAndView selfCheck(@PathVariable("chapterKey") String chapterKey) {
         ModelAndView modelAndView = new ModelAndView();
         List<SelfCheckQuestion> questions = learnService.findAllByChapterKey(chapterKey);
@@ -32,7 +31,7 @@ public class LearnController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/chapter/{chapterKey}", method = RequestMethod.GET)
+    @GetMapping("/chapter/{chapterKey}")
     public ModelAndView chapter(@PathVariable("chapterKey") String chapterKey) {
         ModelAndView modelAndView = new ModelAndView();
         Chapter chapter = learnService.findFirstChapterByKey(chapterKey);

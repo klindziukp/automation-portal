@@ -26,7 +26,8 @@ public class ProgramServiceImpl implements ProgramService {
     private TopicsRepository topicsRepository;
 
     @Autowired
-    public ProgramServiceImpl(ChaptersRepository chaptersRepository, TopicsRepository topicsRepository, ProgramMongoRepository programMongoRepository) {
+    public ProgramServiceImpl(ChaptersRepository chaptersRepository, TopicsRepository topicsRepository,
+                              ProgramMongoRepository programMongoRepository) {
         this.chaptersRepository = chaptersRepository;
         this.topicsRepository = topicsRepository;
         this.programRepository = programMongoRepository;
@@ -48,18 +49,14 @@ public class ProgramServiceImpl implements ProgramService {
     @NotNull
     private List<Topic> getTopics(Program program) {
         List<Topic> topics = new ArrayList<>();
-        program.getSequence().forEach(key -> {
-            topics.addAll(topicsRepository.findAllTopicsByKey(key));
-        });
+        program.getSequence().forEach(key -> topics.addAll(topicsRepository.findAllTopicsByKey(key)));
         return topics;
     }
 
     @NotNull
     private List<Chapter> getChapters(Program program) {
         List<Chapter> chapters = new ArrayList<>();
-        program.getSequence().forEach(key -> {
-             chapters.addAll(chaptersRepository.findAllChaptersByKey(key));
-        });
+        program.getSequence().forEach(key -> chapters.addAll(chaptersRepository.findAllChaptersByKey(key)));
         return chapters;
     }
 
