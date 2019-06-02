@@ -9,7 +9,7 @@ jdk:
 - oraclejdk8
 addons:
   sonarcloud:
-    organization: klindziukp-github
+    organization: dandelion
     token:
       secure: $SONAR_TOKEN
 services:
