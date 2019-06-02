@@ -4,20 +4,28 @@ env:
   - secure: qhJfX+Fju2uYnigoaC30dOQRimpX0AoM7r8auzhLlgRF39Cw4oaw7kUYlcKksO4d2g5J0zf9rgunvMSBdtsOSavYt802/wpBotlu1aG5UOVbGan3/QxdvylBpN86lAH5pUpTemBEIPoilsEuK0AhhmCRuswSdmQJytgGHEBjf/70zU4IYmWS9Pt21yMvNl7zpku2S0sX3eBAWIIE9gyXM5H/k07K5igrSvC5CatOf5alC9500VKlL2D/r/LgLVUcEaIp1+GcYMPfA9Ne9x3AaPetrIZgVZaOmuM/tfLwYgDi7I/lHIPfpycSiooLLKbVQx/ZtrEsyeTJyTsffo71GZkiuDHyOO4CHFzdlS9JaBToNQ7ttyDug6a6htTrvY4ISvcNbtmwwY4zlpvwJMIpDn8AQSGjreQ7qZbZotBKnCG49Hj9v3xsa7CqC6FMNCd2G6du7Xdi3I4RRXYu0WW2OWvabJ08dUGk2IKH8llzfCb4WIZcu/LJ+dwEcjSE8M42xv8Y61TDbJPalhsYHNpOlpf433GHqxsewNUxIU9B07Mko1u6M1nUosHq4OOalvu7Hq5erafpCTKGMEJsAFeficoKg7XXfX0TMdRa7FpTrLg693oJwiWZAWD1s2+b9oM6vtntF2hsnR6EiAxslwi1OybtNVoL4hgEB0shsBAYS3s=
   - secure: QGFQO5xLIJp5FIIaArdBjfjbJiPRxtx2Ue1KxidjSK2CryEklkan5yP3AiA2dcGEJIcq5C2l2LSpvbmC/3tsOQyzov3yOsCSToOKO6f+aN1HlAmxVjURBGCjaqCG85L35MEsTcyR9YklV6ymprnmXHjEREjAnzzp9wsqOZgkQRjYY2MQhYblT0hfRngQz78nVqYgdNB461MSantwYMQKJERl93nxojL0yu2R9KdtV7xrVkBpuTSKXxqm8xyo1JX5H3aP8OU5+ea+IooVXP4iNqTVUrahT0vU1OWqIXdvQTJR9YHPfnf6Uv/4XFmASM5gCsapSMuttrma7Z2RtmQ2qkCYVx7Uwhb2Zn75zc1wHw5+jSL9u2DYaSWYV/wspSi2OBmYeMSN477+3P9vcxE83N7L3rPnkve2+8VTICH1SPHUOBwO6VLHPV5eSv7lL3c7s7QDAmgVaRGsrbh2CXC44uVELUSPG/nDBpmWf5jVUbDUBd2LskhLHyyZVjcFpOusS867H9GjzQEN0nU5A54DibDqD/YInS8rfZDm/ERpTP64FTa0m3joEv0zls7wFfolPG1SrlsHYJNjmh96Af7xQXanaDbfMEpIxDp/tqkqNXEOisRwkLAt4yS4MrmR+KdMQa1kpg7VF6Lxo1F29qw2hhfpdO59iN6bliyuzQiuyKw=
 language: java
+
 jdk:
-- oraclejdk8
+  - oraclejdk8
+
 services:
-- mongodb
+  - docker
+  - mongodb
+
 before_install:
-- chmod +x gradlew
+  - chmod +x gradlew
+
 script:
-- "./gradlew build -i --continue"
+- ./gradlew build -i --continue
+
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
+
 notifications:
   email:
-  - pavel_klindziuk@epam.com
-  - alena_liamtsava@epam.com
+    - pavel_klindziuk@epam.com
+    - alena_liamtsava@epam.com
+
 deploy:
   provider: heroku
   api_key:

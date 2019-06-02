@@ -1,8 +1,6 @@
 [
   {
-    "_id": {
-      "$oid": "5b577c3f37e10c3174a46711"
-    },
+
     "key": "web-driver",
     "name": "Selenium WebDriver",
     "parent": "web",
@@ -203,9 +201,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b577caf37e10c31b6bdd57c"
-    },
+
     "key": "proxy",
     "name": "Proxy",
     "description": "Using proxy in TAF. Charles Proxy.",
@@ -307,9 +303,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b577d1137e10c31faee9caa"
-    },
+
     "key": "appium",
     "name": "Appium",
     "description": "Mobile automation. Appium.",
@@ -414,9 +408,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b577d6b37e10c322dc6cbc9"
-    },
+
     "key": "ci",
     "name": "Continuous Integration",
     "description": "Automated testing in Continuous Integration.",
@@ -497,9 +489,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b577deb37e10c3272e271f1"
-    },
+
     "key": "testing-theory",
     "name": "Testing Theory",
     "description": "Testing Theory",
@@ -613,9 +603,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b577e6837e10c32b95a950e"
-    },
+
     "key": "design-patterns",
     "name": "Design Patterns",
     "description": "Architecture principles and Design Patterns in TAF.",
@@ -725,9 +713,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b5afbe54ab79a662df0846b"
-    },
+
     "key": "git",
     "name": "Git",
     "description": "Version Control System: Git.",
@@ -891,9 +877,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b5afc194ab79a6664204048"
-    },
+
     "key": "maven",
     "name": "Maven",
     "description": "What is Maven and how does it work? Maven in MQE Frameworks.",
@@ -1013,9 +997,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5b5afc464ab79a668351d83b"
-    },
+
     "key": "testng",
     "name": "TestNG",
     "description": "Using TestNG in MQE Frameworks.",
@@ -1157,9 +1139,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd4684a18c03e0eaa224492"
-    },
+
     "key": "unit",
     "name": "Unit testing",
     "description": "Unit testing",
@@ -1301,9 +1281,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd4687418c03e0eaa224493"
-    },
+
     "key": "api",
     "name": "Api testing",
     "description": "Api testing",
@@ -1445,9 +1423,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd4688f18c03e0eaa224494"
-    },
+
     "key": "web",
     "name": "Web testing",
     "description": "Web testing",
@@ -1589,9 +1565,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd468c418c03e0eaa224495"
-    },
+
     "key": "mobile",
     "name": "Mobile testing",
     "description": "Mobile testing",
@@ -1733,9 +1707,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd468f918c03e0eaa224496"
-    },
+
     "key": "connected",
     "name": "Connected Tv testing",
     "description": "Connected Tv testing",
@@ -1877,9 +1849,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6c31118c03e0eaa224498"
-    },
+
     "key": "unit-general",
     "name": "Unit testing general info",
     "parent": "unit",
@@ -2022,9 +1992,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6c34118c03e0eaa224499"
-    },
+
     "key": "unit-techniques",
     "name": "Unit testing techniques",
     "parent": "unit",
@@ -2167,9 +2135,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6c36a18c03e0eaa22449a"
-    },
+
     "key": "unit-mocks",
     "name": "Unit testing mocks",
     "parent": "unit",
@@ -2312,9 +2278,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6c38e18c03e0eaa22449b"
-    },
+
     "key": "unit-stubs",
     "name": "Unit testing stubs",
     "parent": "unit",
@@ -2454,9 +2418,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6c3a918c03e0eaa22449c"
-    },
+
     "key": "unit-tdd",
     "name": "Test driven development",
     "parent": "unit",
@@ -2596,9 +2558,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cd6ea2718c03e0eaa22449d"
-    },
+
     "key": "unit-coverage",
     "name": "Unit testing code coverage",
     "parent": "unit",
@@ -2738,9 +2698,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbb3b37f860074f044ec8"
-    },
+
     "key": "api-general",
     "name": "Api general info",
     "parent": "api",
@@ -2880,9 +2838,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbbad37f860074f044ec9"
-    },
+
     "key": "api-web-service",
     "name": "Api web services",
     "parent": "api",
@@ -3022,9 +2978,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbc0437f860074f044eca"
-    },
+
     "key": "api-graphql",
     "name": "Api graph ql",
     "parent": "api",
@@ -3165,9 +3119,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbc3237f860074f044ecb"
-    },
+
     "key": "api-contract",
     "name": "Api Contract testing",
     "parent": "api",
@@ -3307,9 +3259,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbcd837f860074f044ecc"
-    },
+
     "key": "api-microservices",
     "name": "Api Microservices testing",
     "parent": "api",
@@ -3449,9 +3399,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbdef37f860074f044ecd"
-    },
+
     "key": "api-http",
     "name": "Http protocol",
     "parent": "api",
@@ -3591,9 +3539,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbfd937f860074f044ed1"
-    },
+
     "key": "web-general",
     "name": "Web testing general information",
     "parent": "web",
@@ -3733,9 +3679,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfbffd37f860074f044ed2"
-    },
+
     "key": "mobile-general",
     "name": "Mobile testing general information",
     "parent": "mobile",
@@ -3876,9 +3820,7 @@
     ]
   },
   {
-    "_id": {
-      "$oid": "5cdfc05437f860074f044ed3"
-    },
+
     "key": "connected-general",
     "name": "Connected testing general information",
     "parent": "connected",

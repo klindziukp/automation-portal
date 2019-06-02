@@ -1,46 +1,52 @@
 package com.dandelion.automationportal.script.controller;
 
-import com.dandelion.automationportal.support.TestEntity;
-import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
-import com.dandelion.automationportal.support.embedded.EmbeddedService;
-import io.restassured.RestAssured;
+import com.dandelion.automationportal.support.DatabaseEntity;
+import com.dandelion.automationportal.support.embedded.TestDatabaseService;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Value;
+import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
-@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, properties = {
+        "spring.data.mongodb.uri=mongodb://${embedded.container.mongodb.host}:${embedded.container.mongodb.port}/automation",
+})
+@Testcontainers
 @ActiveProfiles("testcontroller")
-@SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
-@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class BaseControllerTest {
 
-    @Value("${server.port}")
-    private int port;
+    private static final int MONGO_EXPOSED_PORT = 27017;
+    private static GenericContainer mongoGenericContainer = new GenericContainer("mongo:4.0.3").withExposedPorts(MONGO_EXPOSED_PORT);
 
-    @Value("${server.host}")
-    private String host;
+    private static TestDatabaseService testDatabaseService;
+    private static DatabaseEntity databaseEntity;
 
-    private static EmbeddedService embeddedService;
+    @BeforeAll
+    public static void setUpContainer(){
+        mongoGenericContainer.start();
+        databaseEntity = initDataBaseEntity(mongoGenericContainer);
+        System.setProperty("embedded.container.mongodb.host", databaseEntity.getDataBaseHost());
+        System.setProperty("embedded.container.mongodb.port", String.valueOf(databaseEntity.getDataBasePort()));
+    }
 
-    void initEmbeddedService(TestEntity testEntity, String jsonCollectionName) {
-        embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
-        embeddedService.fillCollection();
-        setBaseUriAndPort();
+    protected static void initDataBase() {
+        testDatabaseService = new TestDatabaseService(databaseEntity);
+        testDatabaseService.dropDatabase();
+        testDatabaseService.createDatabase();
     }
 
     @AfterEach
     protected void tearDown() {
-        embeddedService.dropCollection();
+        testDatabaseService.dropDatabase();
     }
 
-    private void setBaseUriAndPort() {
-        RestAssured.port = port;
-        RestAssured.baseURI = host;
+    private static DatabaseEntity initDataBaseEntity(GenericContainer genericContainer) {
+        DatabaseEntity databaseEntity = new DatabaseEntity();
+        databaseEntity.setDataBaseHost(genericContainer.getContainerIpAddress());
+        databaseEntity.setDataBasePort(genericContainer.getMappedPort(MONGO_EXPOSED_PORT));
+        databaseEntity.setDataBaseName("automation");
+        return databaseEntity;
     }
 }

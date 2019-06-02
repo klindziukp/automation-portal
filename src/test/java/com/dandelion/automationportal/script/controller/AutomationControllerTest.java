@@ -1,35 +1,30 @@
 package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.AutomationController;
-import com.dandelion.automationportal.support.TestEntity;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-@EnableAutoConfiguration
-@TestInstance(Lifecycle.PER_METHOD)
+@EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
 public class AutomationControllerTest extends BaseControllerTest {
 
     private AutomationController automationController;
-    private TestEntity testEntity;
 
     @Autowired
-    public AutomationControllerTest(AutomationController automationController, TestEntity testEntity) {
+    public AutomationControllerTest(AutomationController automationController ) {
         this.automationController = automationController;
-        this.testEntity = testEntity;
     }
 
     @BeforeEach
-    void initEmbeddedService() {
-        initEmbeddedService(testEntity, "program");
+    public void initDatabase() {
+        initDataBase();
     }
 
     @Test()

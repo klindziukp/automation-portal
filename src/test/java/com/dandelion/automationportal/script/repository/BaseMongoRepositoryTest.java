@@ -1,8 +1,7 @@
 package com.dandelion.automationportal.script.repository;
 
-import com.dandelion.automationportal.support.TestEntity;
-import com.dandelion.automationportal.support.embedded.EmbeddedMongoService;
-import com.dandelion.automationportal.support.embedded.EmbeddedService;
+import com.dandelion.automationportal.support.DatabaseEntity;
+import com.dandelion.automationportal.support.embedded.TestDatabaseService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
@@ -15,20 +14,21 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @DataMongoTest
 @ActiveProfiles("test")
-@ContextConfiguration(classes = TestEntity.class)
+@ContextConfiguration(classes = DatabaseEntity.class)
 @TestPropertySource("classpath:application-test.properties")
 @ComponentScan("com.dandelion.automationportal")
 public class BaseMongoRepositoryTest {
 
-    private EmbeddedService embeddedService;
+    private TestDatabaseService testDatabaseService;
 
-    void initEmbeddedService(String jsonCollectionName, TestEntity testEntity) {
-        embeddedService = new EmbeddedMongoService(jsonCollectionName, testEntity);
-        embeddedService.fillCollection();
+    void initDatabase(DatabaseEntity databaseEntity) {
+        testDatabaseService = new TestDatabaseService(databaseEntity);
+        testDatabaseService.dropDatabase();
+        testDatabaseService.createDatabase();
     }
 
     @AfterEach
     protected void tearDown() {
-        embeddedService.dropCollection();
+        testDatabaseService.dropDatabase();
     }
 }

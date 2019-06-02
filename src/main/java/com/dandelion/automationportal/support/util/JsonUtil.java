@@ -2,9 +2,13 @@ package com.dandelion.automationportal.support.util;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.bson.Document;
 
 import java.io.File;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class JsonUtil {
 
@@ -21,9 +25,19 @@ public final class JsonUtil {
         }
     }
 
+    public static List<Document> fromJson(File file) {
+        try {
+            return (List<Document>) mapper.readValue(file, List.class)
+                    .stream()
+                    .map(listItem -> new Document((LinkedHashMap) listItem))
+                    .collect(Collectors.toList());
+        } catch (Exception ex) {
+            throw new RuntimeException(ex.getMessage(), ex);
+        }
+    }
+
     public static <T> T fromJson(File file, Class<T> classOfT) {
         try {
-
             return mapper.readValue(file, classOfT);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage(), e);
