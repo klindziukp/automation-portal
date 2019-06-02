@@ -4,6 +4,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
 [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=bugs)](https://sonarcloud.io/project/issues?id=com.dandelion%3Aautomation-portal&resolved=false&types=BUG)
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=vulnerabilities)](https://sonarcloud.io/project/issues?id=com.dandelion%3Aautomation-portal&resolved=false&types=VULNERABILITY)
+[![SonarCloud Code Smells](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=code_smells)](https://sonarcloud.io/project/issues?id=com.dandelion%3Aautomation-portal&resolved=false&types=CODE_SMELL)
 
 
 # Test Automation Portal 
