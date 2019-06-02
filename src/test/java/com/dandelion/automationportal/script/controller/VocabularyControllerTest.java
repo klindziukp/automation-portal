@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoCo
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class VocabularyControllerTest extends BaseControllerTest {
+public class VocabularyControllerTest extends BaseControllerScript {
 
     private VocabularyController vocabularyController;
 

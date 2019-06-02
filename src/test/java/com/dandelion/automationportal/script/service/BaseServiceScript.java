@@ -15,7 +15,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ActiveProfiles("test-service")
 @TestPropertySource("classpath:application-test-service.properties")
 @ComponentScan("com.dandelion.automationportal")
-public class BaseServiceTest {
+public class BaseServiceScript {
 
     private TestDatabaseService testDatabaseService;
 

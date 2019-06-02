@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoCo
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class LearnControllerChaptersTest extends BaseControllerTest {
+public class LearnControllerChaptersTest extends BaseControllerScript {
 
     private LearnController learnController;
 

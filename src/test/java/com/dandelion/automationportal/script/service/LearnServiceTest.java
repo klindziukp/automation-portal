@@ -20,7 +20,7 @@ import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestInstance(Lifecycle.PER_METHOD)
-class LearnServiceTest extends BaseServiceTest {
+class LearnServiceTest extends BaseServiceScript {
 
     private LearnService learnService;
     private DatabaseEntity databaseEntity;

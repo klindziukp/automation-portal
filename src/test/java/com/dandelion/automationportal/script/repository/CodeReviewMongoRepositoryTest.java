@@ -20,7 +20,7 @@ import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestInstance(Lifecycle.PER_METHOD)
-class CodeReviewMongoRepositoryTest extends BaseMongoRepositoryTest {
+class CodeReviewMongoRepositoryTest extends BaseMongoRepositoryScript {
 
     private CodeReviewMongoRepository codeReviewMongoRepository;
     private DatabaseEntity databaseEntity;

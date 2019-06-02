@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class CodeReviewControllerTest extends BaseControllerTest {
+public class CodeReviewControllerTest extends BaseControllerScript {
 
     private CodeReviewController codeReviewController;
 

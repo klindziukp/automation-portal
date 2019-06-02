@@ -4,7 +4,6 @@ import com.dandelion.automationportal.layer.service.CodeReviewService;
 import com.dandelion.automationportal.model.CodeReviewItem;
 import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
-import com.dandelion.automationportal.support.data.TestDataStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -20,7 +19,7 @@ import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestInstance(Lifecycle.PER_METHOD)
-class CodeReviewServiceTest extends BaseServiceTest {
+class CodeReviewServiceTest extends BaseServiceScript {
 
     private CodeReviewService codeReviewService;
     private DatabaseEntity databaseEntity;

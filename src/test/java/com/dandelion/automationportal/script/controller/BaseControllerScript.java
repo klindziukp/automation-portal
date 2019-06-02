@@ -15,7 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 })
 @Testcontainers
 @ActiveProfiles("test-integration")
-public class BaseControllerTest {
+public class BaseControllerScript {
 
     private static final int MONGO_EXPOSED_PORT = 27017;
     private static GenericContainer mongoGenericContainer = new GenericContainer("mongo:4.0.3").withExposedPorts(MONGO_EXPOSED_PORT);

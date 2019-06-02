@@ -17,7 +17,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ContextConfiguration(classes = DatabaseEntity.class)
 @TestPropertySource("classpath:application-test.properties")
 @ComponentScan("com.dandelion.automationportal")
-public class BaseMongoRepositoryTest {
+public class BaseMongoRepositoryScript {
 
     private TestDatabaseService testDatabaseService;
 
