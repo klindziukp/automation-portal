@@ -1,7 +1,11 @@
 [![Build Status](https://travis-ci.org/klindziukp/automation-portal.svg?branch=master)](https://travis-ci.org/klindziukp/automation-portal)
 [![codecov](https://codecov.io/gh/klindziukp/automation-portal/branch/master/graph/badge.svg?token=etQz2ItWW9)](https://codecov.io/gh/klindziukp/automation-portal)
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=com.dandelion%3Aautomation-portal)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
+[![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=automation-portal)
+[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=automation-portal)
 
 
 # Test Automation Portal 
@@ -34,6 +38,7 @@ Automation portal uses a number of open source projects to work properly:
 [![EmbedMongoDB](https://img.shields.io/static/v1.svg?label=EmbedMongo&message=2.2.0&color=2197ba)](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo)
 [![RestAssured](https://img.shields.io/static/v1.svg?label=RestAssured&message=3.3.0&color=2197ba)](http://rest-assured.io/)
 [![Junit](https://img.shields.io/static/v1.svg?label=Junit&message=5.4.2&color=2197ba)](https://junit.org/junit5/docs/snapshot/user-guide/)
+[![TestContainers](https://img.shields.io/static/v1.svg?label=TestContainers&message=1.11.2&color=2197ba)](https://www.testcontainers.org/)
 #### Cloud 
 [![Jacoco](https://img.shields.io/static/v1.svg?label=Jacoco&message=CodeCov&color=efbdee)](https://www.eclemma.org/jacoco/)
 [![TravisCi](https://img.shields.io/static/v1.svg?label=TravisCI&message=CIaaS&color=efbdee)](https://docs.travis-ci.com/user/for-beginners/)
