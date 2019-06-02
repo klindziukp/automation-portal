@@ -2,8 +2,8 @@
 [![codecov](https://codecov.io/gh/klindziukp/automation-portal/branch/master/graph/badge.svg?token=etQz2ItWW9)](https://codecov.io/gh/klindziukp/automation-portal)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
-[![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=automation-portal)
-[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=automation-portal)
+[![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=bugs)](https://sonarcloud.io/project/issues?id=com.dandelion%3Aautomation-portal&resolved=false&types=BUG)
+[![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.dandelion%3Aautomation-portal&metric=vulnerabilities)](https://sonarcloud.io/project/issues?id=com.dandelion%3Aautomation-portal&resolved=false&types=VULNERABILITY)
 
 
 # Test Automation Portal 
