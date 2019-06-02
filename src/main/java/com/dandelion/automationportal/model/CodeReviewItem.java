@@ -2,24 +2,24 @@ package com.dandelion.automationportal.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collection = "vocabulary")
+@Document(collection = "codereview")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class VocabularyItem implements Comparable<VocabularyItem> {
+public class CodeReviewItem implements Comparable<CodeReviewItem> {
 
     @Id
     private String id;
-    @Indexed(unique = true)
     private String key;
     private String value;
+    private String topicKey;
+    private String startLine;
 
     @Override
-    public int compareTo(@NotNull VocabularyItem vocabularyItem) {
-        return this.key.compareTo(vocabularyItem.getKey());
+    public int compareTo(CodeReviewItem codeReviewItem) {
+        return this.key.compareTo(codeReviewItem.getKey());
     }
 }
