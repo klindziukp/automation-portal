@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class LearnController {
         this.learnService = learnService;
     }
 
-    @RequestMapping("/self-check/{chapterKey}")
+    @RequestMapping(value = "/self-check/{chapterKey}", method = RequestMethod.GET)
     public ModelAndView selfCheck(@PathVariable("chapterKey") String chapterKey) {
         ModelAndView modelAndView = new ModelAndView();
         List<SelfCheckQuestion> questions = learnService.findAllByChapterKey(chapterKey);
@@ -31,7 +32,7 @@ public class LearnController {
         return modelAndView;
     }
 
-    @RequestMapping("/chapter/{chapterKey}")
+    @RequestMapping(value = "/chapter/{chapterKey}", method = RequestMethod.GET)
     public ModelAndView chapter(@PathVariable("chapterKey") String chapterKey) {
         ModelAndView modelAndView = new ModelAndView();
         Chapter chapter = learnService.findFirstChapterByKey(chapterKey);
