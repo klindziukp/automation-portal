@@ -1,5 +1,8 @@
-[![Build Status](https://travis-ci.com/klindziukp/automation-portal.svg?token=ij8oqxkKyJASFWpSVXcW&branch=master)](https://travis-ci.com/klindziukp/automation-portal)
+[![Build Status](https://travis-ci.org/klindziukp/automation-portal.svg?branch=master)](https://travis-ci.org/klindziukp/automation-portal)
 [![codecov](https://codecov.io/gh/klindziukp/automation-portal/branch/master/graph/badge.svg?token=etQz2ItWW9)](https://codecov.io/gh/klindziukp/automation-portal)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=com.dandelion%3Aautomation-portal)](https://sonarcloud.io/dashboard?id=com.dandelion%3Aautomation-portal)
+
 
 # Test Automation Portal 
 ---
