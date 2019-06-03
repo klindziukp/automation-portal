@@ -60,7 +60,9 @@ test {
 }
 
 sonarqube {
-    property "sonar.exclusions", "**/exception/**,**/model/**"
+    properties {
+        property "sonar.exclusions", "**/exception/**,**/model/**"
+    }
 }
 
 jacocoTestReport {
