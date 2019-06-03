@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.support.util;
 
+import com.dandelion.automationportal.exception.IncorrectMappingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.bson.Document;
@@ -19,8 +20,8 @@ public final class JsonUtil {
     public static <T> T fromJson(String json, Class<T> classOfT) {
         try {
             return mapper.readValue(json, classOfT);
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception ex) {
+            throw new IncorrectMappingException(ex.getMessage(), ex);
         }
     }
 
@@ -31,15 +32,15 @@ public final class JsonUtil {
                     .map(listItem -> new Document((LinkedHashMap) listItem))
                     .collect(Collectors.toList());
         } catch (Exception ex) {
-            throw new RuntimeException(ex.getMessage(), ex);
+            throw new IncorrectMappingException(ex.getMessage(), ex);
         }
     }
 
     public static <T> T fromJson(File file, Class<T> classOfT) {
         try {
             return mapper.readValue(file, classOfT);
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception ex) {
+            throw new IncorrectMappingException(ex.getMessage(), ex);
         }
     }
 
@@ -47,8 +48,8 @@ public final class JsonUtil {
         try {
             JavaType collectionType = mapper.getTypeFactory().constructCollectionType(List.class, classOfT);
             return mapper.readValue(file, collectionType);
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception ex) {
+            throw new IncorrectMappingException(ex.getMessage(), ex);
         }
     }
 }
