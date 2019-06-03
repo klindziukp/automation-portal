@@ -59,6 +59,12 @@ test {
     useJUnitPlatform()
 }
 
+sonarqube {
+    properties{
+        property "sonar.coverage.exclusions", ["**/exception/**","**/model/**"]
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
