@@ -67,6 +67,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
+                    '**/exception/**',
                     '**/model/**',
                     '**/support/**',
                     '**/*AutomationPortalApplication*.*'
