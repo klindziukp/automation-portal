@@ -59,6 +59,12 @@ test {
     useJUnitPlatform()
 }
 
+sonarqube {
+    properties {
+        property "sonar.exclusions", "**/exception/**,**/model/**"
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -67,6 +73,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
+                    '**/exception/**',
                     '**/model/**',
                     '**/support/**',
                     '**/*AutomationPortalApplication*.*'
