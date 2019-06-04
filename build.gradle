@@ -61,7 +61,7 @@ test {
 
 sonarqube {
     properties {
-        property "sonar.exclusions", "**/exception/**,**/model/**"
+        property "sonar.exclusions", "**/exception/**,**/model/**,**/support/**"
     }
 }
 
