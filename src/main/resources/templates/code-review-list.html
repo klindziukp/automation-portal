@@ -23,7 +23,7 @@
     <div th:replace="fragments/header :: header"></div>
 </div>
 <div class="bg-content">
-    <h4 class="centered-title ml3">TEST AUTOMATION</h4>
+    <h4 class="centered-title ml3">CODE REVIEW</h4>
     <div class="content">
 
         <div class="row justify-content-center">
@@ -33,7 +33,7 @@
                         <div class="card-img-block">
                             <img class="card-img"
                                  th:src="@{/images/} + ${chapter.key} + '.png'"
-                                 src="../static/images/git.png" alt="Chapter image">
+                                 src="../static/images/${chapter.key}.png" alt="Chapter image">
                         </div>
                         <div class="card-body">
                             <p th:text="${chapter.description}"
