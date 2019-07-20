@@ -20,11 +20,6 @@ public class WelcomeControllerTest extends BaseControllerScript {
         this.welcomeController = welcomeController;
     }
 
-    @BeforeEach
-    public void initDatabase() {
-        initDataBase();
-    }
-
     @Test()
     public void welcomeControllerTest(){
         given().log().all().

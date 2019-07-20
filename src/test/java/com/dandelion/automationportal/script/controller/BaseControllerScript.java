@@ -2,6 +2,7 @@ package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.embedded.TestDatabaseService;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,17 +30,19 @@ public class BaseControllerScript {
         databaseEntity = initDataBaseEntity(mongoGenericContainer);
         System.setProperty("embedded.container.mongodb.host", databaseEntity.getDataBaseHost());
         System.setProperty("embedded.container.mongodb.port", String.valueOf(databaseEntity.getDataBasePort()));
+
+        initDataBase();
     }
 
-    protected static void initDataBase() {
+    @AfterAll
+    protected static void tearDown() {
+        testDatabaseService.dropDatabase();
+    }
+
+    private static void initDataBase() {
         testDatabaseService = new TestDatabaseService(databaseEntity);
         testDatabaseService.dropDatabase();
         testDatabaseService.createDatabase();
-    }
-
-    @AfterEach
-    protected void tearDown() {
-        testDatabaseService.dropDatabase();
     }
 
     private static DatabaseEntity initDataBaseEntity(GenericContainer genericContainer) {

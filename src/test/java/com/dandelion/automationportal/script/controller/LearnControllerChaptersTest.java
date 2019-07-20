@@ -21,11 +21,6 @@ public class LearnControllerChaptersTest extends BaseControllerScript {
         this.learnController = learnController;
     }
 
-    @BeforeEach
-    public void initDatabase() {
-        initDataBase();
-    }
-
     @ParameterizedTest
     @MethodSource("com.dandelion.automationportal.support.data.JsonTestDataStorage#getChapterKeys")
     public void learnControllerChaptersTest(String automationKey) {

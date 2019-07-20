@@ -1,8 +1,8 @@
-package com.dandelion.automationportal.script.controller;
+package com.dandelion.automationportal.script.controller.api;
 
-import com.dandelion.automationportal.layer.controller.LearnController;
+import com.dandelion.automationportal.layer.controller.api.LearnRestController;
+import com.dandelion.automationportal.script.controller.BaseControllerScript;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,25 +12,25 @@ import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoCo
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class LearnControllerQuestionsTest extends BaseControllerScript {
+public class LearnRestControllerQuestionsTest extends BaseControllerScript {
 
-    private LearnController learnController;
+    private LearnRestController learnRestController;
 
     @Autowired
-    public LearnControllerQuestionsTest(LearnController learnController) {
-        this.learnController = learnController;
+    public LearnRestControllerQuestionsTest(LearnRestController learnRestController) {
+        this.learnRestController = learnRestController;
     }
 
     @ParameterizedTest
     @MethodSource("com.dandelion.automationportal.support.data.JsonTestDataStorage#getChapterKeys")
     public void learnControllerSelfCheckTest(String automationKey) {
-        String path = "/self-check/" + automationKey;
-        verifyLearnController(path);
+        String path = "api/self-check/" + automationKey;
+        verifyLearnRestController(path);
     }
 
-    protected void verifyLearnController(String path) {
+    protected void verifyLearnRestController(String path) {
         given().log().all().
-                standaloneSetup(learnController).
+                standaloneSetup(learnRestController).
         when().
                 get(path).
         then().
