@@ -15,7 +15,7 @@ https://automation-portal.herokuapp.com/
 ---
 - Unit testing
 - Api testing
-- Web  testing
+- Web testing
 - Mobile testing
 - Connected Tv testing
 - Continuous integration
