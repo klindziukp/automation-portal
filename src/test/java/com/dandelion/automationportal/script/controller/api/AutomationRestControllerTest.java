@@ -1,6 +1,7 @@
-package com.dandelion.automationportal.script.controller;
+package com.dandelion.automationportal.script.controller.api;
 
-import com.dandelion.automationportal.layer.controller.AutomationController;
+import com.dandelion.automationportal.layer.controller.api.AutomationRestController;
+import com.dandelion.automationportal.script.controller.BaseControllerScript;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,30 +13,32 @@ import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoCo
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class AutomationControllerTest extends BaseControllerScript {
+public class AutomationRestControllerTest extends BaseControllerScript {
 
-    private AutomationController automationController;
+    private static final String PATH = "api/automation/";
+
+    private AutomationRestController automationRestController;
 
     @Autowired
-    public AutomationControllerTest(AutomationController automationController ) {
-        this.automationController = automationController;
+    public AutomationRestControllerTest(AutomationRestController automationRestController ) {
+        this.automationRestController = automationRestController;
     }
 
     @Test()
     public void automationControllerTest() {
-        verifyAutomationController("/automation");
+        verifyAutomationRestController(PATH);
     }
 
     @ParameterizedTest
     @MethodSource("com.dandelion.automationportal.support.ProgramType#getProgramKeys")
     public void automationControllersTest(String automationKey) {
-        String path = "/automation/" + automationKey;
-        verifyAutomationController(path);
+        String path = PATH + automationKey;
+        verifyAutomationRestController(path);
     }
 
-    private void verifyAutomationController(String path) {
+    private void verifyAutomationRestController(String path) {
         given().log().all().
-                standaloneSetup(automationController).
+                standaloneSetup(automationRestController).
         when().
                 get(path).
         then().

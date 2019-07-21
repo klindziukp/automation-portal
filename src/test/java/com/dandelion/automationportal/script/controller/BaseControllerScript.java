@@ -2,8 +2,10 @@ package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.embedded.TestDatabaseService;
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ActiveProfiles;
@@ -15,6 +17,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 })
 @Testcontainers
 @ActiveProfiles("test-integration")
+@Execution(ExecutionMode.CONCURRENT)
 public class BaseControllerScript {
 
     private static final int MONGO_EXPOSED_PORT = 27017;
@@ -29,17 +32,19 @@ public class BaseControllerScript {
         databaseEntity = initDataBaseEntity(mongoGenericContainer);
         System.setProperty("embedded.container.mongodb.host", databaseEntity.getDataBaseHost());
         System.setProperty("embedded.container.mongodb.port", String.valueOf(databaseEntity.getDataBasePort()));
+
+        initDataBase();
     }
 
-    protected static void initDataBase() {
+    @AfterAll
+    protected static void tearDown() {
+        testDatabaseService.dropDatabase();
+    }
+
+    private static void initDataBase() {
         testDatabaseService = new TestDatabaseService(databaseEntity);
         testDatabaseService.dropDatabase();
         testDatabaseService.createDatabase();
-    }
-
-    @AfterEach
-    protected void tearDown() {
-        testDatabaseService.dropDatabase();
     }
 
     private static DatabaseEntity initDataBaseEntity(GenericContainer genericContainer) {

@@ -1,6 +1,7 @@
-package com.dandelion.automationportal.script.controller;
+package com.dandelion.automationportal.script.controller.api;
 
-import com.dandelion.automationportal.layer.controller.VocabularyController;
+import com.dandelion.automationportal.layer.controller.api.VocabularyRestController;
+import com.dandelion.automationportal.script.controller.BaseControllerScript;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,21 +11,21 @@ import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoCo
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class VocabularyControllerTest extends BaseControllerScript {
+public class VocabularyRestControllerTest extends BaseControllerScript {
 
-    private VocabularyController vocabularyController;
+    private VocabularyRestController vocabularyRestController;
 
     @Autowired
-    public VocabularyControllerTest(VocabularyController vocabularyController) {
-        this.vocabularyController = vocabularyController;
+    public VocabularyRestControllerTest(VocabularyRestController vocabularyRestController) {
+        this.vocabularyRestController = vocabularyRestController;
     }
 
     @Test
     public void vocabularyControllerTest(){
         given().log().all().
-                standaloneSetup(vocabularyController).
+                standaloneSetup(vocabularyRestController).
         when().
-                get("/vocabulary").
+                get("api/vocabulary").
         then().
                 statusCode(HttpStatus.SC_OK);
     }

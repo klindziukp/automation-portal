@@ -2,7 +2,6 @@ package com.dandelion.automationportal.script.controller;
 
 import com.dandelion.automationportal.layer.controller.LearnController;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,6 @@ public class LearnControllerChaptersTest extends BaseControllerScript {
     @Autowired
     public LearnControllerChaptersTest(LearnController learnController) {
         this.learnController = learnController;
-    }
-
-    @BeforeEach
-    public void initDatabase() {
-        initDataBase();
     }
 
     @ParameterizedTest

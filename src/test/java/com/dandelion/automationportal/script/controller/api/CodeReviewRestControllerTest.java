@@ -1,6 +1,7 @@
-package com.dandelion.automationportal.script.controller;
+package com.dandelion.automationportal.script.controller.api;
 
-import com.dandelion.automationportal.layer.controller.CodeReviewController;
+import com.dandelion.automationportal.layer.controller.api.CodeReviewRestController;
+import com.dandelion.automationportal.script.controller.BaseControllerScript;
 import com.dandelion.automationportal.support.data.JsonTestDataStorage;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
@@ -15,31 +16,32 @@ import java.util.stream.Stream;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @EnableAutoConfiguration(exclude = EmbeddedMongoAutoConfiguration.class)
-public class CodeReviewControllerTest extends BaseControllerScript {
+public class CodeReviewRestControllerTest extends BaseControllerScript {
 
-    private CodeReviewController codeReviewController;
+    private static final String PATH = "api/code-review/";
+
+    private CodeReviewRestController codeReviewRestController;
 
     @Autowired
-    public CodeReviewControllerTest(CodeReviewController codeReviewController) {
-        this.codeReviewController = codeReviewController;
+    public CodeReviewRestControllerTest(CodeReviewRestController codeReviewRestController) {
+        this.codeReviewRestController = codeReviewRestController;
     }
 
     @Test
     public void codeReviewControllerTest() {
-        String path = "/code-review";
-        verifyLearnController(path);
+        verifyLearnRestController(PATH);
     }
 
     @ParameterizedTest
     @MethodSource("getCodeReviewItems")
     public void codeReviewControllerItemsTest(String codeReviewItemName) {
-        String path = "/code-review/" + codeReviewItemName;
-        verifyLearnController(path);
+        String path = PATH + codeReviewItemName;
+        verifyLearnRestController(path);
     }
 
-    private void verifyLearnController(String path) {
+    private void verifyLearnRestController(String path) {
         given().log().all().
-                standaloneSetup(codeReviewController).
+                standaloneSetup(codeReviewRestController).
                 when().
                 get(path).
                 then().
