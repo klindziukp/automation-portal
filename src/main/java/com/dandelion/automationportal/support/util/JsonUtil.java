@@ -3,7 +3,6 @@ package com.dandelion.automationportal.support.util;
 import com.dandelion.automationportal.exception.IncorrectMappingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bson.Document;
 
 import java.io.File;
 import java.util.LinkedHashMap;
@@ -20,17 +19,6 @@ public final class JsonUtil {
     public static <T> T fromJson(String json, Class<T> classOfT) {
         try {
             return mapper.readValue(json, classOfT);
-        } catch (Exception ex) {
-            throw new IncorrectMappingException(ex.getMessage(), ex);
-        }
-    }
-
-    public static List<Document> fromJson(File file) {
-        try {
-            return (List<Document>) mapper.readValue(file, List.class)
-                    .stream()
-                    .map(listItem -> new Document((LinkedHashMap) listItem))
-                    .collect(Collectors.toList());
         } catch (Exception ex) {
             throw new IncorrectMappingException(ex.getMessage(), ex);
         }

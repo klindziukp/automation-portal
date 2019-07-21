@@ -1,25 +1,21 @@
 package com.dandelion.automationportal.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.EqualsAndHashCode;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vocabulary")
 @Data
-@Document(collection = "vocabulary")
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class VocabularyItem implements Comparable<VocabularyItem> {
+@EqualsAndHashCode(callSuper = true)
+public class VocabularyItem extends UpdatableEntity {
 
-    @Id
-    private String id;
-    @Indexed(unique = true)
+    @Column(name = "key")
     private String key;
-    private String value;
 
-    @Override
-    public int compareTo(@NotNull VocabularyItem vocabularyItem) {
-        return this.key.compareTo(vocabularyItem.getKey());
-    }
+    @Column(name = "value")
+    private String value;
 }

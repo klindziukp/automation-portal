@@ -4,9 +4,7 @@ import com.dandelion.automationportal.model.chapter.Chapter;
 
 import java.util.List;
 
-public interface ChaptersRepository {
+public interface AutomationRepository {
 
-    Chapter findFirstChapterByName(String name);
     List<Chapter> findAll();
-    List<Chapter> findAllChaptersByName(String name);
 }
