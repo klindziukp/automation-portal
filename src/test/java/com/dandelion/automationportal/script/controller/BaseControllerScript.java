@@ -3,7 +3,6 @@ package com.dandelion.automationportal.script.controller;
 import com.dandelion.automationportal.support.DatabaseEntity;
 import com.dandelion.automationportal.support.embedded.TestDatabaseService;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
