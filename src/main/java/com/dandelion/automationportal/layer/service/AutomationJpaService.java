@@ -1,10 +1,10 @@
 package com.dandelion.automationportal.layer.service;
 
-import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
 
 import java.util.List;
 
 public interface AutomationJpaService {
 
-    List<Chapter> findAllChapters();
+    List<AutomationTypeProjection> findAllTypes();
 }

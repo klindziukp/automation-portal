@@ -1,8 +1,8 @@
 package com.dandelion.automationportal.layer.service.impl;
 
 import com.dandelion.automationportal.layer.repository.AutomationRepository;
+import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
 import com.dandelion.automationportal.layer.service.AutomationJpaService;
-import com.dandelion.automationportal.model.chapter.Chapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class AutomationServiceImpl implements AutomationJpaService {
     }
 
     @Override
-    public List<Chapter> findAllChapters() {
-        return automationRepository.findAll();
+    public List<AutomationTypeProjection> findAllTypes() {
+        return automationRepository.getNameAndDescriptionOnly();
     }
 }

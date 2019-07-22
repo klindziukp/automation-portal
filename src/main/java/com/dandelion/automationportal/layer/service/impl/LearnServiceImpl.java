@@ -31,6 +31,6 @@ public class LearnServiceImpl implements LearnJpaService {
 
     @Override
     public List<SelfCheckQuestion> findAllSelfCheckQuestionsByChapterName(String chapterName) {
-        return automationRepository.findAll().get(0).getSelfCheckQuestions();
+        return automationRepository.findAll().get(0).getChapters().get(0).getSelfCheckQuestions();
     }
 }

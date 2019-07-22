@@ -27,19 +27,19 @@
 		<div class="content">
 
 			<div class="row justify-content-center">
-				<th:block th:each="chapterKey : ${program.sequence}">
-					<div class="col-sm-3" th:with="chapter=${program.getChapter(chapterKey)}">
+				<th:block th:each="type : ${automationType}">
+					<div class="col-sm-3" th:with="chapter=${type.name}">
 						<div class="card text-center mx-auto border-info border-thick">
 							<div class="card-img-block">
 								<img class="card-img"
-									th:src="@{/images/} + ${chapter.key} + '.png'"
+									th:src="@{/images/automation/} + ${type.name} + '.png'"
 									src="../static/images/git.png" alt="Chapter image">
 							</div>
 							<div class="card-body">
-								<p th:text="${chapter.description}"
+								<p th:text="${type.description}"
 									class="card-text text-block bold-font">Some default description.</p>
 								<div class="card-buttons ">
-									<a th:href="@{/automation/} + ${chapter.key}" href="#" class="btn button-primary">Chapters</a>
+									<a th:href="@{/automation/} + ${type.name}" href="#" class="btn button-primary">Chapters</a>
 								</div>
 							</div>
 						</div>

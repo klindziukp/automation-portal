@@ -1,4 +1,4 @@
-package com.dandelion.automationportal.layer.controller.jpa;
+package com.dandelion.automationportal.layer.controller.rest;
 
 import com.dandelion.automationportal.layer.service.VocabularyJpaService;
 import com.dandelion.automationportal.model.VocabularyItem;

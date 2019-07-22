@@ -1,7 +1,7 @@
-package com.dandelion.automationportal.layer.controller.jpa;
+package com.dandelion.automationportal.layer.controller.rest;
 
+import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
 import com.dandelion.automationportal.layer.service.AutomationJpaService;
-import com.dandelion.automationportal.model.chapter.Chapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -23,13 +23,13 @@ public class AutomationRestController {
 
     @GetMapping(value = "/api/automation", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
-    public List<Chapter> restAutomation() {
-        return automationJpaService.findAllChapters();
+    public List<AutomationTypeProjection> restAutomation() {
+        return automationJpaService.findAllTypes();
     }
 
     @GetMapping(value = "api/automation/{automationKey}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
-    public Chapter restAutomation(@PathVariable("automationKey") String automationKey) {
-       return automationJpaService.findAllChapters().get(0);
+    public AutomationTypeProjection restAutomation(@PathVariable("automationKey") String automationKey) {
+       return automationJpaService.findAllTypes().get(0);
     }
 }

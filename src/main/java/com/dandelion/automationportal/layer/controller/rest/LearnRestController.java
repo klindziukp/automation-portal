@@ -1,4 +1,4 @@
-package com.dandelion.automationportal.layer.controller.jpa;
+package com.dandelion.automationportal.layer.controller.rest;
 
 import com.dandelion.automationportal.layer.service.LearnJpaService;
 import com.dandelion.automationportal.model.chapter.SelfCheckQuestion;
