@@ -7,10 +7,12 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,8 +26,7 @@ import java.util.List;
 @Table(name = "chapter")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@ToString
 public class Chapter extends UpdatableEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -64,7 +65,7 @@ public class Chapter extends UpdatableEntity {
     @JsonProperty("questions")
     private List<Question> questions;
 
-    @OneToMany(mappedBy = "chapter", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "chapter", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonManagedReference
     @JsonProperty("selfCheckQuestions")
     private List<SelfCheckQuestion> selfCheckQuestions;

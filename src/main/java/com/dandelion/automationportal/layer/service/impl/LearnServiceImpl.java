@@ -1,8 +1,8 @@
 package com.dandelion.automationportal.layer.service.impl;
 
-import com.dandelion.automationportal.layer.repository.AutomationJpaRepository;
+import com.dandelion.automationportal.layer.repository.ChaptersRepository;
+import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.layer.service.LearnJpaService;
-import com.dandelion.automationportal.model.chapter.Chapter;
 import com.dandelion.automationportal.model.chapter.SelfCheckQuestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,25 +12,15 @@ import java.util.List;
 @Service
 public class LearnServiceImpl implements LearnJpaService {
 
-    private AutomationJpaRepository automationJpaRepository;
+    private ChaptersRepository chaptersJpaRepository;
 
     @Autowired
-    public LearnServiceImpl(AutomationJpaRepository automationJpaRepository) {
-        this.automationJpaRepository = automationJpaRepository;
+    public LearnServiceImpl(ChaptersRepository chaptersJpaRepository) {
+        this.chaptersJpaRepository = chaptersJpaRepository;
     }
 
     @Override
-    public String getChapterNameFromKey(String chapterKey) {
-        return null;
-    }
-
-    @Override
-    public Chapter findFirstChapterById(String chapterName) {
-        return null;
-    }
-
-    @Override
-    public List<SelfCheckQuestion> findAllSelfCheckQuestionsByChapterName(String chapterName) {
-        return automationJpaRepository.findAll().get(0).getChapters().get(0).getSelfCheckQuestions();
+    public List<ChapterSelfCheckProjection> findAllSelfCheckQuestionsByChapterName(String chapterName) {
+        return chaptersJpaRepository.findAllSelfCheckQuestionsByChapterName(chapterName);
     }
 }

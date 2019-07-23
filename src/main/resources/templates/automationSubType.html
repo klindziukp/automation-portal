@@ -39,8 +39,8 @@
 								<p th:text="${subType.description}"
 									class="card-text text-block bold-font">Some default description.</p>
 								<div class="card-buttons ">
-									<a th:href="@{/chapter/} + ${subType.name}" href="#" class="btn button-primary">Materials</a>
-									<a th:href="@{/self-check/} + ${subType.name}" href="#" class="btn button-primary">Self check</a>
+									<a th:href="@${subType.name} + {/chapter}" href="#" class="btn button-primary">Materials</a>
+									<a th:href="@${subType.name} + {/self-check}" href="#" class="btn button-primary">Self check</a>
 								</div>
 							</div>
 						</div>

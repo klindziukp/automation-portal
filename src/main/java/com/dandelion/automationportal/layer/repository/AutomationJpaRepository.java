@@ -1,6 +1,5 @@
 package com.dandelion.automationportal.layer.repository;
 
-import com.dandelion.automationportal.model.AutomationType;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;

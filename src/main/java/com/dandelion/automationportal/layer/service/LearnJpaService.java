@@ -1,13 +1,9 @@
 package com.dandelion.automationportal.layer.service;
 
-import com.dandelion.automationportal.model.chapter.Chapter;
-import com.dandelion.automationportal.model.chapter.SelfCheckQuestion;
-
+import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import java.util.List;
 
 public interface LearnJpaService {
 
-    String getChapterNameFromKey(String chapterKey);
-    Chapter findFirstChapterById(String chapterName);
-    List<SelfCheckQuestion> findAllSelfCheckQuestionsByChapterName(String chapterName);
+    List<ChapterSelfCheckProjection> findAllSelfCheckQuestionsByChapterName(String chapterName);
 }
