@@ -24,6 +24,10 @@ public class SelfCheckQuestion extends UpdatableEntity {
     @JsonBackReference
     private Chapter chapter;
 
+    @Column(name = "chapter_name")
+    @JsonProperty("chapterName")
+    private String chapterName;
+
     @Column(name = "question")
     @JsonProperty("question")
     private String question;

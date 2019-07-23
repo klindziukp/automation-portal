@@ -6,11 +6,11 @@ import java.util.stream.Stream;
 
 public enum ProgramType {
 
-    UNIT_TESTING_PROGRAM_NAME("unit", "Unit Testing"),
-    API_TESTING_PROGRAM_NAME("api", "Api Testing"),
-    WEB_TESTING_PROGRAM_NAME("web", "Web Testing"),
-    MOBILE_TESTING_PROGRAM_NAME("mobile", "Mobile Testing"),
-    CONNECTED_TV_TESTING_PROGRAM_NAME("connected", "ConnectedTv Testing"),
+    UNIT_TESTING_PROGRAM_NAME("unit-testing", "Unit Testing"),
+    API_TESTING_PROGRAM_NAME("api-testing", "Api Testing"),
+    WEB_TESTING_PROGRAM_NAME("web-testing", "Web Testing"),
+    MOBILE_TESTING_PROGRAM_NAME("mobile-testing", "Mobile Testing"),
+    CONNECTED_TV_TESTING_PROGRAM_NAME("connected-tv-testing", "ConnectedTv Testing"),
     CODE_REVIEW_PROGRAM_NAME("code-review", "Code Review");
 
     private String key;

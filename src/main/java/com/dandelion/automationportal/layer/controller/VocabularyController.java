@@ -2,7 +2,6 @@ package com.dandelion.automationportal.layer.controller;
 
 import com.dandelion.automationportal.layer.service.VocabularyJpaService;
 import com.dandelion.automationportal.model.VocabularyItem;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

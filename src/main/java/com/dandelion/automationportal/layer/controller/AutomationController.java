@@ -1,7 +1,10 @@
 package com.dandelion.automationportal.layer.controller;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationJpaService;
+import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.support.ProgramType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,8 +32,14 @@ public class AutomationController {
         return modelAndView;
     }
 
-    @GetMapping("/automation/{automationKey}")
-    public AutomationTypeProjection restAutomation(@PathVariable("automationKey") String automationKey) {
-       return automationJpaService.findAllTypes().get(0);
+    @GetMapping("/automation/{automationName}")
+    public ModelAndView restAutomation(@PathVariable("automationName") String automationName) {
+        ModelAndView modelAndView = new ModelAndView();
+        String programName = ProgramType.getTopicNameByKey(automationName);
+        List<ChapterProjection> chapters = automationJpaService.findChaptersAllByAutomationName(automationName);
+        modelAndView.addObject("pageName", programName);
+        modelAndView.addObject("automationSubType", chapters);
+        modelAndView.setViewName("automationSubType");
+        return modelAndView;
     }
 }

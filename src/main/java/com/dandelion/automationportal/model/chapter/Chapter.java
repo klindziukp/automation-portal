@@ -33,6 +33,10 @@ public class Chapter extends UpdatableEntity {
     @JsonBackReference
     private AutomationType automationType;
 
+    @Column(name = "automation_name")
+    @JsonProperty("automation_name")
+    private String automationName;
+
     @Column(name = "name")
     @JsonProperty("name")
     private String name;

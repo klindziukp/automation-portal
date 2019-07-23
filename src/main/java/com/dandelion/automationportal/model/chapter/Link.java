@@ -27,6 +27,10 @@ public class Link extends UpdatableEntity {
     @JsonBackReference
     private Chapter chapter;
 
+    @Column(name = "chapter_name")
+    @JsonProperty("chapterName")
+    private String chapterName;
+
     @Column(name = "text")
     @JsonProperty("text")
     private String text;

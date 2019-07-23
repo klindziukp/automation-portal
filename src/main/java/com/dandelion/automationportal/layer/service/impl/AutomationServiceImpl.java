@@ -1,7 +1,8 @@
 package com.dandelion.automationportal.layer.service.impl;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository;
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationJpaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,15 +12,20 @@ import java.util.List;
 @Service
 public class AutomationServiceImpl implements AutomationJpaService {
 
-    private AutomationRepository automationRepository;
+    private AutomationJpaRepository automationJpaRepository;
 
     @Autowired
-    public AutomationServiceImpl(AutomationRepository automationRepository) {
-        this.automationRepository = automationRepository;
+    public AutomationServiceImpl(AutomationJpaRepository automationJpaRepository) {
+        this.automationJpaRepository = automationJpaRepository;
     }
 
     @Override
     public List<AutomationTypeProjection> findAllTypes() {
-        return automationRepository.getNameAndDescriptionOnly();
+        return automationJpaRepository.getNameAndDescriptionOnly();
+    }
+
+    @Override
+    public List<ChapterProjection> findChaptersAllByAutomationName(String name) {
+       return automationJpaRepository.findChaptersAllByAutomationName(name);
     }
 }

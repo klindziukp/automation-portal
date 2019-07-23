@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.layer.service.impl;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository;
+import com.dandelion.automationportal.layer.repository.AutomationJpaRepository;
 import com.dandelion.automationportal.layer.service.LearnJpaService;
 import com.dandelion.automationportal.model.chapter.Chapter;
 import com.dandelion.automationportal.model.chapter.SelfCheckQuestion;
@@ -12,11 +12,11 @@ import java.util.List;
 @Service
 public class LearnServiceImpl implements LearnJpaService {
 
-    private AutomationRepository automationRepository;
+    private AutomationJpaRepository automationJpaRepository;
 
     @Autowired
-    public LearnServiceImpl(AutomationRepository automationRepository) {
-        this.automationRepository = automationRepository;
+    public LearnServiceImpl(AutomationJpaRepository automationJpaRepository) {
+        this.automationJpaRepository = automationJpaRepository;
     }
 
     @Override
@@ -31,6 +31,6 @@ public class LearnServiceImpl implements LearnJpaService {
 
     @Override
     public List<SelfCheckQuestion> findAllSelfCheckQuestionsByChapterName(String chapterName) {
-        return automationRepository.findAll().get(0).getChapters().get(0).getSelfCheckQuestions();
+        return automationJpaRepository.findAll().get(0).getChapters().get(0).getSelfCheckQuestions();
     }
 }
