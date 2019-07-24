@@ -1,7 +1,8 @@
 package com.dandelion.automationportal.layer.controller.rest;
 
 import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
-import com.dandelion.automationportal.layer.service.LearnJpaService;
+import com.dandelion.automationportal.layer.service.ChapterJpaService;
+import com.dandelion.automationportal.model.chapter.Chapter;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,21 +14,21 @@ import java.util.List;
 @RestController
 public class ChapterRestController {
 
-    private LearnJpaService learnJpaService;
+    private ChapterJpaService chapterJpaService;
 
-    public ChapterRestController(LearnJpaService learnJpaService) {
-        this.learnJpaService = learnJpaService;
+    public ChapterRestController(ChapterJpaService chapterJpaService) {
+        this.chapterJpaService = chapterJpaService;
     }
 
     @GetMapping(value = "api/{chapterName}/self-check", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
     public List<ChapterSelfCheckProjection> selfCheck(@PathVariable("chapterName") String chapterName) {
-        return learnJpaService.findAllSelfCheckQuestionsByChapterName(chapterName);
+        return chapterJpaService.findAllSelfCheckQuestionsByChapterName(chapterName);
     }
 
-//    @GetMapping(value = "api/chapter/{chapterKey}", produces = { MediaType.APPLICATION_JSON_VALUE })
-//    @ResponseBody
-//    public Chapter chapter(@PathVariable("chapterKey") String chapterKey) {
-//        return learnService.findFirstChapterByKey(chapterKey);
-//    }
+    @GetMapping(value = "api/{chapterName}/chapter", produces = { MediaType.APPLICATION_JSON_VALUE })
+    @ResponseBody
+    public Chapter chapter(@PathVariable("chapterName") String chapterName) {
+        return chapterJpaService.findChapterByName(chapterName);
+    }
 }

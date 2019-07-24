@@ -1,11 +1,10 @@
 package com.dandelion.automationportal.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
+import lombok.ToString;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -14,8 +13,8 @@ import javax.persistence.Table;
 @Table(name = "vocabulary")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@ToString
+@JsonIgnoreProperties({ "id", "createdAt", "updatedAt", "deletedAt", "createdBy", "updatedBy", "deletedBy" })
 public class VocabularyItem extends UpdatableEntity {
 
     @Column(name = "key")

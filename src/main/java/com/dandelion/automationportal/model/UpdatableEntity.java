@@ -14,8 +14,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
 
-@Data
 @MappedSuperclass
+@Data
 public abstract class UpdatableEntity {
 
     @Id
@@ -28,12 +28,14 @@ public abstract class UpdatableEntity {
     @JsonProperty("createdAt")
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
+    @JsonIgnore
     private Date createdAt;
 
     @Column(name = "updated_at")
     @JsonProperty("updatedAt")
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
+    @JsonIgnore
     private Date updatedAt;
 
     @Column(name = "deleted_at")
@@ -51,7 +53,7 @@ public abstract class UpdatableEntity {
     @Column(name = "updated_by")
     @JsonProperty("updatedBy")
     @JsonIgnore
-    private String updateBy;
+    private String updatedBy;
 
     @Column(name = "deleted_by")
     @JsonProperty("deletedBy")

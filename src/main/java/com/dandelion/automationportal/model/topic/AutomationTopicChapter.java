@@ -2,8 +2,10 @@ package com.dandelion.automationportal.model.topic;
 
 import com.dandelion.automationportal.model.UpdatableEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +18,8 @@ import javax.persistence.Table;
 @Table(name = "automation_topic_chapter")
 @Data
 @EqualsAndHashCode(callSuper = true)
+@ToString(exclude = "automationTopic")
+@JsonIgnoreProperties({ "id", "createdAt", "updatedAt", "deletedAt", "createdBy", "updatedBy", "deletedBy" })
 public class AutomationTopicChapter extends UpdatableEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)

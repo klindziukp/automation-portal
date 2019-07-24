@@ -3,15 +3,13 @@ package com.dandelion.automationportal.model.chapter;
 import com.dandelion.automationportal.model.UpdatableEntity;
 import com.dandelion.automationportal.model.AutomationType;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +24,8 @@ import java.util.List;
 @Table(name = "chapter")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@ToString
+@ToString(exclude = { "automationType", "links", "notes", "questions", "selfCheckQuestions", "tasks" })
+@JsonIgnoreProperties({ "id", "createdAt", "updatedAt", "deletedAt", "createdBy", "updatedBy", "deletedBy" })
 public class Chapter extends UpdatableEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -35,11 +34,11 @@ public class Chapter extends UpdatableEntity {
     private AutomationType automationType;
 
     @Column(name = "automation_name")
-    @JsonProperty("automation_name")
+    @JsonProperty("automationName")
     private String automationName;
 
     @Column(name = "name")
-    @JsonProperty("name")
+    @JsonProperty("chapterName")
     private String name;
 
     @Column(name = "description")
