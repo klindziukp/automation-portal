@@ -1,11 +1,17 @@
 package com.dandelion.automationportal.support.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class StringUtil {
 
     private StringUtil() {
+    }
+
+    public static String getChapterNameFromKey(String chapterName) {
+        return StringUtils.capitalize(chapterName);
     }
 
     public static String[] splitByUpperCase(String text) {

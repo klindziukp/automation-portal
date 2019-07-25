@@ -20,13 +20,13 @@ public class ChapterRestController {
         this.chapterJpaService = chapterJpaService;
     }
 
-    @GetMapping(value = "api/{chapterName}/self-check", produces = { MediaType.APPLICATION_JSON_VALUE })
+    @GetMapping(value = "api/self-check/{chapterName}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
     public List<ChapterSelfCheckProjection> selfCheck(@PathVariable("chapterName") String chapterName) {
         return chapterJpaService.findAllSelfCheckQuestionsByChapterName(chapterName);
     }
 
-    @GetMapping(value = "api/{chapterName}/chapter", produces = { MediaType.APPLICATION_JSON_VALUE })
+    @GetMapping(value = "api/chapter/{chapterName}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
     public Chapter chapter(@PathVariable("chapterName") String chapterName) {
         return chapterJpaService.findChapterByName(chapterName);

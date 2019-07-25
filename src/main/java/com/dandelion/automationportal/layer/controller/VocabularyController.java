@@ -18,7 +18,7 @@ public class VocabularyController {
         this.vocabularyJpaService = vocabularyJpaService;
     }
 
-    @GetMapping("vocabulary")
+    @GetMapping("/vocabulary")
     @ResponseBody
     public ModelAndView vocabulary() {
         ModelAndView modelAndView = new ModelAndView();

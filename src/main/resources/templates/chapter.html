@@ -21,18 +21,18 @@
 		<div th:replace="fragments/header :: header">&nbsp;</div>
 	</div>
 	<div class="bg-content">
-	<h4 class="centered-title ml3" th:text="${chapter.name}">Chapter name.</h4>
+	<h4 class="centered-title ml3" th:text="${chapter.description}">Chapter name.</h4>
 		<div class="content">
 			<div class="row">
 				<div class="column left">
 					<div class="centered">
-						<img th:src="@{'/images/' + ${chapter.key} + '.png'}"
+						<img th:src="@{'/images/chapter/' + ${chapter.name} + '.png'}"
 							src="../static/images/git.png" alt="Chapter image">
 
 					</div>
 					<div id="nav-buttons" class="centered">
-						<a th:href="@{/automation/} + ${chapter.parent}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Back</a>
-            <a th:href="@{/self-check/} + ${chapter.key}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Self check</a>
+						<a th:href="@{/automation/} + ${chapter.automationName}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Back</a>
+            <a th:href="@{/self-check/} + ${chapter.name}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Self check</a>
 					</div>
 				</div>
 				<div class="column right">
@@ -71,10 +71,6 @@
 									<ul class="list-bullet">
 										<th:block th:each="question : ${chapter.questions}">
 											<li th:text="${question.text}">Some default question</li>
-											<th:block th:each="subquestion : ${question.subItems}">
-												<p th:text="${' - ' + subquestion.text}">Some default
-													subquestion</p>
-											</th:block>
 										</th:block>
 									</ul>
 								</div>
@@ -86,9 +82,6 @@
 								<ul class="list-bullet">
 									<th:block th:each="task : ${chapter.tasks}">
 										<li th:utext="${task.text}">Some default task</li>
-										<th:block th:each="subtask : ${task.subItems}">
-											<p th:utext="${' - ' + subtask.text}">Some default subtask</p>
-										</th:block>
 									</th:block>
 								</ul>
 							</div>
@@ -100,9 +93,6 @@
 								<ul class="list-bullet">
 									<th:block th:each="link : ${chapter.links}">
 										<li><a th:href="${link.text}" th:text="${link.text}">Some default link</a></li>
-										<th:block th:each="sublink : ${link.subItems}">
-											<p th:text="${' - ' + sublink.text}">Some default sublink</p>
-										</th:block>
 									</th:block>
 								</ul>
 							</div>
@@ -114,9 +104,6 @@
 								<ul class="list-bullet">
 									<th:block th:each="note : ${chapter.notes}">
 										<li th:text="${note.text}">Some default note</li>
-										<th:block th:each="subnote : ${note.subItems}">
-											<p th:text="${' - ' + subnote.text}">Some default subnote</p>
-										</th:block>
 									</th:block>
 								</ul>
 							</div>

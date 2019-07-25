@@ -24,7 +24,7 @@
 		<div th:replace="fragments/header :: header"></div>
 	</div>
 	<div class="content">
-		<h3 class="centered-title " th:text="${#strings.toUpperCase(chapterName)}">Chapter name.</h3>
+		<h3 class="centered-title " th:text="${chapterName}">Chapter name.</h3>
 		<h4 class="centered-title ">Think twice before flip the card.</h4>
 		<div
 			class="card-deck col-12 text-center mx-auto row justify-content-center">
@@ -52,7 +52,7 @@
 	</div>
 	<div class="button-text-center">
 		<div class="buttons-right">
-			<a href="javascript:history.back()" class="btn btn-dark pulse button-right-margin">Back to Chapter</a>
+			<a href="#" th:href="@{/chapter/} + ${#strings.toLowerCase(chapterName)}" class="btn btn-dark pulse button-right-margin">Back to Chapter</a>
 			<a href="#" th:href="@{/automation}" class="btn btn-dark pulse button-right-margin">Back to automation</a>
 			<br>
 		</div>

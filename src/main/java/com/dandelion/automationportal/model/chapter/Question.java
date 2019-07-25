@@ -34,5 +34,5 @@ public class Question extends UpdatableEntity {
 
     @Column(name = "text")
     @JsonProperty("text")
-    private String name;
+    private String text;
 }
