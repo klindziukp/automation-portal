@@ -27,20 +27,19 @@
 		<div class="content">
 
 			<div class="row justify-content-center">
-				<th:block th:each="subType : ${automationSubType}">
-					<div class="col-sm-3" th:with="chapter=${subType.name}">
+				<th:block th:each="topicChapter : ${topicChapters}">
+					<div class="col-sm-3" th:with="chapter=${topicChapter.name}">
 						<div class="card text-center mx-auto border-info border-thick">
 							<div class="card-img-block">
 								<img class="card-img"
-									th:src="@{/images/subautomation/} + ${subType.name} + '.png'"
-									src="../static/images/git.png" alt="Chapter image">
+									th:src="@{/images/subtopic/} + ${topicChapter.name} + '.png'"
+									src="../static/images/git.png" alt="Subtopic image">
 							</div>
 							<div class="card-body">
-								<p th:text="${subType.description}"
+								<p th:text="${topicChapter.description}"
 									class="card-text text-block bold-font">Some default description.</p>
 								<div class="card-buttons ">
-									<a th:href="@{/chapter/} + ${subType.name}" href="#" class="btn button-primary">Materials</a>
-									<a th:href="@{/self-check/} + ${subType.name}" href="#" class="btn button-primary">Self check</a>
+									<a th:href="@{/} + 'topics/' + ${topicChapter.automationTopicName} + '/' + ${topicChapter.name}" href="#" class="btn button-primary">Topic</a>
 								</div>
 							</div>
 						</div>

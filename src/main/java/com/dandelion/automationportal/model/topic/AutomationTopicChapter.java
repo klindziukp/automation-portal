@@ -3,6 +3,7 @@ package com.dandelion.automationportal.model.topic;
 import com.dandelion.automationportal.model.UpdatableEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -27,12 +28,27 @@ public class AutomationTopicChapter extends UpdatableEntity {
     @JoinColumn(name = "automation_topic_id", nullable = false)
     private AutomationTopic automationTopic;
 
+    @Column(name = "automationTopicName")
+    @JsonProperty("automationTopicName")
+    private String automationTopicName;
+
     @Column(name = "name")
+    @JsonProperty("name")
     private String name;
 
+    @Column(name = "description")
+    @JsonProperty("description")
+    private String description;
+
+    @Column(name = "key")
+    @JsonProperty("key")
+    private String key;
+
     @Column(name = "begin_with")
+    @JsonProperty("beginWith")
     private String beginWith;
 
     @Column(name = "text")
+    @JsonProperty("text")
     private String text;
 }

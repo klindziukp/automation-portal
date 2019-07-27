@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.layer.controller.rest;
 
+import com.dandelion.automationportal.layer.repository.TopicsRepository.TopicProjection;
 import com.dandelion.automationportal.layer.service.TopicService;
 import com.dandelion.automationportal.model.topic.AutomationTopic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,8 @@ public class TopicRestController {
 
     @GetMapping(value = "api/topics", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
-    public List<AutomationTopic> topics() {
-        return topicService.findAllTopics();
+    public List<TopicProjection> topics() {
+        return topicService.getNameAndDescriptionOnly();
     }
 
     @GetMapping(value = "api/topics/{topicName}", produces = { MediaType.APPLICATION_JSON_VALUE })

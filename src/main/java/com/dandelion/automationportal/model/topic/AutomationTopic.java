@@ -31,6 +31,10 @@ public class AutomationTopic {
     @JsonProperty("name")
     private String name;
 
+    @Column(name = "description")
+    @JsonProperty("description")
+    private String description;
+
     @OneToMany(mappedBy = "automationTopic", fetch = FetchType.LAZY)
     @JsonManagedReference
     @JsonProperty("topicChapters")
