@@ -1,9 +1,8 @@
 package com.dandelion.automationportal.layer.controller;
 
-import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.AutomationTypeProjection;
-import com.dandelion.automationportal.layer.repository.AutomationJpaRepository.ChapterProjection;
-import com.dandelion.automationportal.layer.service.AutomationJpaService;
-import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.layer.repository.AutomationRepository.ChapterProjection;
+import com.dandelion.automationportal.layer.service.AutomationService;
 import com.dandelion.automationportal.support.ProgramType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,17 +15,17 @@ import java.util.List;
 @Controller
 public class AutomationController {
 
-    private AutomationJpaService automationJpaService;
+    private AutomationService automationService;
 
     @Autowired
-    public AutomationController(AutomationJpaService automationJpaService) {
-        this.automationJpaService = automationJpaService;
+    public AutomationController(AutomationService automationService) {
+        this.automationService = automationService;
     }
 
     @GetMapping("/automation")
     public ModelAndView automation() {
         ModelAndView modelAndView = new ModelAndView();
-        List<AutomationTypeProjection> automationTypes = automationJpaService.findAllTypes();
+        List<AutomationTypeProjection> automationTypes = automationService.findAllTypes();
         modelAndView.addObject("automationType", automationTypes);
         modelAndView.setViewName("automationType");
         return modelAndView;
@@ -36,7 +35,7 @@ public class AutomationController {
     public ModelAndView restAutomation(@PathVariable("automationName") String automationName) {
         ModelAndView modelAndView = new ModelAndView();
         String programName = ProgramType.getTopicNameByKey(automationName);
-        List<ChapterProjection> chapters = automationJpaService.findChaptersAllByAutomationName(automationName);
+        List<ChapterProjection> chapters = automationService.findChaptersAllByAutomationName(automationName);
         modelAndView.addObject("pageName", programName);
         modelAndView.addObject("automationSubType", chapters);
         modelAndView.setViewName("automationSubType");

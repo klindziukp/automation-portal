@@ -4,7 +4,7 @@ import com.dandelion.automationportal.model.VocabularyItem;
 
 import java.util.List;
 
-public interface VocabularyJpaService {
+public interface VocabularyService {
 
     List<VocabularyItem> getAllItemsOrderByKeyAsc();
 }

@@ -18,7 +18,7 @@ import java.util.List;
 @Entity
 @Table(name = "automation_topic")
 @Data
-@ToString(exclude = "chapters")
+@ToString(exclude = "topicChapters")
 @JsonIgnoreProperties({ "id" })
 public class AutomationTopic {
 
@@ -33,6 +33,6 @@ public class AutomationTopic {
 
     @OneToMany(mappedBy = "automationTopic", fetch = FetchType.LAZY)
     @JsonManagedReference
-    @JsonProperty("chapters")
-    private List<AutomationTopicChapter> chapters;
+    @JsonProperty("topicChapters")
+    private List<AutomationTopicChapter> topicChapters;
 }

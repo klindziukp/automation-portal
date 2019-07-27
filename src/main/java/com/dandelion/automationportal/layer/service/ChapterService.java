@@ -5,7 +5,7 @@ import com.dandelion.automationportal.model.chapter.Chapter;
 
 import java.util.List;
 
-public interface ChapterJpaService {
+public interface ChapterService {
 
     Chapter findChapterByName(String name);
     List<ChapterSelfCheckProjection> findAllSelfCheckQuestionsByChapterName(String chapterName);

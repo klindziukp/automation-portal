@@ -1,16 +1,15 @@
 package com.dandelion.automationportal.layer.service.impl;
 
 import com.dandelion.automationportal.layer.repository.TopicsRepository;
-import com.dandelion.automationportal.layer.service.TopicJpaService;
+import com.dandelion.automationportal.layer.service.TopicService;
 import com.dandelion.automationportal.model.topic.AutomationTopic;
-import com.dandelion.automationportal.model.topic.AutomationTopicChapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class TopicServiceImpl implements TopicJpaService {
+public class TopicServiceImpl implements TopicService {
 
     private TopicsRepository topicsRepository;
 
@@ -20,7 +19,12 @@ public class TopicServiceImpl implements TopicJpaService {
     }
 
     @Override
-    public List<AutomationTopicChapter> findAllAutomationTopics() {
+    public AutomationTopic findTopicByName(String name) {
+        return topicsRepository.findByName(name);
+    }
+
+    @Override
+    public List<AutomationTopic> findAllTopics() {
         return topicsRepository.findAll();
     }
 }
