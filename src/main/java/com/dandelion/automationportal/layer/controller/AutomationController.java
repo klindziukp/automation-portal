@@ -26,19 +26,21 @@ public class AutomationController {
     public ModelAndView automation() {
         ModelAndView modelAndView = new ModelAndView();
         List<AutomationTypeProjection> automationTypes = automationService.findAllTypes();
-        modelAndView.addObject("automationType", automationTypes);
-        modelAndView.setViewName("automationType");
+        final String automationType = "automationType";
+        modelAndView.addObject(automationType, automationTypes);
+        modelAndView.setViewName(automationType);
         return modelAndView;
     }
 
     @GetMapping("/automation/{automationName}")
     public ModelAndView restAutomation(@PathVariable("automationName") String automationName) {
         ModelAndView modelAndView = new ModelAndView();
-        String programName = StringUtil.extractName(automationName);
         List<ChapterProjection> chapters = automationService.findChaptersAllByAutomationName(automationName);
-        modelAndView.addObject("pageName", programName);
-        modelAndView.addObject("automationSubType", chapters);
-        modelAndView.setViewName("automationSubType");
+        final String automationSubType = "automationSubType";
+        modelAndView.addObject(automationSubType, chapters);
+        modelAndView.setViewName(automationSubType);
+        String pageName = StringUtil.extractName(automationName);
+        modelAndView.addObject("pageName", pageName);
         return modelAndView;
     }
 }

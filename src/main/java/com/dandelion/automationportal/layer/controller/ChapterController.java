@@ -35,9 +35,10 @@ public class ChapterController {
     @GetMapping("/chapter/{chapterName}")
     public ModelAndView chapter(@PathVariable("chapterName") String chapterName) {
         ModelAndView modelAndView = new ModelAndView();
-        Chapter chapter = chapterService.findChapterByName(chapterName);
-        modelAndView.addObject("chapter", chapter);
-        modelAndView.setViewName("chapter");
+        Chapter automationChapter = chapterService.findChapterByName(chapterName);
+        final String chapter = "chapter";
+        modelAndView.addObject(chapter, automationChapter);
+        modelAndView.setViewName(chapter);
         return modelAndView;
     }
 }
