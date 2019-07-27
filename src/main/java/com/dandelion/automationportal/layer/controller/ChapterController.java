@@ -27,7 +27,7 @@ public class ChapterController {
         ModelAndView modelAndView = new ModelAndView();
         List<ChapterSelfCheckProjection> selfCheckQuestions = chapterService.findAllSelfCheckQuestionsByChapterName(chapterName);
         modelAndView.addObject("selfCheckQuestions", selfCheckQuestions);
-        modelAndView.addObject("chapterName", StringUtil.getChapterNameFromKey(chapterName));
+        modelAndView.addObject("chapterName", StringUtil.extractName(chapterName));
         modelAndView.setViewName("self-check");
         return modelAndView;
     }

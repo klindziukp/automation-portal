@@ -26,6 +26,6 @@ public class AutomationServiceImpl implements AutomationService {
 
     @Override
     public List<ChapterProjection> findChaptersAllByAutomationName(String name) {
-       return automationRepository.findChaptersAllByAutomationName(name);
+       return automationRepository.findAllChaptersByAutomationName(name);
     }
 }
