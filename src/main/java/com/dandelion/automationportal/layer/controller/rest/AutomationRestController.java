@@ -1,8 +1,9 @@
 package com.dandelion.automationportal.layer.controller.rest;
 
 import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
-import com.dandelion.automationportal.layer.repository.AutomationRepository.ChapterProjection;
+import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationService;
+import com.dandelion.automationportal.layer.service.ChapterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +17,12 @@ import java.util.List;
 public class AutomationRestController {
 
     private AutomationService automationService;
+    private ChapterService chapterService;
 
     @Autowired
-    public AutomationRestController(AutomationService automationService) {
+    public AutomationRestController(AutomationService automationService, ChapterService chapterService) {
         this.automationService = automationService;
+        this.chapterService = chapterService;
     }
 
     @GetMapping(value = "/api/automation", produces = { MediaType.APPLICATION_JSON_VALUE })
@@ -31,6 +34,6 @@ public class AutomationRestController {
     @GetMapping(value = "api/automation/{automationName}", produces = { MediaType.APPLICATION_JSON_VALUE })
     @ResponseBody
     public List<ChapterProjection> chapters(@PathVariable("automationName") String automationName) {
-        return automationService.findChaptersAllByAutomationName(automationName);
+        return chapterService.findChaptersAllByAutomationName(automationName);
     }
 }

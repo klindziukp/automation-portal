@@ -1,8 +1,9 @@
 package com.dandelion.automationportal.layer.controller;
 
 import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
-import com.dandelion.automationportal.layer.repository.AutomationRepository.ChapterProjection;
+import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationService;
+import com.dandelion.automationportal.layer.service.ChapterService;
 import com.dandelion.automationportal.support.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,10 +17,12 @@ import java.util.List;
 public class AutomationController {
 
     private AutomationService automationService;
+    private ChapterService chapterService;
 
     @Autowired
-    public AutomationController(AutomationService automationService) {
+    public AutomationController(AutomationService automationService, ChapterService chapterService) {
         this.automationService = automationService;
+        this.chapterService = chapterService;
     }
 
     @GetMapping("/automation")
@@ -35,7 +38,7 @@ public class AutomationController {
     @GetMapping("/automation/{automationName}")
     public ModelAndView restAutomation(@PathVariable("automationName") String automationName) {
         ModelAndView modelAndView = new ModelAndView();
-        List<ChapterProjection> chapters = automationService.findChaptersAllByAutomationName(automationName);
+        List<ChapterProjection> chapters = chapterService.findChaptersAllByAutomationName(automationName);
         final String automationSubType = "automationSubType";
         modelAndView.addObject(automationSubType, chapters);
         modelAndView.setViewName(automationSubType);

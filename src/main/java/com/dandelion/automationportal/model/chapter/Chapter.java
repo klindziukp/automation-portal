@@ -64,7 +64,7 @@ public class Chapter extends UpdatableEntity {
     @JsonProperty("questions")
     private List<Question> questions;
 
-    @OneToMany(mappedBy = "chapter", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "chapter", fetch = FetchType.LAZY)
     @JsonManagedReference
     @JsonProperty("selfCheckQuestions")
     private List<SelfCheckQuestion> selfCheckQuestions;

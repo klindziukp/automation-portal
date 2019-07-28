@@ -1,6 +1,7 @@
 package com.dandelion.automationportal.layer.service.impl;
 
 import com.dandelion.automationportal.layer.repository.ChaptersRepository;
+import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.layer.service.ChapterService;
 import com.dandelion.automationportal.model.chapter.Chapter;
@@ -22,6 +23,11 @@ public class ChapterServiceImpl implements ChapterService {
     @Override
     public Chapter findChapterByName(String name) {
         return chaptersJpaRepository.findChapterByName(name);
+    }
+
+    @Override
+    public List<ChapterProjection> findChaptersAllByAutomationName(String name) {
+        return chaptersJpaRepository.findAllChaptersByAutomationName(name);
     }
 
     @Override

@@ -11,14 +11,7 @@ public interface AutomationRepository {
         String getDescription();
     }
 
-    interface ChapterProjection {
-        String getName();
-        String getDescription();
-    }
-
     @Query(value = "SELECT name,description FROM automation_type", nativeQuery = true)
     List<AutomationTypeProjection> getNameAndDescriptionOnly();
 
-    @Query(value = "SELECT name,description FROM chapter WHERE automation_name = ?1", nativeQuery = true)
-    List<ChapterProjection> findAllChaptersByAutomationName(String name);
 }
