@@ -1,8 +1,6 @@
 package com.dandelion.automationportal.layer.repository;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.ChapterProjection;
 import com.dandelion.automationportal.model.topic.AutomationTopic;
-import com.dandelion.automationportal.model.topic.AutomationTopicChapter;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
