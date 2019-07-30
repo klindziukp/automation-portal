@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.layer.service;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.model.projection.AutomationTypeProjection;
 
 import java.util.List;
 

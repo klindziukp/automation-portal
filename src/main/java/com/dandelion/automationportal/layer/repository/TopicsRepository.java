@@ -1,22 +1,13 @@
 package com.dandelion.automationportal.layer.repository;
 
+import com.dandelion.automationportal.model.projection.TopicChapterProjection;
+import com.dandelion.automationportal.model.projection.TopicProjection;
 import com.dandelion.automationportal.model.topic.AutomationTopic;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
 public interface TopicsRepository {
-
-    interface TopicProjection {
-        String getName();
-        String getDescription();
-    }
-
-    interface TopicChapterProjection {
-        String getAutomationTopicName();
-        String getName();
-        String getDescription();
-    }
 
     @Query(value = "SELECT name,description FROM automation_topic", nativeQuery = true)
     List<TopicProjection> getNameAndDescriptionOnly();

@@ -1,6 +1,6 @@
 package com.dandelion.automationportal.data;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.model.projection.AutomationTypeProjection;
 import org.springframework.data.projection.ProjectionFactory;
 import org.springframework.data.projection.SpelAwareProxyProjectionFactory;
 

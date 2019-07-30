@@ -1,8 +1,8 @@
 package com.dandelion.automationportal.layer.service;
 
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.model.projection.ChapterProjection;
+import com.dandelion.automationportal.model.projection.ChapterSelfCheckProjection;
 
 import java.util.List;
 

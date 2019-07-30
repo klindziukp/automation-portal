@@ -1,8 +1,8 @@
 package com.dandelion.automationportal.layer.controller;
 
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.layer.service.ChapterService;
 import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.model.projection.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.support.util.StringUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

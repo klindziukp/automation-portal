@@ -1,9 +1,9 @@
 package com.dandelion.automationportal.layer.controller;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationService;
 import com.dandelion.automationportal.layer.service.ChapterService;
+import com.dandelion.automationportal.model.projection.AutomationTypeProjection;
+import com.dandelion.automationportal.model.projection.ChapterProjection;
 import com.dandelion.automationportal.support.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

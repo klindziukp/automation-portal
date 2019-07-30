@@ -1,9 +1,9 @@
 package com.dandelion.automationportal.layer.controller.rest;
 
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
 import com.dandelion.automationportal.layer.service.AutomationService;
 import com.dandelion.automationportal.layer.service.ChapterService;
+import com.dandelion.automationportal.model.projection.AutomationTypeProjection;
+import com.dandelion.automationportal.model.projection.ChapterProjection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

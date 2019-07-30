@@ -2,7 +2,7 @@ package com.dandelion.automationportal.script.repository;
 
 import com.dandelion.automationportal.data.TestDataStorage;
 import com.dandelion.automationportal.layer.repository.AutomationRepository;
-import com.dandelion.automationportal.layer.repository.AutomationRepository.AutomationTypeProjection;
+import com.dandelion.automationportal.model.projection.AutomationTypeProjection;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

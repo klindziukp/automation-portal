@@ -1,7 +1,7 @@
 package com.dandelion.automationportal.layer.service;
 
-import com.dandelion.automationportal.layer.repository.TopicsRepository.TopicChapterProjection;
-import com.dandelion.automationportal.layer.repository.TopicsRepository.TopicProjection;
+import com.dandelion.automationportal.model.projection.TopicChapterProjection;
+import com.dandelion.automationportal.model.projection.TopicProjection;
 import com.dandelion.automationportal.model.topic.AutomationTopic;
 import com.dandelion.automationportal.model.topic.AutomationTopicChapter;
 

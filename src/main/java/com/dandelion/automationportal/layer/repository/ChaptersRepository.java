@@ -1,22 +1,13 @@
 package com.dandelion.automationportal.layer.repository;
 
 import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.model.projection.ChapterProjection;
+import com.dandelion.automationportal.model.projection.ChapterSelfCheckProjection;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
 public interface ChaptersRepository {
-
-    interface ChapterProjection {
-        String getName();
-        String getDescription();
-    }
-
-    interface ChapterSelfCheckProjection {
-        String getChapterName();
-        String getQuestion();
-        String getAnswer();
-    }
 
     Chapter findChapterByName(String name);
 

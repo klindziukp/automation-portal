@@ -1,10 +1,10 @@
 package com.dandelion.automationportal.layer.service.impl;
 
 import com.dandelion.automationportal.layer.repository.ChaptersRepository;
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterProjection;
-import com.dandelion.automationportal.layer.repository.ChaptersRepository.ChapterSelfCheckProjection;
 import com.dandelion.automationportal.layer.service.ChapterService;
 import com.dandelion.automationportal.model.chapter.Chapter;
+import com.dandelion.automationportal.model.projection.ChapterProjection;
+import com.dandelion.automationportal.model.projection.ChapterSelfCheckProjection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
