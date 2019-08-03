@@ -19,7 +19,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SpringBootTest
 @Testcontainers
 @ExtendWith(SpringExtension.class)
-@Profile("test-integration")
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @ContextConfiguration(initializers = { BaseControllerTest.Initializer.class })
 public class BaseControllerTest {
