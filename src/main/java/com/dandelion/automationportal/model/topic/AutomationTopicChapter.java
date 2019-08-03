@@ -40,7 +40,7 @@ public class AutomationTopicChapter extends UpdatableEntity {
     @JsonProperty("description")
     private String description;
 
-    @Column(name = "key")
+    @Column(name = "key_word")
     @JsonProperty("key")
     private String key;
 

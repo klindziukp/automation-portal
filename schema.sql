@@ -106,7 +106,7 @@ CREATE TABLE `automation_topic` (
 
 CREATE TABLE `vocabulary` (
 	`id` BIGINT AUTO_INCREMENT,
-	`key` VARCHAR(255),
+	`key_word` VARCHAR(255),
 	`value` LONGTEXT,
 	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`updated_at` TIMESTAMP NULL DEFAULT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE `automation_topic_chapter` (
   	`automation_topic_name` VARCHAR(255),
     `name` VARCHAR(255),
     `description` VARCHAR(255),
-    `key` VARCHAR(255),
+    `key_word` VARCHAR(255),
 	`begin_with` VARCHAR(255),
 	`text` LONGTEXT,
 	`created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

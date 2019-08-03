@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @JsonIgnoreProperties({ "id", "createdAt", "updatedAt", "deletedAt", "createdBy", "updatedBy", "deletedBy" })
 public class VocabularyItem extends UpdatableEntity {
 
-    @Column(name = "key")
+    @Column(name = "key_word")
     private String key;
 
     @Column(name = "value")
