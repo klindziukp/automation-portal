@@ -20,6 +20,6 @@ public class AutomationServiceImpl implements AutomationService {
 
     @Override
     public List<AutomationTypeProjection> findAllTypes() {
-        return automationRepository.getNameAndDescriptionOnly();
+        return automationRepository.getAutomationTypes();
     }
 }

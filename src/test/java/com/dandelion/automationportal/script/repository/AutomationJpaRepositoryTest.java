@@ -10,24 +10,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
-class AutomationRepositoryTest extends BaseRepositoryTest {
+import static com.dandelion.automationportal.support.Step.GIVEN;
+import static com.dandelion.automationportal.support.Step.THEN;
+import static com.dandelion.automationportal.support.Step.WHEN;
+
+class AutomationJpaRepositoryTest extends BaseRepositoryTest {
 
     private AutomationRepository automationRepository;
 
     @Autowired
-    public AutomationRepositoryTest(AutomationRepository automationRepository) {
+    public AutomationJpaRepositoryTest(AutomationRepository automationRepository) {
         this.automationRepository = automationRepository;
     }
 
     @Test()
     void getNameAndDescriptionOnlyTest() {
-        final List<AutomationTypeProjection> actual = automationRepository.getNameAndDescriptionOnly();
-        final List<AutomationTypeProjection> expected = TestDataStorage.testAutomationProjections();
+
+        GIVEN();
+        final List<AutomationTypeProjection> expected = TestDataStorage.getTestAutomationProjections();
+
+        WHEN();
+        final List<AutomationTypeProjection> actual = automationRepository.getAutomationTypes();
+
+        THEN();
         verifyProjections(actual, expected);
     }
 
     private void verifyProjections(List<AutomationTypeProjection> actual, List<AutomationTypeProjection> expected){
         SoftAssertions softAssertions = new SoftAssertions();
+        softAssertions.assertThat(actual.size()).as("Sizes are not equal").isEqualTo(expected.size());
         for(int i = 0; i< expected.size(); i++){
             String actualName = Optional.ofNullable(actual.get(i).getName()).orElse("Unable to get actual name.");
             String expectedName = Optional.ofNullable(expected.get(i).getName()).orElse("Unable to get expected name.");
@@ -38,5 +49,6 @@ class AutomationRepositoryTest extends BaseRepositoryTest {
             softAssertions.assertThat(actualDescription).as("Descriptions are not equal.")
                     .isEqualTo(expectedDescription);
         }
+        softAssertions.assertAll();
     }
 }

@@ -1,7 +1,8 @@
 package com.dandelion.automationportal.script.controller.rest;
 
+import com.dandelion.automationportal.layer.controller.VocabularyController;
 import com.dandelion.automationportal.layer.controller.rest.AutomationRestController;
-import com.dandelion.automationportal.model.AutomationType;
+import com.dandelion.automationportal.layer.controller.rest.VocabularyRestController;
 import com.dandelion.automationportal.script.controller.BaseControllerTest;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
@@ -11,15 +12,15 @@ import org.springframework.context.annotation.Profile;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @Profile("test-integration")
-public class AutomationRestControllerTest extends BaseControllerTest {
+public class VocabularyRestControllerTest extends BaseControllerTest {
 
-    private AutomationRestController automationRestController;
+    private VocabularyRestController vocabularyRestController;
 
-    private static final String PATH = "api/automation";
+    private static final String PATH = "api/vocabulary";
 
     @Autowired
-    public AutomationRestControllerTest(AutomationRestController automationRestController) {
-        this.automationRestController = automationRestController;
+    public VocabularyRestControllerTest(VocabularyRestController vocabularyRestController) {
+        this.vocabularyRestController = vocabularyRestController;
     }
 
     @Test()
@@ -29,11 +30,10 @@ public class AutomationRestControllerTest extends BaseControllerTest {
 
     private void verifyRestAutomationController(String path) {
        given().log().all().
-                standaloneSetup(automationRestController).
+                standaloneSetup(vocabularyRestController).
                 when().
                 get(path).
                 then().
                 statusCode(HttpStatus.SC_OK);
-
-    }
+   }
 }

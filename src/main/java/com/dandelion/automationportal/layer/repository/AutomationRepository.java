@@ -8,6 +8,6 @@ import java.util.List;
 public interface AutomationRepository {
 
     @Query(value = "SELECT name,description FROM automation_type", nativeQuery = true)
-    List<AutomationTypeProjection> getNameAndDescriptionOnly();
+    List<AutomationTypeProjection> getAutomationTypes();
 
 }

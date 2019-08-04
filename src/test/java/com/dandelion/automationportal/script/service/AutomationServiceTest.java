@@ -22,7 +22,7 @@ class AutomationServiceTest extends BaseServiceTest {
     @Test()
     void getNameAndDescriptionOnlyTest() {
         final List<AutomationTypeProjection> actual = automationService.findAllTypes();
-        final List<AutomationTypeProjection> expected = TestDataStorage.testAutomationProjections();
+        final List<AutomationTypeProjection> expected = TestDataStorage.getTestAutomationProjections();
         verifyProjections(actual, expected);
     }
 
@@ -37,6 +37,7 @@ class AutomationServiceTest extends BaseServiceTest {
             String expectedDescription = Optional.ofNullable(expected.get(i).getDescription()).orElse("Unable to get expected description.");
             softAssertions.assertThat(actualDescription).as("Descriptions are not equal.")
                     .isEqualTo(expectedDescription);
+            softAssertions.assertAll();
         }
     }
 }
