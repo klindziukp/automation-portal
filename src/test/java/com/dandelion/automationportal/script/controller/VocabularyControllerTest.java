@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
-public class VocabularyControllerTest extends BaseControllerTest {
+public class VocabularyControllerTest extends BaseControllerScript {
 
     private VocabularyController vocabularyController;
 

@@ -38,7 +38,7 @@ public class TopicController {
         List<TopicChapterProjection> topicChapters = topicService.findAllChaptersByTopicName(topicName);
         modelAndView.addObject("topicChapters", topicChapters);
         modelAndView.setViewName("automationTopicChapter");
-        String pageName = StringUtil.extractName(topicName);
+        String pageName = StringUtil.extractTitle(topicName);
         modelAndView.addObject("pageName", pageName);
         return modelAndView;
     }
@@ -49,7 +49,7 @@ public class TopicController {
         List<AutomationTopicChapter> topicChapters = topicService.findAllByName(topicChapterName);
         modelAndView.addObject("topicChapters", topicChapters);
         modelAndView.setViewName("topic");
-        String pageName = StringUtil.extractName(topicName);
+        String pageName = StringUtil.extractTitle(topicName);
         modelAndView.addObject("pageName", pageName);
         return modelAndView;
     }

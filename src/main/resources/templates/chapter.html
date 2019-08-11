@@ -32,7 +32,7 @@
 					</div>
 					<div id="nav-buttons" class="centered">
 						<a th:href="@{/automation/} + ${chapter.automationName}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Back</a>
-            <a th:href="@{/self-check/} + ${chapter.name}" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Self check</a>
+            <a th:href="@{/} + ${chapter.automationName} + '/' + ${chapter.name} + '/self-check'" href="#" class="btn btn-sm btn-dark pulse button-left-chapter button-chapter">Self check</a>
 					</div>
 				</div>
 				<div class="column right">

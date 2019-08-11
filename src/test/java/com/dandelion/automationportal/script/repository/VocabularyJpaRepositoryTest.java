@@ -6,7 +6,6 @@ import com.dandelion.automationportal.model.VocabularyItem;
 import com.dandelion.automationportal.support.Ignore;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class VocabularyJpaRepositoryTest extends BaseRepositoryTest {
+class VocabularyJpaRepositoryTest extends BaseRepositoryScript {
 
     private VocabularyRepository vocabularyRepository;
 

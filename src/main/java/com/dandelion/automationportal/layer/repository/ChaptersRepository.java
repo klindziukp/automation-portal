@@ -11,7 +11,7 @@ public interface ChaptersRepository {
 
     Chapter findChapterByName(String name);
 
-    @Query(value = "SELECT name,description FROM chapter WHERE automation_name = ?1", nativeQuery = true)
+    @Query(value = "SELECT name, automation_name AS automationName, description FROM chapter WHERE automation_name = ?1", nativeQuery = true)
     List<ChapterProjection> findAllChaptersByAutomationName(String name);
 
     @Query(value = "SELECT chapter_name AS chapterName, question, answer FROM self_check_question s WHERE s.chapter_name = ?1", nativeQuery = true)

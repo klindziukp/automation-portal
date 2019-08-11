@@ -7,7 +7,7 @@ public final class StringUtil {
     private StringUtil() {
     }
 
-    public static String extractName(String name) {
+    public static String extractTitle(String name) {
         return WordUtils.capitalize(name.replaceAll("-", " "));
     }
 }

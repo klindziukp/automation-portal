@@ -42,7 +42,7 @@ public class AutomationController {
         final String automationSubType = "automationSubType";
         modelAndView.addObject(automationSubType, chapters);
         modelAndView.setViewName(automationSubType);
-        String pageName = StringUtil.extractName(automationName);
+        String pageName = StringUtil.extractTitle(automationName);
         modelAndView.addObject("pageName", pageName);
         return modelAndView;
     }

@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
-class AutomationServiceTest extends BaseServiceTest {
+class AutomationServiceTest extends BaseServiceScript {
 
     private AutomationService automationService;
 

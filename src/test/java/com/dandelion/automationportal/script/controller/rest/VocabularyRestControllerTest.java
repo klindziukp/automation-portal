@@ -1,9 +1,7 @@
 package com.dandelion.automationportal.script.controller.rest;
 
-import com.dandelion.automationportal.layer.controller.VocabularyController;
-import com.dandelion.automationportal.layer.controller.rest.AutomationRestController;
 import com.dandelion.automationportal.layer.controller.rest.VocabularyRestController;
-import com.dandelion.automationportal.script.controller.BaseControllerTest;
+import com.dandelion.automationportal.script.controller.BaseControllerScript;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 
 @Profile("test-integration")
-public class VocabularyRestControllerTest extends BaseControllerTest {
+public class VocabularyRestControllerTest extends BaseControllerScript {
 
     private VocabularyRestController vocabularyRestController;
 

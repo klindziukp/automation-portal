@@ -14,7 +14,7 @@ import static com.dandelion.automationportal.support.Step.GIVEN;
 import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 
-class AutomationJpaRepositoryTest extends BaseRepositoryTest {
+class AutomationJpaRepositoryTest extends BaseRepositoryScript {
 
     private AutomationRepository automationRepository;
 

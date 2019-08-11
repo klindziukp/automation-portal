@@ -17,8 +17,8 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers
 @ExtendWith(SpringExtension.class)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
-@ContextConfiguration(initializers = { BaseControllerTest.Initializer.class })
-public class BaseControllerTest {
+@ContextConfiguration(initializers = { BaseControllerScript.Initializer.class })
+public class BaseControllerScript {
 
     private static MySQLContainer mySqlContainer = new MySQLContainer("mysql:5.7.24");
 

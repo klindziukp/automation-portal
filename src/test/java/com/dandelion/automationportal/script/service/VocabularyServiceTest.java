@@ -14,7 +14,7 @@ import static com.dandelion.automationportal.support.Step.THEN;
 import static com.dandelion.automationportal.support.Step.WHEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class VocabularyServiceTest extends BaseServiceTest {
+class VocabularyServiceTest extends BaseServiceScript {
 
     private VocabularyService vocabularyService;
 
