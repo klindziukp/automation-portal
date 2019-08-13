@@ -1,5 +1,6 @@
 package com.dandelion.automationportal.script.service;
 
+import com.dandelion.automationportal.support.JpaVerificationService;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
@@ -15,4 +16,5 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ComponentScan("com.dandelion.automationportal.layer")
 class BaseServiceScript {
 
+    JpaVerificationService jpaVerificationService = new JpaVerificationService();
 }
