@@ -1,0 +1,40 @@
+apiVersion: apps/v1                                 # API version
+kind: Deployment                                    # Type of kubernetes resource
+metadata:
+  name: automation-portal                           # Name of the kubernetes resource
+  namespace: ap-test
+  labels:                                           # Labels that will be applied to this resource
+    app: automation-portal
+spec:
+  replicas: 1                                       # No. of replicas/pods to run in this deployment
+  selector:
+    matchLabels:                                    # The deployment applies to any pods mayching the specified labels
+      app: automation-portal
+  template:                                         # Template for creating the pods in this deployment
+    metadata:
+      labels:                                       # Labels that will be applied to each Pod in this deployment
+        app: automation-portal
+    spec:                                           # Spec for the containers that will be run in the Pods
+      containers:
+        - name: automation-portal
+          image: klindziuk/automation-portal-kube
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8881                    # The port that the container exposes
+---
+apiVersion: v1                                       # API version
+kind: Service                                        # Type of the kubernetes resource
+metadata:
+  name: automation-portal                            # Name of the kubernetes resource
+  namespace: ap-test
+  labels:                                            # Labels that will be applied to this resource
+    app: automation-portal
+spec:
+  type: NodePort                                     # The service will be exposed by opening a Port on each node and proxying it.
+  selector:
+    app: automation-portal                           # The service exposes Pods with label `automation-portal`
+  ports:                                             # Forward incoming connections on port 8881 to the target port 8881
+    - name: http
+      port: 8881
+      targetPort: 8881

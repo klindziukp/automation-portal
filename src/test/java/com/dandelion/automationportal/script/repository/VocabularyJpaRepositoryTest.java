@@ -31,7 +31,6 @@ class VocabularyJpaRepositoryTest extends BaseRepositoryScript {
 
         WHEN();
         List<VocabularyItem> actual = vocabularyRepository.findAllByOrderByKeyAsc();
-        System.out.println(actual.get(0).toString());
 
         THEN();
         assertThat(actual).usingElementComparatorIgnoringFields(Ignore.getUpdatableEntityFields()).isEqualTo(expected);

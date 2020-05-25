@@ -1,0 +1,164 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ap-dev
+  labels:
+    name: ap-dev
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim-dev
+  namespace: ap-dev
+  labels:
+    app: automation-portal
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: ap-dev
+data:
+  MYSQL_DATABASE: automation
+  MYSQL_DATABASE_URL: jdbc:mysql://ap-mysql/automation
+  init.sql: |
+    use automation;
+    CREATE TABLE automation_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, description VARCHAR(255) NOT NULL, PRIMARY KEY (id), CONSTRAINT uc_name UNIQUE (name));
+    INSERT INTO automation_type (id,name,description) VALUES (100,'first-automation-type','First Automation Type'),
+                                                             (101,'second-automation-type','Second Automation Type');
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+  namespace: ap-dev
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: cm9vdA==
+  MYSQL_USER: cm9vdA==
+  MYSQL_PASSWORD: cm9vdA==
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ap-mysql
+  namespace: ap-dev
+  labels:
+    app: ap-mysql
+spec:
+  selector:
+    matchLabels:
+      app: ap-mysql
+      environment: development
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: ap-mysql
+        environment: development
+    spec:
+      containers:
+        - image: mysql:5.7.24
+          name: ap-mysql
+          env:
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-config
+                  key: MYSQL_DATABASE
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_PASSWORD
+          ports:
+            - containerPort: 3306
+              name: ap-mysql
+          volumeMounts:
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
+            - name: initdb
+              mountPath: /docker-entrypoint-initdb.d
+      volumes:
+        - name: mysql-persistent-storage
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim-dev
+        - name: initdb
+          configMap:
+            name: mysql-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ap-mysql
+  namespace: ap-dev
+  labels:
+    app: ap-mysql
+    environment: development
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+      nodePort: 30306
+  selector:
+    app: ap-mysql
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: automation-portal
+  namespace: ap-dev
+  labels:
+    app: automation-portal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: automation-portal
+  template:
+    metadata:
+      labels:
+        app: automation-portal
+    spec:
+      containers:
+        - name: automation-portal
+          image: klindziuk/automation-portal-kube
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8881
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: automation-portal
+  namespace: ap-dev
+  labels:
+    app: automation-portal
+spec:
+  type: NodePort
+  selector:
+    app: automation-portal
+  ports:
+    - name: http
+      port: 8881
+      targetPort: 8881

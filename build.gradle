@@ -46,9 +46,9 @@ dependencies {
     compile 'com.jupiter-tools:spring-test-mongo:0.13'
     compile 'org.hibernate:hibernate-ehcache:5.4.3.Final'
 
-    testCompile "org.testcontainers:junit-jupiter:1.11.3"
-    testCompile "org.testcontainers:testcontainers:1.11.3"
-    testCompile "org.testcontainers:mysql:1.11.3"
+    testCompile "org.testcontainers:junit-jupiter:1.14.1"
+    testCompile "org.testcontainers:testcontainers:1.14.1"
+    testCompile "org.testcontainers:mysql:1.14.1"
     testCompile 'org.awaitility:awaitility:3.0.0'
     testCompile 'io.rest-assured:rest-assured:3.3.0'
     testCompile 'io.rest-assured:spring-mock-mvc:3.3.0'

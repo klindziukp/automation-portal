@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: ap-dev
+data:
+  MYSQL_DATABASE: automation
+  MYSQL_DATABASE_URL: jdbc:mysql://ap-mysql/automation
+  init.sql: |
+    use automation;
+    CREATE TABLE automation_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, description VARCHAR(255) NOT NULL, PRIMARY KEY (id), CONSTRAINT uc_name UNIQUE (name));
+    INSERT INTO automation_type (id,name,description) VALUES (100,'first-automation-type','First Automation Type'),
+                                                             (101,'second-automation-type','Second Automation Type');

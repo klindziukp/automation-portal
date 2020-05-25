@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ap-mysql
+  namespace: ap-dev
+  labels:
+    app: ap-mysql
+    environment: development
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+      nodePort: 30306
+  selector:
+    app: ap-mysql
