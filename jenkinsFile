@@ -31,7 +31,6 @@ pipeline {
     }
 
     stages {
-        sta
         stage('Execute maven lifecycle') {
             steps {
                 echo 'Executing maven lifecycle...'
