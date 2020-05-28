@@ -44,15 +44,6 @@ pipeline {
                     gradlew('test -i')
                 }
             }
-    stage('Static code analysis') {
-    environment {
-                   SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
-                 }
-                      steps {
-                          echo 'Perform static code analysis...'
-                          gradlew('sonarqube')
-                      }
-                }
      stage('Assemble') {
                  steps {
                      echo 'Assembling build analysis...'
