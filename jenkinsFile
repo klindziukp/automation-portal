@@ -22,7 +22,7 @@ pipeline {
     agent any
 
     tools {
-        jdk "1.8.0_192"
+        jdk "1.8.0_202"
     }
 
     options {
