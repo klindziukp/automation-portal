@@ -70,6 +70,21 @@ pipeline {
                 archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
             }
         }
+      stage("Docker build") {
+           steps {
+                sh "docker build -t klindziuk/ap ."
+           }
+      }
+
+      stage('Docker Push') {
+            agent any
+            steps {
+              withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+                sh 'docker push klindziuk/ap:latest'
+              }
+           }
+       }
     }
   }
 
