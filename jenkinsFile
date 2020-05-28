@@ -84,7 +84,7 @@ pipeline {
             agent any
             steps {
                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-                loginToHub(${env.dockerHubUser},${env.dockerHubPassword})
+                loginToHub("${env.dockerHubUser}","${env.dockerHubPassword}")
                 pushImage("ap-${GIT_HASH}")
               }
            }
