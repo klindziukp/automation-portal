@@ -56,8 +56,6 @@ pipeline {
                             ]
                         }
                       }
-                    }
-                  }
             }
      stage('Assemble') {
                  steps {
