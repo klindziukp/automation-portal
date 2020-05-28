@@ -98,11 +98,11 @@ def gradlew(String... args) {
 }
 
 def loginToHub(String userName, String password){
- sh "docker login -u ${userName} -p ${password}"
+    sh "docker login -u ${userName} -p ${password}"
 }
 
 def buildImage(String tag) {
-sh "docker build -t ${tag} ."
+    sh "docker build -t ${tag} ."
 }
 
 def pushImage(String tag){
