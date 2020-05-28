@@ -26,14 +26,52 @@ pipeline {
     }
 
     stages {
-        stage('Execute maven lifecycle') {
+    stage('Polling Scm') {
+                steps {
+                    echo 'Polling Scm changes...'
+                    git url: 'https://github.com/klindziukp/automation-portal.git', branch: 'AP-11-migrate-to-SQL'
+                }
+            }
+    stage('Compile') {
+    echo 'Compiling...'
+                steps {
+                    gradlew('clean', 'classes')
+                }
+            }
+    stage('Unit Tests') {
+    echo 'Perform unit testing...'
+                steps {
+                    gradlew('test -i')
+                }
+            }
+    stage('Static code analysis') {
+    echo 'Perform static code analysis...'
+     environment {
+                   SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
+                 }
+                 stage('Code Analysis') {
+                      steps {
+                          gradlew('sonarqube')
+                      }
+                    }
+                }
+            }
+     stage('Assemble') {
+     echo 'Assembling build analysis...'
+                 steps {
+                     gradlew('assemble')
+                     stash includes: '**/build/libs/*.jar', name: 'automation-portal'
+                 }
+             }
+      stage('Archive artifacts') {
+      echo 'Archive artifacts...'
             steps {
-                echo 'Executing maven lifecycle...'
-                git url: 'https://github.com/klindziukp/automation-portal.git', branch: 'AP-11-migrate-to-SQL'
-                sh './gradlew clean build -i'
                 archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
             }
         }
     }
 }
 
+def gradlew(String... args) {
+    sh "./gradlew ${args.join(' ')} -s"
+}
