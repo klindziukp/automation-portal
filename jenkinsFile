@@ -1,0 +1,49 @@
+/*
+## PLUGINS
+---
+Allure Jenkins plugin
+Build Pipeline plugin
+Build With Parameters plugin
+Build Discard plugin
+Copy Artifact plugin
+Delivery Pipeline plugin
+Email Extension plugin
+Pipeline plugin
+Simple Theme plugin
+Test Results Analyzer plugin
+
+## JENKINS SCHEME
+---
+http://afonsof.com/jenkins-material-theme/dist/material-light.css
+*/
+
+pipeline {
+
+    agent any
+
+    tools {
+        jdk "1.8.0_192"
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    parameters {
+        string(defaultValue: 'AP-11-migrate-to-SQL', description: 'Code branch', name: 'BRANCH', trim: false)
+        string(defaultValue: 'pavel_klindziuk@epam.com', description: 'Email notifications list', name: 'EMAIL_LIST', trim: false)
+    }
+
+    stages {
+        sta
+        stage('Execute maven lifecycle') {
+            steps {
+                echo 'Executing maven lifecycle...'
+                git url: 'https://github.com/klindziukp/automation-portal.git', branch: '${BRANCH}'
+                sh './gradlew clean build -i'
+                archiveArtifacts artifacts: '**/build/libs*.jar', fingerprint: true, onlyIfSuccessful: true
+            }
+        }
+    }
+}
+

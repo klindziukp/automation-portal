@@ -63,6 +63,11 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    reports.html.destination = file('build/test-results/report')
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
 }
 
 sonarqube {
