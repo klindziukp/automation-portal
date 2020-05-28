@@ -56,7 +56,6 @@ pipeline {
                       }
                     }
                 }
-            }
      stage('Assemble') {
                  steps {
                      echo 'Assembling build analysis...'
@@ -71,6 +70,7 @@ pipeline {
             }
         }
     }
+  }
 
 def gradlew(String... args) {
     sh "./gradlew ${args.join(' ')} -s"
