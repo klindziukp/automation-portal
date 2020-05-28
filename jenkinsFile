@@ -43,6 +43,21 @@ pipeline {
                     echo 'Perform unit testing...'
                     gradlew('test -i')
                 }
+                post {
+                        success {
+                          // publish html
+                          publishHTML target: [
+                              allowMissing: false,
+                              alwaysLinkToLastBuild: false,
+                              keepAll: true,
+                              reportDir: '**/build/test-results/report',
+                              reportFiles: 'index.html',
+                              reportName: 'jUnit5Report '
+                            ]
+                        }
+                      }
+                    }
+                  }
             }
      stage('Assemble') {
                  steps {
@@ -57,22 +72,6 @@ pipeline {
                 archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
             }
         }
-    }
-  }
-
-post {
-        success {
-          // publish html
-          publishHTML target: [
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: '**/build/test-results/report',
-              reportFiles: 'index.html',
-              reportName: 'RCov Report'
-            ]
-        }
-      }
     }
   }
 
