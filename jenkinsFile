@@ -60,6 +60,22 @@ pipeline {
     }
   }
 
+post {
+        success {
+          // publish html
+          publishHTML target: [
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: '**/build/test-results/report',
+              reportFiles: 'index.html',
+              reportName: 'RCov Report'
+            ]
+        }
+      }
+    }
+  }
+
 def gradlew(String... args) {
     sh "./gradlew ${args.join(' ')} -s"
 }
