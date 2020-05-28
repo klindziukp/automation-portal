@@ -33,39 +33,40 @@ pipeline {
                 }
             }
     stage('Compile') {
-    echo 'Compiling...'
                 steps {
+                    echo 'Compiling...'
                     gradlew('clean', 'classes')
                 }
             }
     stage('Unit Tests') {
-    echo 'Perform unit testing...'
                 steps {
+                    echo 'Perform unit testing...'
                     gradlew('test -i')
                 }
             }
     stage('Static code analysis') {
-    echo 'Perform static code analysis...'
-     environment {
+    environment {
                    SONAR_LOGIN = credentials('SONARCLOUD_TOKEN')
                  }
                  stage('Code Analysis') {
+
                       steps {
+                          echo 'Perform static code analysis...'
                           gradlew('sonarqube')
                       }
                     }
                 }
             }
      stage('Assemble') {
-     echo 'Assembling build analysis...'
                  steps {
+                     echo 'Assembling build analysis...'
                      gradlew('assemble')
                      stash includes: '**/build/libs/*.jar', name: 'automation-portal'
                  }
              }
       stage('Archive artifacts') {
-      echo 'Archive artifacts...'
             steps {
+                echo 'Archive artifacts...'
                 archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
             }
         }
