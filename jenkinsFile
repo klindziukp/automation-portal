@@ -19,6 +19,9 @@ http://afonsof.com/jenkins-material-theme/dist/material-light.css
 
 pipeline {
 
+    environment {
+      GIT_HASH = GIT_COMMIT.take(7)
+    }
     agent any
 
     options {
@@ -72,6 +75,7 @@ pipeline {
         }
       stage("Build Docker image") {
            steps {
+                buildImage("ap-${GIT_HASH)"
                 sh "docker build -t klindziuk/ap + '${GIT_REVISION:0:7}' ."
            }
       }
@@ -79,9 +83,9 @@ pipeline {
       stage('Push Docker image') {
             agent any
             steps {
-              withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh "docker push klindziuk/ap + '${GIT_REVISION:0:7}':latest"
+               withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+                loginToHub(${env.dockerHubUser},${env.dockerHubPassword})
+                pushImage("ap-${GIT_HASH)")
               }
            }
        }
@@ -90,4 +94,16 @@ pipeline {
 
 def gradlew(String... args) {
     sh "./gradlew ${args.join(' ')} -s"
+}
+
+def loginToHub(String userName, String password){
+ sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+}
+
+def buildImage(String tag) {
+sh "docker build -t ${tag} ."
+}
+
+def pushImage(String tag){
+    sh "docker push ${tag}"
 }
