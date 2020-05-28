@@ -31,7 +31,7 @@ pipeline {
                 echo 'Executing maven lifecycle...'
                 git url: 'https://github.com/klindziukp/automation-portal.git', branch: 'AP-11-migrate-to-SQL'
                 sh './gradlew clean build -i'
-                archiveArtifacts artifacts: '**/build/libs*.jar', fingerprint: true, onlyIfSuccessful: true
+                archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
             }
         }
     }
