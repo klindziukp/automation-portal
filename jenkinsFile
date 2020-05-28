@@ -75,7 +75,7 @@ pipeline {
         }
       stage("Build Docker image") {
            steps {
-                buildImage("ap-${GIT_HASH")
+                buildImage("ap-${GIT_HASH}")
 
            }
       }
@@ -85,7 +85,7 @@ pipeline {
             steps {
                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
                 loginToHub(${env.dockerHubUser},${env.dockerHubPassword})
-                pushImage("ap-${GIT_HASH")
+                pushImage("ap-${GIT_HASH}")
               }
            }
        }
