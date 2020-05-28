@@ -50,7 +50,7 @@ pipeline {
                               allowMissing: false,
                               alwaysLinkToLastBuild: false,
                               keepAll: true,
-                              reportDir: '**/build/test-results/report',
+                              reportDir: 'build/test-results/report',
                               reportFiles: 'index.html',
                               reportName: 'jUnit5Report '
                             ]
