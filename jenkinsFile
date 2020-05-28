@@ -97,7 +97,7 @@ def gradlew(String... args) {
 }
 
 def loginToHub(String userName, String password){
- sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+ sh "docker login -u ${userName} -p ${password}"
 }
 
 def buildImage(String tag) {
