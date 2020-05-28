@@ -75,8 +75,8 @@ pipeline {
         }
       stage("Build Docker image") {
            steps {
-                buildImage("ap-${GIT_HASH)"
-                sh "docker build -t klindziuk/ap + '${GIT_REVISION:0:7}' ."
+                buildImage("ap-${GIT_HASH")
+
            }
       }
 
@@ -85,7 +85,7 @@ pipeline {
             steps {
                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
                 loginToHub(${env.dockerHubUser},${env.dockerHubPassword})
-                pushImage("ap-${GIT_HASH)")
+                pushImage("ap-${GIT_HASH")
               }
            }
        }
