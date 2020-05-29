@@ -72,6 +72,10 @@ test {
 
 sonarqube {
     properties {
+        property "sonar.projectKey", "klindziukp_automation-portal"
+        property "sonar.organization", "klindziukp-github"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "3a29aa6704f21047a226858ec6170309a0d6b40b"
         property "sonar.exclusions", "**/exception/**,**/model/**,**/support/**,**/AutomationPortalApplication.java"
     }
 }
